@@ -1,7 +1,7 @@
 {
   "vendor": "tezexb",
   "name": "lumini-store-theme",
-  "version": "1.7.50",
+  "version": "1.7.60",
   "builders": {
     "styles": "2.x",
     "store": "0.x",
