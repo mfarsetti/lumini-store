@@ -1,0 +1,100 @@
+@import 'mixins/text';
+
+.listPrice {
+  @include text($font-size-xs, $text-color-1-400, $normal);
+  margin-right: 10px;
+  margin-bottom: -25px;
+
+  @media (min-width: $l) {
+    font-size: $font-size-sm;
+  }
+  .currencyContainer,
+  .listPriceValue {
+    color: $text-color-2;
+    font-size: $font-size-sm;
+  }
+}
+
+.selling {
+  &Price {
+    .currencyContainer {
+      color: $text-color-1;
+      font-weight: $regular;
+
+      // @media (min-width: $l) {
+      //   font-size: $font-24;
+      // }
+
+      &--summary {
+        @media (min-width: $l) {
+          font-size: $font-size-md;
+        }
+      }
+    }
+
+    &Range {
+      font-size: 0;
+      .currencyCode{
+        text-transform: uppercase
+      }
+      &MinValue {
+        .currencyContainer {
+          @include text($font-size-xs, $text-color-1, $regular);
+
+          @media (min-width: $l) {
+            font-size: $font-24;
+          }
+        }
+      }
+
+      &MaxValue {
+        display: none;
+      }
+    }
+  }
+}
+
+.installment {
+  &s {
+    @include text($font-size-sm, $text-color-1-400, $regular);
+    margin-bottom: 15px;
+    text-transform: lowercase;
+
+    &Number {
+      @include text($font-size-sm, $text-color-1-400, $regular);
+    }
+    .currencyCode{
+      text-transform: uppercase;
+    }
+    .currencyContainer {
+      color: $text-color-1-400;
+    }
+  }
+
+  &Value {
+    @include text($font-size-sm, $text-color-1-400, $regular);
+  }
+
+  &Value {
+    @include text($font-size-sm, $text-color-1-500, $bold);
+
+    &::before {
+      content: 'de';
+      margin: 0 2px;
+      display: inline-block;
+      @include text($font-size-sm, $text-color-1-400, $normal);
+    }
+  }
+}
+
+.currencyContainer {
+  @include text($font-size-xs, $text-color-1-500, $regular);
+
+  @media (min-width: $l) {
+    font-size: $font-size-sm;
+  }
+}
+
+:global(.vtex-price-pdp) {
+  display: none;
+}

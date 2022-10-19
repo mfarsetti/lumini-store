@@ -1,0 +1,40 @@
+{
+  "vtex.menu@2.x:menu#category-menu": {
+    "props": {
+      "experimentalOptimizeRendering": true,
+      "blockClass": "header__menu"
+    },
+    "children": [
+      "menu-item#luminarias",
+      // "menu-item#categories-decoracao",
+      "menu-item#categories-lumini1",
+      "menu-item#categories-lumini2",
+      "menu-item#sobre-lumini"
+    ]
+  },
+  "rich-text#sobre-lumini": {
+    "props": {
+      "blockClass": ["sobre-lumini"],
+      "font": "t-body",
+      "text": "[sobre a lumini](/sobre)",
+      "textAlignment": "CENTER",
+      "textColor": "c-on-base",
+      "textPosition": "CENTER"
+    }
+  },
+  "menu-item#sobre-lumini": {
+    "props": {
+      "id": "menu-item-categories-sobre-lumini",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/sobre",
+        "noFollow": false,
+        "tagTitle": "sobre a lumini",
+        "text": "sobre a lumini"
+      }
+    }
+  }
+}

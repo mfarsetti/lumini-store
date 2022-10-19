@@ -1,0 +1,50 @@
+.searchNotFound {
+  display: flex;
+  align-items: flex-start;
+  margin: 40px 0 59px;
+
+  @media (min-width: $m) {
+    margin: 96px 0 40px;
+  }
+}
+
+.searchNotFoundOops {
+  @include text($font-size-h3, $color-1, $regular);
+
+  @media (max-width: $m) {
+    margin: auto;
+  }
+}
+
+.searchNotFoundInfo {
+  @include text($font-size-md, $color-2, $regular);
+  padding: 0 21px;
+
+  @media (min-width: $l) {
+    font-size: $font-24;
+    padding: 0 64px;
+  }
+}
+
+.searchNotFoundWhatDoIDo {
+  @include text($font-size-sm, $color-2, $regular);
+}
+
+.searchNotFoundWhatToDoDotsContainer {
+  padding: 0 20px;
+  margin-top: 0;
+}
+
+.searchNotFoundWhatToDoDots {
+  @include text($font-size-sm, $color-2, $regular);
+  margin: 5px 0;
+
+  &::marker {
+    color: $color-1;
+    font-size: 20px;
+
+    @media (min-width: $l) {
+      font-size: 25px;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+.drawer {
+  &Content {
+    &--drawer-search-filters {
+      overflow-x: hidden;
+      &::-webkit-scrollbar {
+        width: 8px;
+        margin: 10px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background-color: $color-5-600;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: $color-5-900;
+      }
+    }
+  }
+
+  .closeIcon {
+    &Container {
+      &--drawer-search-filters {
+        transform: translate(370px, 40px);
+        height: 0;
+      }
+    }
+
+    &Button {
+      @media (min-width: $l) {
+        &::before {
+          content: '';
+          display: block;
+          width: 20px;
+          height: 20px;
+          background-image: url('assets/svg/delete-icon.svg');
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: 17px;
+        }
+      }
+    }
+
+    &:first-child {
+      display: none;
+    }
+  }
+}
+
+.openIconContainer {
+  &--drawer-search-filters {
+    padding: 0 !important;
+  }
+
+  &--menu-search {
+    padding: 0 15px;
+  }
+}

@@ -1,0 +1,47 @@
+.totalizers {
+  .cart-template & {
+    max-width: 350px;
+    margin-bottom: 0;
+    @media (max-width: $m) {
+      max-width: 100%;
+    }
+  }
+  .summary-coupon {
+    margin: 0;
+  }
+  .table {
+    border: solid 1px $color-5-500;
+    tr td,
+    tr th {
+      padding: 3px !important;
+    }
+    tr {
+      border: none;
+    }
+    .empty {
+      display: none;
+    }
+
+    .info {
+      text-align: left;
+      padding: 3px 3px 3px 35px !important;
+      text-transform: lowercase;
+    }
+    .monetary {
+      text-align: right;
+      padding: 3px 35px 3px 3px !important;
+    }
+    tfoot {
+      tr .monetary,
+      tr .info {
+        padding-bottom: 10px !important;
+      }
+    }
+    .totalizers-list {
+      .Items .monetary,
+      .Items .info {
+        padding-top: 16px !important;
+      }
+    }
+  }
+}

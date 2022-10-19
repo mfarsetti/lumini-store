@@ -1,0 +1,28 @@
+{
+  "gallery": {
+    "props": {
+      "layouts": [
+        {
+          "name": "grid",
+          "component": "GridSummary",
+          "itemsPerRow": {
+            "desktop": 3,
+            "tablet": 2,
+            "phone": 2
+          }
+        },
+        {
+          "name": "list",
+          "component": "ListSummary",
+          "itemsPerRow": {
+            "desktop": 4,
+            "tablet": 2,
+            "phone": 1
+          }
+        }
+      ],
+      "GridSummary": "product-summary.shelf",
+      "ListSummary": "product-summary.shelf#list"
+    }
+  }
+}

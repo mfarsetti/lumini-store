@@ -1,0 +1,23 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "sass": "^1.32.8",
+    "slugify": "^1.4.5",
+    "tabletop": "^1.6.3",
+    "typescript": "3.9.7"
+  },
+  "devDependencies": {
+    "@types/graphql": "^14.5.0",
+    "@types/jquery": "2.0.45",
+    "g-sheets-api": "^2.1.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

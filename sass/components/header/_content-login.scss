@@ -1,0 +1,178 @@
+@import 'extends/inputs';
+@import 'extends/links';
+@import 'extends/buttons';
+
+.box {
+  right: -36px !important;
+
+  .arrowUp {
+    top: 7px;
+  }
+
+  .content {
+    padding: 1.35rem;
+
+    &Container {
+      box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  // FORM
+  .form {
+    &Title {
+      letter-spacing: 1px;
+      font-weight: $bold;
+      font-size: $font-size-sm;
+      color: $text-color-1-500;
+      margin: 0;
+      text-align: left;
+      padding: 0;
+      text-transform: lowercase;
+    }
+
+    &Subtitle {
+      letter-spacing: 1px;
+      font-weight: $normal;
+      font-size: $font-size-xs;
+      color: $text-color-1-400;
+      text-align: left;
+      text-transform: lowercase;
+    }
+  }
+
+  .optionsList {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    :global(.vtex-button) {
+      text-transform: lowercase;
+      border: none;
+      border-radius: 0;
+      background-color: transparent;
+      color: $text-color-1-500;
+      text-transform: inherit;
+      font-size: $font-size-xs;
+      min-height: inherit;
+
+      &:hover,
+      &:focus,
+      &:active {
+        text-transform: lowercase;
+        text-decoration: underline;
+        color: $text-color-1-400;
+      }
+    }
+
+    :global(.vtex-button__label) {
+      text-transform: lowercase;
+      padding: 0 !important;
+      justify-content: end !important;
+    }
+  }
+
+  .inputContainer {
+    margin: 12px 0;
+
+    :global(.vtex-input-prefix__group) {
+      border: none;
+    }
+
+    :global(.vtex-styleguide-9-x-input) {
+      text-transform: lowercase;
+      @extend %input-text;
+    }
+
+    :global(.vtex-input__suffix) {
+      text-transform: lowercase;
+      padding: 0;
+    }
+
+    .eyeSightIcon {
+      width: 24px;
+    }
+
+    .eyeIcon {
+      &--visible,
+      &--invisible {
+        text-transform: lowercase;
+        position: absolute;
+        right: 0;
+        color: $text-color-1-500;
+      }
+    }
+  }
+
+  .forgotPasswordLink,
+  .dontHaveAccount {
+    @extend %link;
+    text-transform: lowercase;
+    text-decoration: underline;
+  }
+
+  .dontHaveAccount {
+    display: flex;
+    width: 100%;
+  }
+
+  .contentForm {
+    padding: 0;
+  }
+
+  .form {
+    &Footer {
+      text-transform: lowercase;
+      border: none;
+
+      .sendButton {
+        text-transform: lowercase;
+        width: 48%;
+
+        :global(.vtex-button) {
+          text-transform: lowercase;
+          @extend %primary-button;
+          width: 100%;
+        }
+      }
+
+      .backButton {
+        width: 48%;
+
+        :global(.vtex-button) {
+          @extend %primary-button;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  //LOGADO
+  .accountOptions {
+    .button {
+      text-transform: lowercase;
+      @extend %link;
+      padding: 0;
+    }
+
+    :global(.vtex-button) {
+      text-transform: lowercase;
+      padding: 0;
+      border: none;
+      background: transparent !important;
+
+      &:hover,
+      &:hover,
+      &:focus {
+        text-transform: lowercase;
+        background-color: transparent;
+      }
+    }
+
+    :global(.vtex-button__label) {
+      text-transform: lowercase;
+      @extend %link;
+      padding: 0;
+      border: none;
+    }
+  }
+}

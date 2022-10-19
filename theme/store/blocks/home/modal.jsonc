@@ -1,0 +1,120 @@
+{
+  "modal-trigger#mz-newsletter": {
+    "title": "Newsletter",
+    "props": {
+      "trigger": "load-session"
+    },
+    "children": ["modal-layout#mz-newsletter-content"]
+  },
+
+  "modal-layout#mz-newsletter-content": {
+    "children": [
+      "flex-layout.row#mz-newsletter-header",
+      "flex-layout.row#mz-newsletter-content"
+    ],
+    "props": {
+      "blockClass": "mz-modal-news"
+    }
+  },
+
+  "flex-layout.row#mz-newsletter-header": {
+    "children": ["modal-header#mz-modal-newsletter"]
+  },
+  "modal-header#mz-modal-newsletter": {
+    "props": {
+      "blockClass": "mz-modal-news__header",
+      "iconCloseSize": 20
+    }
+  },
+
+  "flex-layout.row#mz-newsletter-content": {
+    "props": {
+      "blockClass": "mz-modal-news__content"
+    },
+    "children": [
+      "flex-layout.col#mz-newsletter-content-1",
+      "flex-layout.col#mz-newsletter-content-2"
+    ]
+  },
+  "flex-layout.col#mz-newsletter-content-1": {
+    "children": ["image#mz-modal-newsletter"],
+    "props": {
+      "width": "28%",
+      "blockClass": "mz-modal-news__content--image"
+    }
+  },
+  "flex-layout.col#mz-newsletter-content-2": {
+    "children": [
+      "rich-text#mz-modal-newsletter-text",
+      "newsletter-form#mz-modal-newsletter",
+      "rich-text#mz-modal-newsletter-inferior-text",
+      "rich-text#mz-modal-newsletter-last-text"
+    ],
+    "props": {
+      "blockClass": "mz-modal-news__content--form"
+    }
+  },
+
+  "image#mz-modal-newsletter": {
+    "title": "Newsletter - Imagem",
+    "props": {
+      "src": "assets/img/modal.png",
+      "maxWidth": "128px",
+      "maxHeight": "397px",
+      "blockClass": "mz-modal-news__banner"
+    }
+  },
+  "rich-text#mz-modal-newsletter-text": {
+    "title": "Newsletter - Texto",
+    "props": {
+      "blockClass": "mz-modal-news__subtitle",
+      "text": "cadastre-se e ganhe 10% off na sua primeira compra."
+    },
+    "title": "Smart Newsletter - Texto Superior"
+  },
+  "rich-text#mz-modal-newsletter-inferior-text": {
+    "title": "Newsletter - Texto Inferior",
+    "props": {
+      "blockClass": "mz-modal-news__text",
+      "text": "a lumini utiliza o e-mail fornecido para enviar novidades e ofertas por e-mail. ao enviar, você confirma que leu e concorda com a política de privacidade."
+    }
+  },
+  "rich-text#mz-modal-newsletter-last-text": {
+    "props": {
+      "blockClass": ["mz-modal-news__text", "mz-modal-news__last-text"],
+      "text": "cupom será enviado para o seu e-mail.<br /> desconto não cumulativo"
+    },
+    "title": "Smart Newsletter - Último Texto"
+  },
+  "newsletter-form#mz-modal-newsletter": {
+    "props": {
+      "blockClass": "mz-modal-news__input"
+    },
+    "children": [
+      // "newsletter-input-name#modal",
+      "newsletter-input-email#modal",
+      // "newsletter-checkbox-confirmation#modal",
+      "newsletter-submit#modal"
+    ]
+  },
+  "newsletter-input-name#modal": {
+    "props": {
+      "placeholderText": "nome"
+    }
+  },
+  "newsletter-input-email#modal": {
+    "props": {
+      "placeholderText": "seu email favorito"
+    }
+  },
+  "newsletter-checkbox-confirmation#modal": {
+    "props": {
+      "checkboxLabel": "eu concordo em receber comunicações."
+    }
+  },
+  "newsletter-submit#modal": {
+    "props": {
+      "submitButtonLabel": "enviar"
+    }
+  }
+}

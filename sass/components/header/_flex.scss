@@ -1,0 +1,215 @@
+@import 'extends/container';
+@import 'mixins/links';
+@import 'mixins/text';
+
+.flex {
+  &Row {
+    &--disclosure-container {
+      width: 0 !important;
+    }
+    &--mz-cart {
+      padding: 16px;
+      border-bottom: 1px solid $color-5-500;
+
+      &:last-child {
+        border: none;
+      }
+    }
+
+    &--header__menu {
+      border-bottom: 1px solid $color-5-600;
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    &--minicart-footer {
+      box-shadow: none;
+      padding: 10px 0 0;
+      border-top: 1px solid $color-5-500;
+      position: absolute;
+      bottom: -8px;
+      right: 0;
+      left: 0;
+      background-color: $color-5-400;
+    }
+
+    &--header__links {
+      width: fit-content;
+      margin-left: auto;
+
+      .stretchChildrenWidth {
+        width: 100% !important;
+        padding: 0px 10px;
+      }
+    }
+
+    &--home__designers {
+      @media (max-width: $l) {
+        .stretchChildrenWidth {
+          &:last-child {
+            padding-top: 21px;
+          }
+        }
+      }
+
+      @media (min-width: $l) {
+        width: 90%;
+        margin-left: auto;
+        padding-top: 112px;
+        padding-bottom: 120px;
+      }
+
+      :global(.vtex-store-components-3-x-container) {
+        margin-right: 0;
+        margin-left: 0;
+        max-width: fit-content;
+      }
+    }
+
+    &Content {
+      &--header__main {
+        @extend %no-container;
+        width: 100% !important;
+        max-height: 30px;
+
+        .flexCol {
+          height: initial;
+        }
+      }
+
+      &--mz-cart {
+        margin: 10px 0;
+        padding-top: 0;
+      }
+
+      &--product-cart {
+        .stretchChildrenWidth {
+          &:last-child {
+            justify-content: end;
+          }
+        }
+      }
+
+      &--header__main--mob {
+        display: flex;
+        max-height: 30px;
+      }
+
+      &--header__menu {
+        @extend %container;
+      }
+
+      &--header {
+        &__tooltip {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: flex-end;
+          padding-right: 10px;
+          height: 24px;
+
+          .stretchChildrenWidth {
+            height: 24px;
+            width: fit-content !important;
+          }
+        }
+
+        &__main {
+          @extend %container;
+          align-items: center;
+          justify-content: space-between;
+
+          @media (min-width: $l) {
+            max-height: unset;
+            height: 100%;
+            :global(.vtex-login-2-x-profile) {
+              color: $black !important;
+            }
+          }
+        }
+
+        &__links {
+          width: 100%;
+        }
+      }
+
+      &--home__designers {
+        border: none;
+
+        .stretchChildrenWidth {
+          @media (min-width: $l) {
+            width: 35% !important;
+
+            &:last-child {
+              width: 65% !important;
+            }
+          }
+        }
+      }
+    }
+
+    &--header {
+      &__tooltip {
+        background-color: $color-2;
+        color: $white;
+        height: 24px;
+      }
+
+      &__main {
+        background-color: $white;
+        padding: 0.8rem 0;
+        border-bottom: 1px solid $color-5-600;
+
+        @media (min-width: $l) {
+          padding: 0;
+          height: 79px;
+        }
+
+        .stretchChildrenWidth {
+          align-items: center;
+        }
+
+        :global(.vtex-store-components-3-x-container) {
+          @media (min-width: $l) {
+            min-width: -webkit-fill-available;
+            height: 100%;
+            margin: 0 5%;
+          }
+        }
+
+        :global(.vtex-store-drawer-0-x-openIconContainer--menu-search) {
+          :global(.vtex-store-drawer-0-x-menuIcon--menu-search) {
+            display: none;
+          }
+          &::after {
+            content: '';
+            display: block;
+            width: 37px;
+            height: 30px;
+            background-image: url('assets/svg/menu-search.svg');
+            background-repeat: no-repeat;
+            background-size: 37px;
+          }
+        }
+      }
+    }
+
+    &--login-wishlist-mobile {
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      padding: 20px 0;
+      background-color: $color-5-400;
+      border-top: 1px solid $color-5-600;
+    }
+  }
+
+  &Col {
+    &Child {
+      height: 100%;
+    }
+
+    &--header__main__search {
+      width: 40% !important;
+    }
+  }
+}

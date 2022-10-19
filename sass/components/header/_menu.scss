@@ -1,0 +1,196 @@
+@import 'mixins/links';
+@import 'mixins/text';
+
+.menu {
+  &Container {
+    &--header__menu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: inherit;
+
+      .menuItem {
+        border-bottom: 1px solid transparent;
+        &--isOpen {
+          .styledLinkContainer {
+            padding-top: 0rem;
+            padding-bottom: 0rem;
+          }
+          .styledLink {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            border-bottom: 1px solid $text-color-1;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            &--highlight {
+              border-bottom: none !important;
+            }
+          }
+        }
+        .menuItem {
+          &:first-child {
+            padding-top: 10px;
+          }
+          &:last-child {
+            padding-bottom: 10px;
+          }
+          .styledLinkContainer {
+            padding-top: 0.25rem;
+            padding-bottom: 0.25rem;
+          }
+          .styledLink {
+            display: inline;
+            width: 100%;
+            height: 100%;
+            // border-bottom: none;
+            padding-top: 0rem;
+            padding-bottom: 0rem;
+          }
+        }
+      }
+    }
+
+    &Nav {
+      &--header__menu {
+        height: inherit;
+        .menu {
+          &Item {
+            &:first-child {
+              .styled {
+                &Link {
+                  &Container {
+                    margin-left: 0;
+                  }
+                }
+              }
+            }
+
+            &:last-child {
+              .styled {
+                &Link {
+                  &Container {
+                    margin-right: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .styled {
+          &Link {
+            @include link($font-size-sm, $text-color-1-500, $regular, none);
+            text-transform: lowercase;
+
+            @media (min-width: $l) {
+              font-size: $font-size-md !important;
+            }
+
+            &--highlight {
+              @include link($font-size-sm, $color-2-500, $regular, none);
+            }
+          }
+        }
+      }
+
+      &--header_menu--mob {
+        width: 100%;
+        padding: 15px 0 30px 0;
+
+        .menu {
+          &Item {
+            padding: 10px 0;
+
+            &--isOpen {
+              padding: 0;
+            }
+
+            .menuContainer {
+              border-left: 2px solid $color-1;
+
+              &Nav {
+                display: flex;
+                align-items: center;
+                padding: 10px 15px;
+              }
+            }
+
+            .menuItem {
+              padding: 4px;
+
+              .styledLinkContent {
+                @include text($font-size-md, $text-color-1-400, $regular);
+              }
+            }
+
+            .styled {
+              &Link {
+                font-size: $font-size-xlg;
+
+                &--highlight {
+                  text-decoration: none !important;
+                }
+
+                &Container {
+                  padding: 0;
+                }
+              }
+            }
+
+            &InnerDiv {
+              .styledLinkContent {
+                justify-content: flex-start !important;
+                align-items: center;
+              }
+            }
+          }
+        }
+
+        .accordion {
+          &Icon {
+            color: $text-color-1;
+            font-weight: $lighter;
+            font-size: $font-size-xlg;
+          }
+        }
+
+        .styled {
+          &Link {
+            @include link($font-size-sm, $text-color-1-400, $regular, none);
+
+            &--highlight {
+              @include link($font-size-md, $text-color-1-500, $regular, none);
+            }
+          }
+        }
+      }
+
+      .styled {
+        &Link {
+          &Container {
+            &--area-arquiteto {
+              &::before {
+                content: ' | ';
+                padding: 0 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.styledLinkContainer {
+  &--footer__menu--mob {
+    margin: 0 15px;
+  }
+}
+
+.styledLinkContainer {
+  &--menu-lateral-1 {
+    font-size: $font-size-md;
+    // background: red ;
+  }
+}

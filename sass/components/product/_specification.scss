@@ -1,0 +1,20 @@
+@import 'mixins/text';
+
+.specification {
+  &Name {
+    @include text($font-size-md, $text-color-1-500, $normal);
+    text-transform: lowercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 1px;
+  }
+
+  &Value {
+    @include text($font-size-md, $text-color-1-400, $lighter);
+    text-transform: lowercase;
+    letter-spacing: 0.04em;
+  }
+}
+
+.groupName {
+  display: none;
+}

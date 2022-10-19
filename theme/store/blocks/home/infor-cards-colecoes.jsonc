@@ -1,0 +1,79 @@
+{
+  "flex-layout.row#info-cards-colecoes": {
+    "title": "Home | Info Card Coleções",
+    "children": [
+      "flex-layout.col#colecoes-title-col",
+      "flex-layout.col#colecoes-info-cards-col"
+    ],
+    "props": {
+      "blockClass": ["info-cards-colecoes"]
+    }
+  },
+  "flex-layout.col#colecoes-title-col": {
+    "children": ["rich-text#title-colecoes", "rich-text#link-colecoes"],
+    "props": {
+      "blockClass": ["colecoes-title-col"]
+    }
+  },
+  "rich-text#title-colecoes": {
+    "title": "Home | Info Card Coleções - Titulo",
+    "props": {
+      "blockClass": ["text-link"],
+      "font": "t-body",
+      "text": "coleções",
+      "textAlignment": "LEFT",
+      "textColor": "c-on-base",
+      "textPosition": "LEFT"
+    }
+  },
+  "rich-text#link-colecoes": {
+    "title": "Home | Info Card Coleções - Link",
+    "props": {
+      "blockClass": ["text-link"],
+      "font": "t-body",
+      "text": "[ver todas as coleções](#)",
+      "textAlignment": "RIGHT",
+      "textColor": "c-on-base",
+      "textPosition": "RIGHT"
+    }
+  },
+
+  "flex-layout.col#colecoes-info-cards-col": {
+    "children": ["info-card#home-colecoes-1", "info-card#home-colecoes-2"],
+    "props": {
+      "blockClass": ["colecoes-title-col"]
+    }
+  },
+  "info-card#home-colecoes-1": {
+    "title": "Coleções",
+    "props": {
+      "id": "home__infoCard-colecoes",
+      "isFullModeStyle": false,
+      "textPosition": "right",
+      "imageUrl": "assets/img/banner-colecao-1.png",
+      "mobileImageUrl": "assets/img/banner-colecao-1.png",
+      "headline": "lorem ipsum vivamus vulputate ",
+      "callToActionText": "Veja mais",
+      "subhead": "lorem ipsum vivamus vulputate class hendrerit felis fusce per ut venenatis, facilisis ornare sapien nostra commodo.",
+      "callToActionUrl": "#",
+      "blockClass": "home__colecoes",
+      "textAlignment": "left"
+    }
+  },
+  "info-card#home-colecoes-2": {
+    "title": "Coleções",
+    "props": {
+      "id": "home__infoCard-colecoes",
+      "isFullModeStyle": false,
+      "textPosition": "right",
+      "imageUrl": "assets/img/banner-colecao-2.png",
+      "mobileImageUrl": "assets/img/banner-colecao-2.png",
+      "headline": "gamela",
+      "callToActionText": "Veja mais",
+      "subhead": "lorem ipsum vivamus vulputate class hendrerit felis fusce per ut venenatis, facilisis ornare sapien nostra commodo.",
+      "callToActionUrl": "#",
+      "blockClass": "home__colecoes",
+      "textAlignment": "left"
+    }
+  }
+}

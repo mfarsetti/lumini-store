@@ -1,0 +1,11 @@
+@import 'mixins/text';
+
+.productHighlightText {
+  @include text($font-size-xs, $white, $normal);
+  text-transform: lowercase;
+  line-height: 1.5;
+  background: $color-2-500;
+  padding: 5px;
+  display: inline-block;
+  width: max-content;
+}

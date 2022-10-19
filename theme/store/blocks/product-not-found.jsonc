@@ -1,0 +1,49 @@
+{
+  // NOT FOUND
+  "store.not-found#product": {
+    "blocks": ["flex-layout.row#not-found"]
+  },
+  "flex-layout.row#not-found": {
+    "props": {
+      "blockClass": "mz-not-found-page"
+    },
+    "children": [
+      "rich-text#not-found-title",
+      "rich-text#not-found-subtitle",
+      "rich-text#not-found-text",
+      "rich-text#not-found-button"
+    ]
+  },
+  "rich-text#not-found-title": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "erro 404!",
+      "blockClass": "mz-not-found-page__title"
+    }
+  },
+  "rich-text#not-found-subtitle": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "a página que você solicitou não foi encontrada\n :/",
+      "blockClass": "mz-not-found-page__subtitle"
+    }
+  },
+  "rich-text#not-found-text": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "mas não fique triste, clique no botão abaixo para ser redirecionado para nossa página inicial.",
+      "blockClass": "mz-not-found-page__text"
+    }
+  },
+  "rich-text#not-found-button": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "[voltar para página inicial](/)",
+      "blockClass": "mz-not-found-page__button"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "flex-layout.row#tooltip": {
+    "title": "Header | Tooltip",
+    "children": [
+      "rich-text#atendimento",
+      "rich-text#divisoria",
+      "rich-text#area-arquiteto"
+    ],
+    "props": {
+      "blockClass": ["header__tooltip"]
+    }
+  },
+  "rich-text#atendimento": {
+    "title": "Header | Tooltip | Atendimento",
+    "props": {
+      "blockClass": ["header__tooltip--link"],
+      "text": "atendimento",
+      "textAlignment": "CENTER",
+      "textColor": "c-on-base",
+      "textPosition": "CENTER"
+    }
+  },
+
+  "rich-text#divisoria": {
+    "title": "Header | Tooltip | Divisória",
+    "props": {
+      "blockClass": ["header__tooltip--link", "header__tooltip--divisoria"],
+      "text": "|",
+      "textAlignment": "CENTER",
+      "textColor": "c-on-base",
+      "textPosition": "CENTER"
+    }
+  },
+
+  "rich-text#area-arquiteto": {
+    "title": "Header | Tooltip | Área Arquiteto",
+    "props": {
+      "blockClass": ["header__tooltip--link"],
+      "text": "área do arquiteto",
+      "textAlignment": "CENTER",
+      "textColor": "c-on-base",
+      "textPosition": "CENTER"
+    }
+  }
+}

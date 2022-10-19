@@ -1,0 +1,26 @@
+@import 'extends/container';
+
+.video {
+  &Element {
+    &--sobre-video {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &Container {
+    &--sobre-video {
+      width: 100%;
+      padding-top: 56.25%;
+      position: relative;
+      margin-top: 70px;
+
+      @media (max-width: $m) {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,113 @@
+%primary-button {
+  font-family: $main-font;
+  letter-spacing: 1px !important;
+  margin: 0;
+  background: $white;
+  color: $text-color-1;
+  border-radius: 0px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: lowercase;
+  font-size: $font-size-sm;
+  font-weight: $regular;
+  display: block;
+  border: 1px solid $text-color-1;
+  box-shadow: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $white !important;
+    background: $text-color-1;
+    transition: all 0.2s;
+  }
+}
+
+%secondary-button {
+  font-family: $main-font;
+  font-weight: $bold;
+  letter-spacing: 1px !important;
+  margin: 0;
+  padding: 10px;
+  border-radius: 30px;
+  border: 2px solid $color-1-500;
+  color: $color-1-500;
+  font-size: $font-size-sm;
+  text-decoration: none;
+  text-transform: none;
+
+  -webkit-appearance: none;
+  background: transparent !important;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border: 2px solid $color-1-700;
+    color: $color-1-700;
+    background: transparent !important;
+    transition: all 0.2s;
+  }
+}
+
+%tertiary-button {
+  font-family: $main-font;
+  letter-spacing: 0px !important;
+  margin: 0;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid $color-5-500;
+  font-size: $font-size-sm;
+  text-decoration: none;
+  background-color: $white;
+  color: $color-5-500;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border: 1px solid $color-5-500;
+    background-color: transparent;
+    transition: all 0.2s;
+  }
+}
+
+%modal-button {
+  font-family: $main-font;
+  letter-spacing: 1px !important;
+  margin: 0;
+  background: $black;
+  color: $white;
+  border-radius: 0px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: lowercase;
+  font-size: $font-size-sm;
+  font-weight: $regular;
+  display: block;
+  border: 1px solid $black;
+  box-shadow: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $black !important;
+    background: $white;
+    transition: all 0.2s;
+    border: 1px solid $black;
+  }
+}
+
+.showMoreButton {
+  background: transparent;
+  font-size: $font-size-sm;
+  font-weight: $lighter;
+  text-transform: lowercase;
+  text-decoration: underline;
+  color: $text-color-1 !important;
+  margin: 10px 0;
+  &:hover,
+  &:focus,
+  &:active {
+    font-weight: $bold;
+    transition: all 0.2s;
+  }
+}

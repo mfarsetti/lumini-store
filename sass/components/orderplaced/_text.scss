@@ -1,0 +1,37 @@
+.container {
+  &--mz-orderplaced {
+    &__title {
+      display: flex;
+      justify-content: flex-start;
+    }
+  }
+}
+
+.heading {
+  &--mz-orderplaced {
+    &__title {
+      font-size: $font-24;
+      font-weight: $regular;
+      color: $text-color-1;
+      text-transform: lowercase;
+      text-align: start;
+      margin: 60px 0 24px;
+
+      @media (max-width: $m) {
+        margin: 30px 0;
+      }
+    }
+  }
+}
+
+.paragraph {
+  &--mz-orderplaced {
+    &__order-summary {
+      margin: 0;
+      font-size: $font-size-lg;
+      font-weight: $regular;
+      color: $color-2;
+      font-weight: $regular;
+    }
+  }
+}

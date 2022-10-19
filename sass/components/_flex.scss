@@ -1,0 +1,37 @@
+@import 'extends/container';
+@import 'mixins/text';
+
+.flex {
+  &Row {
+    &Content {
+      &--shelf__price {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 10px;
+
+        .stretchChildrenWidth {
+          width: auto !important;
+
+          :global(.vtex-product-price-1-x-sellingPrice) {
+            @include text($font-size-md, $text-color-1-500, $regular);
+          }
+        }
+      }
+
+      &--name-share {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .flexRowContent {
+          width: fit-content !important;
+        }
+      }
+
+      &--institucional {
+        @extend %container;
+      }
+    }
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "store.custom#institucional-sobre": {
+    "title": "institucional | sobre a lumini",
+    "blocks": ["flex-layout.row#institucional-sobre"]
+  },
+  "flex-layout.row#institucional-sobre": {
+    "children": [
+      "video#sobre-video",
+      "flex-layout.col#sobre-container"
+    ],
+    "props": {
+      "blockClass": "institucional-container"
+    }
+  },
+  "video#sobre-video": {
+    "title": "institucional | video",
+    "props": {
+      // "width": "100%",
+      // "height": "739px",
+      "loop": false,
+      "autoPlay": false,
+      "muted": false,
+      "src": "https://vimeo.com/177284190",
+      "blockClass": "sobre-video"
+    }
+  },
+  // texto 'sobre a lumini' + imagem ----------------------------
+  "flex-layout.col#sobre-container": {
+    "title": "institucional | texto sobre + imagem",
+    "children": [
+      "flex-layout.row#institucional-sobre-a-lumini",
+      "image#sobre-image"
+    ],
+    "props": {
+      "blockClass": ["sobre-container"]
+    }
+  },
+  "flex-layout.row#institucional-sobre-a-lumini": {
+    "title": "institucional | container de textos",
+    "children": [
+      "rich-text#title-sobre",
+      "rich-text#content-sobre",
+      "rich-text#sobre-button"
+    ],
+    "props": {
+      "blockClass": ["sobre-a-lumini"]
+    }
+  },
+  "rich-text#title-sobre": {
+    "title": "institucional | título",
+    "props": {
+      "blockClass": "institucional-title--sobre",
+      "text": "sobre a lumini"
+    }
+  },
+  "rich-text#content-sobre": {
+    "title": "institucional | conteúdo",
+    "props": {
+      "blockClass": "institucional-content",
+      "text": "somos uma empresa brasileira de iluminação, nascida e criada na linguagem de arquitetos e lighting designers.\n\nacreditamos na importância da iluminação para o bem-estar das pessoas e há 40 anos nos dedicamos a melhorar a qualidade de vida de nossos clientes.\n\nnossos produtos são pautados pelo design, pela simplicidade e pela tecnologia. apostamos no conhecimento e na pesquisa para estar sempre na vanguarda do desenvolvimento técnico.\n\nnossa fábrica, localizada em são paulo, conta com uma equipe qualificada e comprometida em entregar a melhor solução para nossos clientes.\n\ntemos showrooms em quatro cidades brasileiras - são paulo, campinas, rio de janeiro e brasília, além de uma filial na alemanha."
+    }
+  },
+  "rich-text#sobre-button": {
+    "title": "institucional | texto do botão",
+    "props": {
+      "blockClass": ["sobre-button"],
+      "font": "t-body",
+      "text": "[acesse nosso site institucional](/)"
+    }
+  },
+  "image#sobre-image": {
+    "props": {
+      "blockClass": ["sobre-image"],
+      "maxHeight": 470,
+      "src": "assets/img/institucional/sobre.png"
+    }
+  }
+}

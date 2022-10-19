@@ -1,0 +1,118 @@
+@import 'mixins/links';
+
+.menu {
+  &Container {
+    &Nav {
+      &--footer__menu {
+        @media (max-width: $l) {
+          padding-top: 30px;
+          padding-left: 30px;
+          width: 100%;
+        }
+
+        .styled {
+          &Link {
+            @include link($font-size-sm, $text-color-1, $regular, none);
+            margin-bottom: 10px;
+            display: block;
+
+            &--highlight {
+              @include link($font-size-lg, $text-color-1, $regular, none);
+              margin-bottom: 20px;
+            }
+
+            &Container {
+              margin: 0;
+            }
+          }
+        }
+      }
+
+      &--footer__tooltip--text {
+        margin-bottom: 20px;
+
+        .styled {
+          &Link {
+            @include link($font-size-md, $white, $normal, none);
+            margin-bottom: 10px;
+            display: block;
+
+            &--highlight {
+              @include link($font-size-md, $white, $bold, none);
+              margin-bottom: 20px;
+            }
+
+            &Container {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+
+    &--footer__menu {
+      .menuItem {
+        @media (max-width: $m) {
+          &:first-child {
+            display: none;
+          }
+        }
+
+        .styledLink {
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+
+  &Item {
+    &--footer__menu--mob {
+      width: 100%;
+      padding: 10px 0;
+
+      .accordion {
+        &Icon {
+          &--isClosed {
+            font-size: 0;
+
+            &::before {
+              content: '+';
+              font-size: $font-size-md;
+              color: $text-color-1;
+              width: 24px;
+              height: 24px;
+              display: block;
+              text-decoration: none;
+            }
+          }
+
+          &--isOpen {
+            font-size: 0;
+
+            &::before {
+              content: '-';
+              font-size: $font-size-md;
+              color: $text-color-1;
+              width: 24px;
+              height: 24px;
+              display: block;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+
+      .styled {
+        &Link {
+          @include link($font-size-md, $text-color-1 $regular, none);
+          text-decoration: none;
+
+          &--highlight {
+            @include link($font-size-md, $text-color-1, $regular, none);
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,119 @@
+@import 'mixins/text';
+
+.button {
+  &Link {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $m) {
+      &::before {
+        content: '';
+        display: block;
+        width: 24px;
+        height: 24px;
+        background-image: url('assets/svg/hpa-profile.svg');
+        background-repeat: no-repeat;
+        background-size: 24px;
+      }
+    }
+  }
+}
+.container {
+  display: flex;
+  justify-content: flex-start !important;
+
+  .profile {
+    &Icon {
+      display: none;
+    }
+  }
+
+  @media (max-width: $m) {
+    justify-content: center;
+    padding: 10px 20px;
+    margin: 0 15px;
+  }
+
+  :global(.vtex-button) {
+    padding: 0;
+    border: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: transparent;
+      text-decoration: underline;
+    }
+  }
+
+  :global(.vtex-button__label) {
+    padding: 0;
+  }
+
+  .profileIcon {
+    color: $white;
+    margin-right: 0;
+
+    @media (max-width: $l) {
+      color: $text-color-1-500;
+    }
+  }
+
+  .label {
+    font-size: 0px;
+    padding: 0 !important;
+
+    @media (min-width: $m) {
+      &::after {
+        content: '';
+        display: block;
+        width: 24px;
+        height: 24px;
+        background-image: url('assets/svg/hpa-profile.svg');
+        background-repeat: no-repeat;
+        background-size: 24px;
+      }
+    }
+
+    @media (max-width: $l) {
+      font-size: 0 !important;
+
+      &::before {
+        content: 'minha conta';
+        font-weight: $regular;
+        font-size: $font-size-sm;
+        padding: 5px 0;
+      }
+
+      &::after {
+        content: 'entrar ou criar conta';
+        font-weight: $regular;
+        font-size: $font-size-sm;
+        text-decoration: underline;
+      }
+
+      @include text($font-size-sm, $text-color-1-500, $bold);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-transform: lowercase;
+    }
+  }
+
+  .profile {
+    // LOGADO
+    letter-spacing: 1px;
+    font-weight: $regular;
+    font-size: $font-size-md;
+    color: $text-color-1-500 !important;
+    margin: 0;
+    text-align: left;
+    padding: 0;
+    text-transform: lowercase;
+
+    @media (max-width: $l) {
+      display: block !important;
+      max-width: 220px;
+    }
+  }
+}

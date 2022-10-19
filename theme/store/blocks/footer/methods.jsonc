@@ -1,0 +1,125 @@
+{
+  "flex-layout.row#footer-3-desktop": {
+    "title": "MZ | Footer - Selos",
+    "children": [
+      "flex-layout.col#footer-col-1"
+      // "flex-layout.col#footer-col-2"
+    ],
+    "props": {
+      "blockClass": "footer_methods"
+    }
+  },
+  "flex-layout.row#footer-3-mobile": {
+    "title": "MZ | Footer - Selos",
+    "children": [
+      "flex-layout.col#footer-col-1-mobile"
+      // "flex-layout.col#footer-col-2"
+    ],
+    "props": {
+      "blockClass": "footer_methods"
+    }
+  },
+
+  "flex-layout.col#footer-col-1": {
+    "title": "MZ | Footer - Selos - Pagamento",
+    "children": [
+      "rich-text#footer-payment-title",
+      "list-context.image-list#accepted-payment-methods"
+    ]
+  },
+  "flex-layout.col#footer-col-1-mobile": {
+    "title": "MZ | Footer - Selos - Pagamento",
+    "children": [
+      "rich-text#footer-payment-title",
+      "list-context.image-list#accepted-payment-methods"
+    ]
+  },
+  "rich-text#footer-payment-title": {
+    "title": "MZ | Footer - Selos - Pagamento - Título",
+    "props": {
+      "text": "### formas de Pagamentos",
+      "blockClass": "footer_methods--title"
+    }
+  },
+  "list-context.image-list#accepted-payment-methods": {
+    "children": ["list-context-renderer#wrapped"],
+    "props": {
+      "images": [
+        {
+          "image": "assets/img/PayPal.png"
+        },
+        {
+          "image": "assets/img/Boleto.png"
+        },
+        {
+          "image": "assets/img/Cielo.png"
+        },
+        {
+          "image": "assets/img/Diners-Club.png"
+        },
+        {
+          "image": "assets/img/MasterCard.png"
+        },
+        {
+          "image": "assets/img/American-Express.png"
+        },
+        {
+          "image": "assets/img/Hipercard.png"
+        },
+        {
+          "image": "assets/img/Visa.png"
+        },
+        {
+          "image": "assets/img/Elo.png"
+        },
+        {
+          "image": "assets/img/Maestro.png"
+        }
+      ]
+    }
+  },
+
+  "list-context-renderer#wrapped": {
+    "props": {
+      "blockClass": "accepted-payment-methods",
+      "listElement": "div",
+      "itemElement": "div"
+    }
+  },
+
+  "flex-layout.col#footer-col-2": {
+    "title": "MZ | Footer - Selos - Segurança",
+    "children": [
+      "rich-text#footer-lights-title",
+      "flex-layout.row#footer-highlights"
+    ]
+  },
+  "rich-text#footer-lights-title": {
+    "title": "MZ | Footer - Selos - Segurança - Título",
+    "props": {
+      "text": "segurança",
+      "blockClass": "footer_methods--title"
+    }
+  },
+
+  "flex-layout.row#footer-highlights": {
+    "children": ["image#banner-high-1", "image#banner-high-2"],
+    "props": {
+      "blockClass": "home__footer--high"
+    }
+  },
+  "image#banner-high-1": {
+    "props": {
+      "src": "assets/img/footer-02.png",
+      "link": "/",
+      "blockClass": "home__footer"
+    }
+  },
+  "image#banner-high-2": {
+    "props": {
+      "src": "assets/img/footer-01.png",
+      "link": "/",
+      "blockClass": "home__footer"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import 'variables/_all';
+
+// COMMON
+@import 'mixins/responsive';
+@import 'extends/buttons';
+
+@import 'components/header/paragraph';
+
+// HOME
+@import 'components/home/paragraph';
+@import 'components/home/modal/text';
+
+@import 'components/footer/paragraph';
+@import 'components/product/paragraph';
+
+// SEARCH
+@import './components/search/rich-text';
+
+// INSTITUTIONAL
+@import './components/institutional/text';
+
+// NOT FOUND
+@import './components/not-found/text';
+
+//ORDERPLACED
+@import './components/orderplaced/text';

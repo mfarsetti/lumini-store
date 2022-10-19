@@ -1,0 +1,27 @@
+{
+  "paths": {
+    "sass": {
+      "src": "sass/**/*.scss",
+      "dest": {
+        "theme": "theme/styles/css",
+        "checkout": "checkout-ui-settings/checkout-ui-custom"
+      }
+    },
+    "image": {
+      "src": "theme/assets/img/**/*.{png,jpg,jpeg}",
+      "dest": "theme/assets/img"
+    }
+  },
+  "options": {
+    "sass": {
+      "includePaths": [
+        "sass"
+      ],
+      "outputStyle": "compressed"
+    },
+    "image": {
+      "key": "rLgKLJKhNxpbcjk1xzcZ9CmP0LYrrhKh",
+      "log": false
+    }
+  }
+}

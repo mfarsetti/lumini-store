@@ -1,0 +1,27 @@
+.wrapper {
+  &--mz-modal-news {
+    &__title,
+    &__subtitle {
+      width: 100%;
+      text-align: left;
+    }
+  }
+}
+
+.paragraph {
+  &--mz-modal-news {
+    &__title {
+      font-size: $font-size-lg;
+      color: $color-1;
+      margin: 30px auto 0;
+    }
+
+    &__subtitle {
+      margin: 17px auto 60px;
+      font-family: $main-font;
+      font-size: $font-size-h5;
+      color: $text-color-1;
+      line-height: 1.3;
+    }
+  }
+}

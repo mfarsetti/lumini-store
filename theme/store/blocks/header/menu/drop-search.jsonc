@@ -1,0 +1,35 @@
+{
+  "disclosure-layout#search": {
+    "children": [
+      "disclosure-trigger#search",
+      "flex-layout.row#disclosure-container"
+    ],
+    "props": {
+      "blockClass": "search__disclosure--container"
+    }
+  },
+  "flex-layout.row#disclosure-container": {
+    "children": ["disclosure-content#search"],
+    "props": {
+      "blockClass": ["disclosure-container"]
+    }
+  },
+  "disclosure-trigger#search": {
+    "children": ["rich-text#search-svg"],
+    "props": {
+      "blockClass": "search__disclosure--trigger"
+    }
+  },
+  "disclosure-content#search": {
+    "children": ["search-bar"],
+    "props": {
+      "blockClass": "search__disclosure--content"
+    }
+  },
+  "rich-text#search-svg": {
+    "props": {
+      "text": "",
+      "blockClass": "search__disclosure--svg"
+    }
+  }
+}

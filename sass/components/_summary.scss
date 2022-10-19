@@ -1,0 +1,178 @@
+@import 'extends/buttons';
+@import 'mixins/text';
+
+.container {
+  background: $white;
+  border-radius: 10px;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  border: none;
+  max-width: none !important;
+
+  &--grid-layout {
+    .imageNormal {
+      max-height: none !important;
+      height: auto !important;
+    }
+
+    :global(.vtex-product-price-1-x-currencyContainer) {
+      text-transform: capitalize !important;
+
+      &::before {
+        content: 'a partir de ';
+        text-transform: lowercase !important;
+      }
+    }
+  }
+
+  &--list-layout {
+    .imageNormal {
+      @media (min-width: $l) {
+        min-height: 320px !important;
+        min-width: 320px !important;
+      }
+    }
+
+    :global(.vtex-product-price-1-x-currencyContainer) {
+      &::before {
+        content: 'a partir de ';
+      }
+    }
+  }
+
+  .productNameContainer,
+  .productBrand {
+    width: 100%;
+  }
+
+  .brandName {
+    @include text($font-size-md, $text-color-1-500, $regular);
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    text-align: start;
+    text-transform: lowercase;
+
+    @media (min-width: $l) {
+      @include text($font-size-lg, $text-color-1-500, $regular);
+    }
+  }
+
+  .clearLink {
+    position: relative;
+
+    :global(.vtex-wish-list-1-x-wishlistIconContainer) {
+      :global(.vtex-button) {
+        border: none !important;
+        background: transparent;
+        position: absolute;
+        z-index: 99;
+        right: 0;
+        padding: 10px;
+
+        &:hover {
+          background: transparent;
+        }
+      }
+    }
+
+    :global(.vtex-button) {
+      @extend %primary-button;
+    }
+
+    .priceContainer {
+      padding-top: 0;
+    }
+
+    .currencyContainer {
+      @include text($font-size-xs, $text-color-1-500, $lighter);
+
+      @media (min-width: $l) {
+        font-size: $font-size-md;
+      }
+      &::before {
+        content: 'a partir de ';
+      }
+    }
+  }
+
+  .element {
+    padding: 0 0 10px;
+    display: flex;
+    align-items: flex-start;
+    min-width: fit-content;
+    margin: auto;
+
+    .nameContainer {
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+      @media (min-width: $l) {
+        padding-top: 5px;
+        padding-bottom: 10px;
+      }
+    }
+  }
+
+  &Normal {
+    border-radius: 0;
+  }
+}
+
+.element {
+  :global(.vtex-product-price-1-x-currencyContainer) {
+    @include text($font-size-xs, $text-color-1, $regular);
+    text-transform: lowercase;
+
+    @media (min-width: $l) {
+      font-size: $font-size-md;
+    }
+  }
+
+  &--grid-layout {
+    .imageNormal {
+      @media (max-width: $l) {
+        min-width: auto !important;
+      }
+    }
+  }
+
+  &--list-layout {
+    .imageNormal {
+      width: 90vw !important;
+
+      @media (min-width: $l) {
+        width: 100% !important;
+        min-height: 300px !important;
+        min-width: 300px !important;
+      }
+    }
+  }
+
+  &:hover {
+    @media (min-width: $l) {
+      :global(.vtex-wish-list-1-x-wishlistIconContainer) {
+        display: block !important;
+      }
+    }
+  }
+
+  .nameContainer {
+    justify-content: flex-start;
+    padding-bottom: 5px;
+
+    .productBrand {
+      @include text($font-size-md, $text-color-1-500, $regular);
+      text-transform: lowercase;
+
+      @media (min-width: $l) {
+        @include text($font-size-xlg, $text-color-1-500, $regular);
+      }
+    }
+  }
+}
+
+.hoverImage {
+  z-index: 2 !important;
+}

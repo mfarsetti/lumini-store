@@ -1,0 +1,33 @@
+@import 'extends/container';
+@import 'extends/buttons';
+@import 'mixins/text';
+@import 'extends/titles';
+@import 'mixins/links';
+
+.trigger {
+  &--search__disclosure--trigger {
+    border: 0;
+    background: $white;
+    max-width: fit-content;
+  }
+}
+
+.content {
+  &--search__disclosure--content--visible {
+    position: relative;
+    top: 80px;
+    right: 538px;
+    padding: 50px;
+    background: $white;
+    max-width: none !important;
+    min-width: 99vw !important;
+
+    @media (min-width: $xxl) {
+      right: 711px;
+    }
+
+    :global(.vtex-store-components-3-x-searchBarContainer) {
+      margin: auto;
+    }
+  }
+}

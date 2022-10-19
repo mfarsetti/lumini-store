@@ -1,0 +1,26 @@
+{
+  "store.custom#institucional-template-politicas": {
+    "path": "/politicas/trocas-e-devolucoes"
+  },
+  "store.custom#institucional-sobre": {
+    "path": "/sobre"
+  },
+  "store.custom#institucional-cases": {
+    "path": "/cases"
+  },
+  "store.custom#institucional-template-case": {
+    "path": "/cases/case"
+  },
+  "store.custom#institucional-designers": {
+    "path": "/designers"
+  },
+  "store.custom#institucional-template-colecao-designer": {
+    "path": "/designers/designer"
+  },
+  "store.custom#contato-template": {
+    "path": "/contato"
+  },
+  "store.custom#nossas-lojas": {
+    "path": "/nossas-lojas"
+  }
+}

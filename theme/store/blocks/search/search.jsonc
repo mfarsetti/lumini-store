@@ -1,0 +1,119 @@
+{
+  "store.search": {
+    "blocks": ["search-result-layout"],
+    "props": {
+      "context": {
+        "orderByField": "OrderByScoreDESC",
+        "skusFilter": "ALL",
+        "simulationBehavior": "default",
+        "maxItemsPerPage": 12
+      }
+    }
+  },
+
+  "store.search#brand": {
+    "blocks": ["search-result-layout"],
+    "props": {
+      "context": {
+        "orderByField": "OrderByScoreDESC",
+        "hideUnavailableItems": true,
+        "maxItemsPerPage": 12,
+        "skusFilter": "ALL",
+        "simulationBehavior": "default"
+      }
+    }
+  },
+
+  "store.search#department": {
+    "blocks": ["search-result-layout"],
+    "props": {
+      "context": {
+        "orderByField": "OrderByScoreDESC",
+        "skusFilter": "ALL",
+        "simulationBehavior": "default",
+        "maxItemsPerPage": 12
+      }
+    }
+  },
+
+  //categoria
+  "store.search#category": {
+    "blocks": ["search-result-layout"],
+    "props": {
+      "context": {
+        "orderByField": "OrderByScoreDESC",
+        "skusFilter": "ALL",
+        "simulationBehavior": "default",
+        "maxItemsPerPage": 12
+      }
+    }
+  },
+
+  "store.search#subcategory": {
+    "blocks": ["search-result-layout"],
+    "props": {
+      "context": {
+        "orderByField": "OrderByScoreDESC",
+        "skusFilter": "ALL",
+        "simulationBehavior": "default",
+        "maxItemsPerPage": 12
+      }
+    }
+  },
+
+  "search-result-layout": {
+    "blocks": [
+      "search-result-layout.desktop",
+      "search-result-layout.mobile",
+      "search-not-found-layout"
+    ]
+  },
+
+  "flex-layout.row#fetchprevious": {
+    "props": {
+      "blockClass": "mz-search__fetch--previous"
+    },
+    "children": ["search-fetch-previous"]
+  },
+  "flex-layout.row#fetchmore": {
+    "props": {
+      "blockClass": "mz-search__fetch--more"
+    },
+    "children": ["search-fetch-more"]
+  },
+
+  // COMMON - GALLERY
+  "search-content": {
+    "blocks": ["gallery", "not-found"]
+  },
+
+  // COMMON - TITLE
+  "flex-layout.row#searchtitle": {
+    "children": ["search-title.v2", "rich-text#searchtitle-content"],
+    "props": {
+      "blockClass": "mz-search__main-title"
+    }
+  },
+
+  "rich-text#searchtitle-content": {
+    "props": {
+      "blockClass": ["mz-search__seo"],
+      "font": "t-body",
+      "text": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque integer tincidunt amet risus non nulla malesuada. Nunc cursus elit, viverra in consequat ut tempor eget erat. Consequat, sit nunc ipsum nulla. Nam nec interdum vitae, porttitor tellus lobortis.",
+      "textAlignment": "CENTER",
+      "textColor": "c-on-base",
+      "textPosition": "CENTER"
+    }
+  },
+  // SEARCH BANNER
+  "flex-layout.row#banner-one": {
+    "children": ["search-banner#one"]
+  },
+  "search-banner#one": {
+    "props": {
+      "area": "one",
+      "blockClass": "mz-search__banner",
+      "horizontalAlignment": "center"
+    }
+  }
+}

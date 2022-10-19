@@ -1,0 +1,274 @@
+{
+  // ALL CATEGORIES START
+  "menu-item#luminarias": {
+    "props": {
+      "id": "menu-item-luminarias",
+      "type": "custom",
+      "iconId": null,
+      "highlight": true,
+      "itemProps": {
+        "type": "internal",
+        "href": "/search",
+        "noFollow": false,
+        "tagTitle": "luminárias",
+        "text": "Categoria 1"
+      }
+    },
+    "blocks": ["vtex.menu@2.x:submenu#luminarias"]
+  },
+  "vtex.menu@2.x:submenu#luminarias": {
+    "props": {
+      "width": "100%",
+      "blockClass": "header__menu"
+    },
+    "children": [
+      "vtex.menu@2.x:menu#luminarias",
+      "vtex.menu@2.x:menu#luminarias-2"
+    ]
+  },
+  //  COL 1
+  "vtex.menu@2.x:menu#luminarias": {
+    "props": {
+      "orientation": "vertical"
+    },
+    "children": ["disposition-layout#menu-opt1-col1"]
+  },
+  "disposition-layout#menu-opt1-col1": {
+    "title": "Organização dos itens",
+    "children": [
+      "menu-item#menu-opt1-col1-row0",
+      "menu-item#menu-opt1-col1-row1",
+      "menu-item#menu-opt1-col1-row2",
+      "menu-item#menu-opt1-col1-row3",
+      "menu-item#menu-opt1-col1-row4",
+      "menu-item#menu-opt1-col1-row5",
+      "menu-item#menu-opt1-col1-row6"
+    ],
+    "props": {
+      "disposition": [
+        {
+          "order": 1
+        },
+        {
+          "order": 2
+        },
+        {
+          "order": 3
+        },
+        {
+          "order": 4
+        },
+        {
+          "order": 5
+        },
+        {
+          "order": 6
+        },
+        {
+          "order": 7
+        },
+        {
+          "order": 8
+        }
+      ]
+    }
+  },
+  "menu-item#menu-opt1-col1-row0": {
+    "props": {
+      "id": "menu-item-luminarias-col-1",
+      "type": "custom",
+      "iconId": null,
+      "highlight": true,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "luminárias",
+        "text": "luminárias"
+      }
+    }
+  },
+  "menu-item#menu-opt1-col1-row1": {
+    "props": {
+      "id": "menu-item-categories-col-1",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "pendente",
+        "text": "pendente"
+      }
+    }
+  },
+  "menu-item#menu-opt1-col1-row2": {
+    "props": {
+      "id": "menu-item-categories-col-2",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "mesa",
+        "text": "mesa"
+      }
+    }
+  },
+  "menu-item#menu-opt1-col1-row3": {
+    "props": {
+      "id": "menu-item-categories-col-3",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "piso",
+        "text": "piso"
+      }
+    }
+  },
+  "menu-item#menu-opt1-col1-row4": {
+    "props": {
+      "id": "menu-item-categories-col-4",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "área externa",
+        "text": "área externa"
+      }
+    }
+  },
+  "menu-item#menu-opt1-col1-row5": {
+    "props": {
+      "id": "menu-item-categories-col-5",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "embutida",
+        "text": "embutida"
+      }
+    }
+  },
+  "menu-item#menu-opt1-col1-row6": {
+    "props": {
+      "id": "menu-item-categories-col-6",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "parede",
+        "text": "parede"
+      }
+    }
+  },
+  //  COL 2
+  "vtex.menu@2.x:menu#luminarias-2": {
+    "props": {
+      "orientation": "vertical"
+    },
+    "children": ["disposition-layout#menu-opt1-col2"]
+  },
+  "disposition-layout#menu-opt1-col2": {
+    "title": "Organização dos itens",
+    "children": [
+      "menu-item#menu-opt1-col2-row0",
+      "menu-item#menu-opt1-col2-row1",
+      "menu-item#menu-opt1-col2-row2",
+      "menu-item#menu-opt1-col2-row3"
+    ],
+    "props": {
+      "disposition": [
+        {
+          "order": 1
+        },
+        {
+          "order": 2
+        },
+        {
+          "order": 3
+        },
+        {
+          "order": 4
+        }
+      ]
+    }
+  },
+  "menu-item#menu-opt1-col2-row0": {
+    "props": {
+      "id": "menu-item-luminarias-2-col-1",
+      "type": "custom",
+      "iconId": null,
+      "highlight": true,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "decoração",
+        "text": "decoração"
+      }
+    }
+  },
+  "menu-item#menu-opt1-col2-row1": {
+    "props": {
+      "id": "menu-item-luminarias-sub-col-1",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "mobiliário",
+        "text": "mobiliário"
+      }
+    }
+  },
+  "menu-item#menu-opt1-col2-row2": {
+    "props": {
+      "id": "menu-item-luminarias-sub-col-2",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "objetos",
+        "text": "objetos"
+      }
+    }
+  },
+  "menu-item#menu-opt1-col2-row3": {
+    "props": {
+      "id": "menu-item-luminarias-sub-col-3",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "acessórios",
+        "text": "acessórios"
+      }
+    }
+  }
+  // ALL CATEGORIES END
+}

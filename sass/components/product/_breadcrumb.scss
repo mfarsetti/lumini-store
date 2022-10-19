@@ -1,0 +1,69 @@
+@import 'mixins/text';
+@import 'mixins/links';
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+
+  @media (max-width: $m) {
+    padding: 11px 15px 16px;
+    flex-wrap: wrap;
+  }
+
+  .homeIcon {
+    display: none;
+  }
+
+  .homeLink {
+    &::before {
+      content: 'home';
+      padding-left: 0;
+    }
+  }
+  .arrow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    &:last-child{
+      display: none;
+    }
+    &::before {
+      content: '';
+      display: block;
+      width: 9px;
+      height: 18px;
+      background-image: url('assets/svg/arrow-filters.svg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      transform: rotate(90deg);
+      background-size: 18px;
+      margin: 0 5px;
+    }
+    .caretIcon {
+      display: none;
+    }
+  }
+
+  .termArrow {
+    display: none
+  }
+
+  .link {
+    @include text($font-size-base, $text-color-1-400, $lighter);
+    white-space: nowrap;
+    text-transform: lowercase;
+    padding: 0
+  }
+
+  .term {
+    @include text($font-size-base, $text-color-1-400, $lighter);
+    white-space: nowrap;
+    text-transform: lowercase;
+    margin: 2px 0;
+    &:last-child{
+      display: none;
+    }
+  }
+}

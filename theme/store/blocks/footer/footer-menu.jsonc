@@ -1,0 +1,58 @@
+{
+  "flex-layout.row#footer-2-desktop": {
+    "title": "MZ | Footer - Menu - Desktop",
+    "children": [
+      "flex-layout.row#logo",
+      "vtex.menu@2.x:menu#footer-all-categories",
+      "vtex.menu@2.x:menu#footer-all-categories-2",
+      "vtex.menu@2.x:menu#footer-all-categories-3",
+      "flex-layout.col#footer-contact",
+      "newsletter-form#footer"
+    ],
+    "props": {
+      "blockClass": "footer__menu"
+    }
+  },
+
+  "flex-layout.col#footer-contact": {
+    "title": "MZ | Footer - Menu - Coluna 4",
+    "children": ["rich-text#footer-social-networks", "social-networks#footer"],
+    "props": {
+      "blockClass": "footer__social"
+    }
+  },
+  "flex-layout.row#footer-contact": {
+    "children": ["rich-text#footer-social-networks", "social-networks#footer"],
+    "props": {
+      "blockClass": "footer__menu"
+    }
+  },
+
+  "rich-text#footer-social-networks": {
+    "title": "MZ | Footer - Menu - Título - Redes Sociais",
+    "props": {
+      "text": "nos acompanhe",
+      "blockClass": "footer__title"
+    }
+  },
+  "social-networks#footer": {
+    "title": "MZ | Footer - Redes Sociais",
+    "props": {
+      "blockClass": ["footer__menu","footer__menu--social"],
+      "socialNetworks": [
+        {
+          "name": "Facebook",
+          "url": "#"
+        },
+        {
+          "name": "Instagram",
+          "url": "#"
+        },
+        {
+          "name": "Pinterest",
+          "url": "#"
+        }
+      ]
+    }
+  }
+}

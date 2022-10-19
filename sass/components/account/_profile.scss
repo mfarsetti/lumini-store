@@ -1,0 +1,208 @@
+.profile {
+  .dataEntryLabel,
+  .newsletterContainerTitle {
+    font-family: $main-font !important;
+    text-transform: lowercase;
+    font-family: $main-font;
+    font-size: $font-size-md;
+    line-height: 150%;
+    font-weight: $regular;
+    color: $text-color-1-500;
+  }
+
+  .dataEntryChildren,
+  .newsletterContainerMessage {
+    font-family: $main-font !important;
+    text-transform: lowercase;
+    font-family: $main-font;
+    font-size: $font-size-sm;
+    line-height: 150%;
+    font-weight: $normal;
+    color: $text-color-1-500;
+  }
+
+  .newsletterBoxContainer {
+    :global(.vtex-checkbox__label) {
+      font-family: $main-font !important;
+      text-transform: lowercase;
+      font-size: $font-size-xs;
+      line-height: 150%;
+      color: $text-color-1-500;
+    }
+    :global(.vtex-checkbox__container) {
+      :global(.vtex-checkbox__inner-container.b--muted-4) {
+        border: 2px solid #151415;
+      }
+    }
+  }
+
+  .passwordBoxContainer {
+    .boxContainerFooter {
+      :global(.vtex-button__label) {
+        font-size: 0;
+        &::before {
+          content: 'criar senha';
+          font-size: $font-size-md;
+        }
+      }
+    }
+  }
+}
+
+.boxContainer {
+  border-color: #ccc;
+}
+
+.menuLink {
+  font-family: $main-font !important;
+  font-size: $font-size-md !important;
+  font-weight: $regular !important;
+  color: $text-color-1 !important;
+  text-transform: lowercase;
+  padding-left: 0;
+  border: none;
+
+  &:focus,
+  &:active {
+    color: $color-1 !important;
+    font-weight: $regular !important;
+  }
+}
+
+:global(.vtex-account_menu-link) {
+  font-family: $main-font !important;
+  font-size: $font-size-md !important;
+  font-weight: $regular !important;
+  color: $text-color-1 !important;
+  text-transform: lowercase;
+  padding-left: 0;
+  padding: 20px 0 !important;
+  margin: 0;
+  border: none;
+
+  &:focus,
+  &:active {
+    color: $color-1 !important;
+    font-weight: $regular !important;
+  }
+}
+
+:global(.vtex-account_menu-link.c-on-base.b) {
+  color: $color-1 !important;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 39px;
+}
+
+.userGreeting {
+  font-family: $main-font !important;
+  font-size: $font-24;
+  text-transform: lowercase;
+}
+
+.userName {
+  font-family: $main-font !important;
+  font-size: $font-24;
+  text-transform: lowercase;
+}
+
+.boxContainerBody {
+  font-family: $main-font !important;
+  padding: 15px;
+}
+
+.profileBoxContainer {
+  max-width: 647px;
+}
+
+.boxContainerFooter {
+  font-family: $main-font !important;
+  position: relative;
+  transform: translate(10px, -30px);
+  height: 0;
+}
+
+.boxContainerFooter {
+  font-family: $main-font !important;
+  :global(.vtex-button) {
+    text-decoration: underline;
+    background: transparent;
+    border: 0;
+
+    &:hover {
+      background: transparent;
+    }
+  }
+
+  :global(.vtex-button__label) {
+    text-transform: lowercase;
+    font-size: $font-size-xs;
+    font-weight: $regular;
+    color: $color-2;
+  }
+}
+
+.nameContainer,
+.emailContainer,
+.genderContainer,
+.phoneNumberContainer {
+  @media (min-width: $l) {
+    height: 60px;
+    margin-bottom: 20px;
+  }
+}
+
+.boxContainer {
+  border: 1px solid $color-border;
+  border-radius: 0;
+}
+
+.passwordBox {
+  :global(.vtex-checkbox__label) {
+    font-family: $main-font !important;
+    font-size: $font-size-sm;
+  }
+}
+:global(.vtex-pageHeader__container) {
+  padding: 0 11px;
+}
+:global(.vtex-pageHeader__title) {
+  font-family: $main-font !important;
+  text-transform: lowercase !important;
+  font-weight: $regular !important;
+}
+
+:global(.vtex-pageHeader__children) {
+  text-decoration: none;
+
+  :global(.vtex-button) {
+    font-family: $main-font;
+    margin: 0;
+    background: $text-color-1;
+    color: $white;
+    border-radius: 0px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: lowercase;
+    font-size: $font-size-md;
+    font-weight: $regular;
+    border: none;
+    padding: 5px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $text-color-1 !important;
+      background: $white;
+      border: 1px solid $text-color-1;
+    }
+  }
+}
+
+a.newAddressButton {
+  text-decoration: none;
+}

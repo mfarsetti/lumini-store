@@ -1,0 +1,33 @@
+{
+  "flex-layout.row#container-parallax": {
+    "title": "Home | Info Card Video",
+    "children": ["info-card#info-card-parallax", "video#parallax"],
+    "props": {
+      "blockClass": ["container-parallax"]
+    }
+  },
+
+  "info-card#info-card-parallax": {
+    "title": "Home | Banner Video",
+    "props": {
+      "blockClass": "parallax",
+      "isFullModeStyle": true,
+      "id": "",
+      "imageUrl": "assets/img/banner-parallax-desktop.png",
+      "mobileImageUrl": "assets/img/banner-parallax-mobile.png",
+      "textAlignment": "center",
+      "textPosition": "center"
+    }
+  },
+  "video#parallax": {
+    "props": {
+      "width": "50%",
+      "height": "600px",
+      "loop": false,
+      "autoPlay": false,
+      "muted": false,
+      "src": "https://vimeo.com/177284190",
+      "blockClass": "home__parallax"
+    }
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "store.custom#institucional-cases": {
+    "blocks": ["flex-layout.row#cases"]
+  },
+  "flex-layout.row#cases": {
+    "children": [
+      "rich-text#cases-title",
+      "list-context.info-card-list#cases-info-card"
+    ],
+    "props": {
+      "blockClass": "institucional-container-cases"
+    }
+  },
+  "rich-text#cases-title": {
+    "props": {
+      "blockClass": ["cases-title"],
+      "font": "t-body",
+      "text": "cases"
+    }
+  },
+  "list-context.info-card-list#cases-info-card": {
+    "children": ["slider-layout#cases-infocards"],
+    "props": {
+      "blockClass": "cases-infocards",
+      "infoCards": [
+        {
+          "headline": "itaú bba",
+          "subhead": "nova sede do itaú bba. 15mil m² de iluminação em led.",
+          "imageUrl": "assets/img/institucional/case1.png",
+          "callToActionText": "leia mais",
+          "callToActionUrl": "/",
+          "blockClass": "info-card-showrooms",
+          "textAlignment": "left"
+        },
+        {
+          "headline": "museu casa portinari",
+          "subhead": "‘tanto nós como os curadores ficamos bastante satisfeitos com o resultado do led, especialmente quanto à sua consistência na reprodução das cores das obras de arte e afrescos’\n\ngilberto franco, lighting designer responsável pelo projeto.",
+          "imageUrl": "assets/img/institucional/case2.png",
+          "callToActionText": "leia mais",
+          "callToActionUrl": "/",
+          "blockClass": "info-card-showrooms",
+          "textAlignment": "left"
+        },
+        {
+          "headline": "a.niemeyer",
+          "subhead": "para criar sua primeira loja, a marca a.niemeyer investiu em uma iluminação 100% led. 3 anos após a inauguração, fernanda niemeyer garante que os resultados superaram suas expectativas.",
+          "imageUrl": "assets/img/institucional/case3.png",
+          "callToActionText": "leia mais",
+          "callToActionUrl": "/",
+          "blockClass": "info-card-showrooms",
+          "textAlignment": "left"
+        },
+        {
+          "headline": "fleury: unidade ponte...",
+          "subhead": "o grupo fleury inaugurou em sp 3 mil m2 dedicados a análises clínicas e investigação diagnóstica.",
+          "imageUrl": "assets/img/institucional/case2.png",
+          "callToActionText": "leia mais",
+          "callToActionUrl": "/",
+          "blockClass": "info-card-showrooms",
+          "textAlignment": "left"
+        },
+        {
+          "headline": "track&field",
+          "subhead": "a track&field escolheu a solução em led lumini para o retrofit de suas lojas no brasil.",
+          "imageUrl": "assets/img/institucional/case1.png",
+          "callToActionText": "leia mais",
+          "callToActionUrl": "/",
+          "blockClass": "info-card-showrooms",
+          "textAlignment": "left"
+        }
+      ]
+    }
+  },
+  "slider-layout#cases-infocards": {
+    "props": {
+      "blockClass": "cases-slider",
+      "itemsPerPage": {
+        "desktop": 50,
+        "tablet": 50,
+        "phone": 50
+      },
+      "infinite": false,
+      "showPaginationDots": "never",
+      "showNavigationArrows": "never"
+    }
+  }
+}

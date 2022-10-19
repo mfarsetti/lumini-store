@@ -1,0 +1,151 @@
+<script>
+    try {
+        let headers = {
+            "Accept": "application/json, text/plain, */*",
+            "Content-type": "application/json"
+        }
+        start()
+        function start() {
+            checkPage()
+            window.addEventListener("hashchange", checkPage, false);
+        }
+
+        function checkPage() {
+            if (window.location.hash.match(/[0-9]*-[0-9]*/g)) {
+                let orderId = window.location.hash.match(/[0-9]*-[0-9]*/g)
+                callWrapper(orderId, ".vtex-my-orders-app-3-x-productInfo > div")
+            } else if (window.location.hash.includes("#/orders")) {
+                getOrdersData()
+            }
+        }
+
+        function getOrdersData() {
+            let breaker = 0
+            let interval = setInterval(() => {
+                if (breaker > 30) {
+                    clearInterval(interval)
+                }
+                let ordersEl = Array.from(document.querySelectorAll(".vtex-my-orders-app-3-x-orderId"))
+                if (ordersEl.length) {
+                    ordersEl.forEach(orderEl => {
+                        let orderId = orderEl.textContent.replace("#", "").trim()
+                        let block = orderEl.parentNode.parentNode.parentNode
+                        let nodes = block.querySelectorAll(".dib.w-80.pl3.c-on-base.f6.fw4.lh-copy")
+                        wrapper(orderId, nodes)
+                    })
+                    clearInterval(interval)
+                }
+            }, 200)
+        }
+
+        function callWrapper(orderId, selector) {
+            let breaker = 0
+            let interval = setInterval(() => {
+                if (breaker > 30) {
+                    clearInterval(interval)
+                }
+                breaker++
+                let nodes = document.querySelectorAll(selector)
+                if (nodes.length) {
+                    wrapper(orderId, nodes)
+                    clearInterval(interval)
+                }
+            }, 200)
+        }
+        function wrapper(orderId, nodes, insertAfter) {
+
+            getOrder(orderId)
+                .then(order => {
+                    let { items } = order
+
+                    getItems(items)
+                        .then(searchItems => {
+                            items.map((item, index) => {
+                                let sku = item.id
+                                let productId = item.productId
+                                let prod = searchItems.find(prod => prod.productId == productId)
+                                if(!prod) return
+                                let skuObject = prod.items.find(skuObj => skuObj.itemId == sku)
+                                let itemSpecification = skuObject?.variations?.map(spec => {
+                                    return { key: spec, value: skuObject[spec].join(',') }
+                                })
+                                if (itemSpecification && itemSpecification.length) {
+                                    let node = nodes[index]
+                                    if (!node.querySelectorAll(".mz-sku-specs").length) {
+                                        let html = generateHtml(itemSpecification)
+                                        let newElement = createElementFromHTML(html)
+                                        if (insertAfter) {
+                                            node.
+                                                insertAfterFunction(newElement, node)
+                                        } else {
+                                            node.append(newElement)
+                                        }
+                                    }
+                                }
+                            })
+                        })
+                })
+        }
+
+        function getItems(items) {
+            return new Promise((resolve, reject) => {
+                let readyItems = items.filter(item => sessionStorage.getItem("product-" + item.id)).map(item => JSON.parse(sessionStorage.getItem("product-" + item.id)))
+                let notReadyItems = items.filter(item => !sessionStorage.getItem("product-" + item.id))
+                if (!notReadyItems.length) return resolve(readyItems)
+                let params = notReadyItems.map(item => `fq=productId:${item.productId}`)
+                fetch(`/api/catalog_system/pub/products/search?${params.join('&')}`, { headers, "method": "GET" })
+                    .then(response => response.json())
+                    .then(searchItems => {
+                        searchItems.map(item => {
+                            sessionStorage.setItem("product-" + item.id, JSON.stringify(item))
+                        })
+                        resolve([...searchItems, ...readyItems])
+                    })
+            })
+        }
+
+        function getOrder(orderId) {
+            return new Promise((resolve, reject) => {
+                let sso = sessionStorage.getItem(orderId)
+                if (sso) {
+                    resolve(JSON.parse(sso))
+                } else {
+
+                    fetch("/api/checkout/pub/orders/" + orderId, { headers, "method": "get" })
+                        .then(resp => resp.json())
+                        .then(order => {
+                            sessionStorage.setItem(orderId, JSON.stringify(order))
+                            resolve(order)
+                        })
+                }
+            })
+        }
+
+        function generateHtml(itemSpecification) {
+            return `
+    <div class="mz-sku-specs">
+        ${itemSpecification.map(spec => `
+                <div>
+                    <span>${spec.key}</span>:
+                    <span>${spec.value}</span>
+                </div>
+                `).join("")}
+    </div>
+    `
+        }
+
+        function createElementFromHTML(htmlString) {
+            var div = document.createElement('div');
+            div.innerHTML = htmlString.trim();
+
+            // Change this to div.childNodes to support multiple top-level nodes.
+            return div.firstChild;
+        }
+
+        function insertAfterFunction(newNode, existingNode) {
+            existingNode.parentNode.insertBefore(newNode, existingNode.nextSibling);
+        }
+    } catch (e) {
+        console.warn("Something went wrong with the tag MZ - Account Orders Sku Information")
+    }
+</script>

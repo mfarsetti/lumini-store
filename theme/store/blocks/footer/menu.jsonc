@@ -1,0 +1,434 @@
+{
+  //  COL 1
+  "vtex.menu@2.x:menu#footer-all-categories": {
+    "title": "MZ | Footer - Menu - Coluna 1",
+    "props": {
+      "orientation": "vertical",
+      "blockClass": "footer__menu"
+    },
+    "children": [
+      "menu-item#footer-all-categories-col-1",
+      "menu-item#footer-categories-col-1",
+      "menu-item#footer-categories-col-2",
+      "menu-item#footer-categories-col-3",
+      "menu-item#footer-categories-col-4",
+      "menu-item#footer-categories-col-5",
+      "menu-item#footer-categories-col-6",
+      "menu-item#footer-categories-col-7",
+      "menu-item#footer-categories-col-8"
+    ]
+  },
+  "menu-item#footer-all-categories-col-1": {
+    "props": {
+      "id": "menu-item-all-categories-col-1",
+      "type": "custom",
+      "iconId": null,
+      "highlight": true,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "produtos",
+        "text": "produtos"
+      }
+    }
+  },
+  "menu-item#footer-categories-col-1": {
+    "props": {
+      "id": "menu-item-categories-col-1",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "luz e forma",
+        "text": "luz e forma"
+      }
+    }
+  },
+  "menu-item#footer-categories-col-2": {
+    "props": {
+      "id": "menu-item-categories-col-2",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "luz e arquitetura",
+        "text": "luz e arquitetura"
+      }
+    }
+  },
+  "menu-item#footer-categories-col-3": {
+    "props": {
+      "id": "menu-item-categories-col-3",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "sistemas",
+        "text": "sistemas"
+      }
+    }
+  },
+  "menu-item#footer-categories-col-4": {
+    "props": {
+      "id": "menu-item-categories-col-4",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "automação",
+        "text": "automação"
+      }
+    }
+  },
+  "menu-item#footer-categories-col-5": {
+    "props": {
+      "id": "menu-item-categories-col-5",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "led solutions",
+        "text": "led solutions"
+      }
+    }
+  },
+  "menu-item#footer-categories-col-6": {
+    "props": {
+      "id": "menu-item-categories-col-6",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "projetos",
+        "text": "projetos"
+      }
+    }
+  },
+  "menu-item#footer-categories-col-7": {
+    "props": {
+      "id": "menu-item-categories-col-7",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "designers",
+        "text": "designers"
+      }
+    }
+  },
+  "menu-item#footer-categories-col-8": {
+    "props": {
+      "id": "menu-item-categories-col-7",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "prêmios",
+        "text": "prêmios"
+      }
+    }
+  },
+
+  //  COL 2
+  "vtex.menu@2.x:menu#footer-all-categories-2": {
+    "title": "MZ | Footer - Menu - Coluna 2",
+    "props": {
+      "orientation": "vertical",
+      "blockClass": "footer__menu"
+    },
+    "children": [
+      "menu-item#footer-all-categories-2-col-1",
+      "menu-item#footer-categories-2-col-1",
+      "menu-item#footer-categories-2-col-2",
+      "menu-item#footer-categories-2-col-3",
+      "menu-item#footer-categories-2-col-4",
+      "menu-item#footer-categories-2-col-5",
+      "menu-item#footer-categories-2-col-6"
+    ]
+  },
+  "menu-item#footer-all-categories-2-col-1": {
+    "props": {
+      "id": "menu-item-all-categories-2-col-1",
+      "type": "custom",
+      "iconId": null,
+      "highlight": true,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "a lumini",
+        "text": "a lumini"
+      }
+    }
+  },
+  "menu-item#footer-categories-2-col-1": {
+    "props": {
+      "id": "menu-item-categories-2-col-1",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/sobre",
+        "noFollow": false,
+        "tagTitle": "sobre a lumini",
+        "text": "sobre a lumini"
+      }
+    }
+  },
+  "menu-item#footer-categories-2-col-2": {
+    "props": {
+      "id": "menu-item-categories-2-col-2",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "lumini por",
+        "text": "lumini por"
+      }
+    }
+  },
+  "menu-item#footer-categories-2-col-3": {
+    "props": {
+      "id": "menu-item-categories-2-col-3",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "novidades",
+        "text": "novidades"
+      }
+    }
+  },
+  "menu-item#footer-categories-2-col-4": {
+    "props": {
+      "id": "menu-item-categories-2-col-4",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "cases",
+        "text": "cases"
+      }
+    }
+  },
+  "menu-item#footer-categories-2-col-5": {
+    "props": {
+      "id": "menu-item-categories-2-col-5",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "clipping",
+        "text": "clipping"
+      }
+    }
+  },
+  "menu-item#footer-categories-2-col-6": {
+    "props": {
+      "id": "menu-item-categories-2-col-6",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "downloads",
+        "text": "downloads"
+      }
+    }
+  },
+
+  //  COL 3
+  "vtex.menu@2.x:menu#footer-all-categories-3": {
+    "title": "MZ | Footer - Menu - Coluna 3",
+    "props": {
+      "orientation": "vertical",
+      "blockClass": "footer__menu"
+    },
+    "children": [
+      "menu-item#footer-all-categories-3-col-1",
+      "menu-item#footer-categories-3-col-1",
+      "menu-item#footer-categories-3-col-2",
+      "menu-item#footer-categories-3-col-3",
+      "menu-item#footer-categories-3-col-4",
+      "menu-item#footer-categories-3-col-5",
+      "menu-item#footer-categories-3-col-6",
+      "menu-item#footer-categories-3-col-7",
+      "menu-item#footer-categories-3-col-8"
+    ]
+  },
+  "menu-item#footer-all-categories-3-col-1": {
+    "props": {
+      "id": "menu-item-all-categories-3-col-1",
+      "type": "custom",
+      "iconId": null,
+      "highlight": true,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "informações",
+        "text": "informações"
+      }
+    }
+  },
+  "menu-item#footer-categories-3-col-1": {
+    "props": {
+      "id": "menu-item-categories-3-col-1",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "trocas e devoluções",
+        "text": "trocas e devoluções"
+      }
+    }
+  },
+  "menu-item#footer-categories-3-col-2": {
+    "props": {
+      "id": "menu-item-categories-3-col-2",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "termo de garantia",
+        "text": "termo de garantia"
+      }
+    }
+  },
+  "menu-item#footer-categories-3-col-3": {
+    "props": {
+      "id": "menu-item-categories-3-col-3",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "pagamento",
+        "text": "pagamento"
+      }
+    }
+  },
+  "menu-item#footer-categories-3-col-4": {
+    "props": {
+      "id": "menu-item-categories-3-col-4",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "entrega",
+        "text": "entrega"
+      }
+    }
+  },
+  "menu-item#footer-categories-3-col-5": {
+    "props": {
+      "id": "menu-item-categories-3-col-5",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "showrooms",
+        "text": "showrooms"
+      }
+    }
+  },
+  "menu-item#footer-categories-3-col-6": {
+    "props": {
+      "id": "menu-item-categories-3-col-6",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "atendimento corporativo",
+        "text": "atendimento corporativo"
+      }
+    }
+  },
+  "menu-item#footer-categories-3-col-7": {
+    "props": {
+      "id": "menu-item-categories-3-col-7",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "internacional",
+        "text": "internacional"
+      }
+    }
+  },
+  "menu-item#footer-categories-3-col-8": {
+    "props": {
+      "id": "menu-item-categories-3-col-7",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "trabalhe conosco",
+        "text": "trabalhe conosco"
+      }
+    }
+  }
+}

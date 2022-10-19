@@ -1,0 +1,34 @@
+.totalProducts {
+  &--layout {
+    border: none;
+    text-align: left;
+    font-weight: $regular;
+    font-size: $font-size-sm;
+    line-height: normal;
+    color: $text-color-1-500;
+    text-transform: lowercase;
+    padding: 0;
+
+    @media (min-width: $l) {
+      font-size: $font-size-lg;
+    }
+
+    &::before {
+      content: 'produtos encontrados: ';
+      font-size: $font-size-sm;
+      font-weight: $regular;
+
+      @media (min-width: $l) {
+        font-size: $font-size-md;
+      }
+    }
+
+    @media (max-width: $l) {
+      padding: 16px 0;
+    }
+  }
+}
+
+.totalProductsMessage {
+  display: none;
+}

@@ -1,0 +1,62 @@
+@import 'mixins/text';
+@import 'mixins/links';
+
+.container {
+  &--header {
+    &__tooltip {
+      &--text {
+        .paragraph {
+          @include text($font-size-xs);
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  &--sobre-lumini {
+    .link {
+      @include text($font-size-md, $text-color-1-500, $regular);
+      padding: 0 10px;
+      text-decoration: none;
+      text-transform: lowercase;
+      white-space: nowrap;
+    }
+  }
+
+  &--header__tooltip {
+    &--link {
+      @include link($font-size-xs, $white, $lighter, none);
+    }
+
+    &--divisoria {
+      padding: 0 14px;
+    }
+  }
+}
+
+.paragraph {
+  &--header__tooltip--link {
+    margin: 0;
+  }
+}
+
+.wrapper {
+  &--search__disclosure--svg {
+    &::after {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 24px;
+      background-image: url('assets/svg/search-desk.svg');
+      background-repeat: no-repeat;
+      background-size: 24px;
+    }
+  }
+}
+
+.link{
+  &--header__tooltip--link{
+    color: #FFF;
+    text-decoration: none;
+  }
+}

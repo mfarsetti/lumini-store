@@ -1,0 +1,153 @@
+{
+  "responsive-layout.desktop#deals": {
+    "children": [
+      "flex-layout.row#deals-desk"
+    ]
+  },
+  "responsive-layout.mobile#deals": {
+    "children": [
+      "flex-layout.row#deals-mobile"
+    ]
+  },
+  "flex-layout.row#deals-desk": {
+    "title": "MZ | Informações de destaque",
+    "children": [
+      "slider-layout#deals-desk"
+    ],
+    "props": {
+      "blockClass": "home__deals"
+    }
+  },
+  "slider-layout#deals-desk": {
+    "title": "MZ | Informações de destaque - Slider",
+    "props": {
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 1,
+        "phone": 1
+      },
+      "blockClass": "carousel",
+      "showNavigationArrows": "never",
+      "showPaginationDots": "never"
+    },
+    "children": [
+      "flex-layout.col#deals1",
+      "flex-layout.col#deals2",
+      "flex-layout.col#deals3",
+      "flex-layout.col#deals4"
+    ]
+  },
+  "flex-layout.row#deals-mobile": {
+    "title": "MZ | Informações de destaque",
+    "children": [
+      "slider-layout#deals-mobile"
+    ],
+    "props": {
+      "blockClass": "home__deals"
+    }
+  },
+  "slider-layout#deals-mobile": {
+    "title": "MZ | Informações de destaque - Slider",
+    "props": {
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "blockClass": "carousel",
+      "showNavigationArrows": "never",
+      "showPaginationDots": "never",
+      "autoplay": {
+        "timeout": 4000,
+        "stopOnHover": true
+      }
+    },
+    "children": [
+      "flex-layout.col#deals1",
+      "flex-layout.col#deals2",
+      "flex-layout.col#deals3",
+      "flex-layout.col#deals4"
+    ]
+  },
+  "flex-layout.col#deals1": {
+    "title": "MZ | Destaque - Coluna 1",
+    "children": [
+      "image#deal1",
+      "rich-text#deal1"
+    ]
+  },
+  "image#deal1": {
+    "title": "MZ | Destaque - Coluna 1 - Imagem",
+    "props": {
+      "src": "assets/img/deals/fi_percent.png"
+    }
+  },
+  "rich-text#deal1": {
+    "title": "MZ | Destaque - Coluna 1 - Texto",
+    "props": {
+      "text": "desconto à vista",
+      "blockClass": "home__deals"
+    }
+  },
+  "flex-layout.col#deals2": {
+    "title": "MZ | Destaque - Coluna 2",
+    "children": [
+      "image#deal2",
+      "rich-text#deal2"
+    ]
+  },
+  "image#deal2": {
+    "title": "MZ | Destaque - Coluna 2 - Imagem",
+    "props": {
+      "src": "assets/img/deals/fi_truck.png"
+    }
+  },
+  "rich-text#deal2": {
+    "title": "MZ | Destaque - Coluna 2 - Texto",
+    "props": {
+      "text": "frete grátis para SP e RJ",
+      "blockClass": "home__deals"
+    }
+  },
+  "flex-layout.col#deals3": {
+    "title": "MZ | Destaque - Coluna 3",
+    "children": [
+      "image#deal3",
+      "rich-text#deal3"
+    ]
+  },
+  "image#deal3": {
+    "title": "MZ | Destaque - Coluna 3 - Imagem",
+    "props": {
+      "src": "assets/img/deals/fi_percent.png"
+    }
+  },
+  "rich-text#deal3": {
+    "title": "MZ | Destaque - Coluna 3 - Texto",
+    "props": {
+      "text": "pagamento por pix",
+      "blockClass": "home__deals"
+    }
+  },
+  "flex-layout.col#deals4": {
+    "title": "MZ | Destaque - Coluna 4",
+    "children": [
+      "image#deal4",
+      "rich-text#deal4"
+    ]
+  },
+  "image#deal4": {
+    "title": "MZ | Destaque - Coluna 4 - Imagem",
+    "props": {
+      "src": "assets/img/deals/fi_package.png"
+    }
+  },
+  "rich-text#deal4": {
+    "title": "MZ | Destaque - Coluna 4 - Texto",
+    "props": {
+      "text": "entrega para todo o brasil",
+      "blockClass": "home__deals"
+    }
+  }
+}

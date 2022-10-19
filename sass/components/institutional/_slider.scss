@@ -1,0 +1,405 @@
+@import 'mixins/links';
+@import 'mixins/text';
+@import 'extends/buttons';
+
+.infoCard {
+  &Container {
+    &--sobre-slider,
+    &--cases-slider {
+      display: flex;
+      flex-direction: column-reverse;
+
+      .infoCardTextContainer {
+        width: 100% !important;
+      }
+
+      .infoCardImageContainer {
+        width: 100% !important;
+      }
+    }
+
+    &--sobre-slider,
+    &--cases-slider {
+      .infoCardTextContainer {
+        padding: 0;
+      }
+    }
+
+    &--designers-slider {
+      display: flex;
+      flex-direction: column-reverse;
+      .infoCardTextContainer {
+        width: 100% !important;
+      }
+
+      .infoCardImageContainer {
+        width: 100% !important;
+      }
+    }
+
+    &--case-banner {
+      min-height: 170px;
+      background-size: contain !important;
+
+      @media (min-width: $m) {
+        min-height: 396px;
+        background-size: cover !important;
+      }
+    }
+  }
+
+  &Headline {
+    &--sobre-slider {
+      font-family: $main-font;
+      @include text($font-size-lg, $text-color-1-500, $regular);
+
+      @media (min-width: $m) {
+        font-size: $font-size-h3;
+      }
+    }
+
+    &--cases-slider {
+      @include text($font-size-sm, $text-color-1-500, $regular);
+      position: absolute;
+      margin: 0;
+      top: -22px;
+    }
+  }
+
+  &TextContainer {
+    &--case-banner {
+      display: none;
+    }
+
+    &--designers-slider {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .infoCardHeadline {
+        font-size: $font-size-xs;
+
+        @media (min-width: $l) {
+          font-size: $font-24;
+        }
+      }
+
+      .infoCardSubhead {
+        font-size: $font-size-xxs;
+
+        @media (min-width: $l) {
+          font-size: $font-size-md;
+        }
+      }
+
+      .infoCardCallActionContainer {
+        margin: 0;
+        margin-top: 5px;
+
+        :global(.vtex-button) {
+          font-size: $font-size-xs;
+          color: $text-color-1;
+          font-weight: $lighter;
+          background: transparent;
+          text-decoration: underline;
+          text-transform: lowercase;
+          border: none;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          @media (max-width: $l) {
+            &::after {
+              content: '';
+              display: block;
+              width: 14px;
+              height: 9px;
+              background-image: url('assets/svg/hpa-plus-filter.svg');
+              background-repeat: no-repeat;
+              background-size: 9px;
+              margin-left: 8px;
+            }
+          }
+
+          @media (min-width: $l) {
+            font-size: $font-size-sm;
+            &::after {
+              content: '';
+              display: block;
+              width: 14px;
+              height: 14px;
+              background-image: url('assets/svg/hpa-plus-filter.svg');
+              background-repeat: no-repeat;
+              background-size: 9px;
+              margin-left: 15px;
+            }
+          }
+        }
+
+        :global(.vtex-button__label) {
+          padding: 0;
+          justify-content: flex-start;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+
+  &Subhead {
+    font-family: $main-font;
+    @include text($font-size-sm, $text-color-1-400, $regular);
+
+    @media (min-width: $m) {
+      font-size: $font-size-md;
+    }
+
+    &--cases-slider {
+      line-height: 150%;
+      letter-spacing: 0.05em;
+      height: auto;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: $font-size-sm ;
+      margin-top: 10px;
+
+      @media (min-width: $m) {
+        max-height: 149px;
+      }
+    }
+  }
+
+  &CallActionContainer {
+    &--sobre-slider,
+    &--cases-slider {
+      font-family: $main-font;
+      text-decoration: none;
+      margin-top: 12px;
+
+      :global(.vtex-button) {
+        @extend %primary-button;
+      }
+
+      :global(.vtex-button__label) {
+        font-size: $font-size-sm;
+      }
+    }
+
+    &--sobre-slider {
+      :global(.vtex-button__label) {
+        &::after {
+          content: '';
+          display: block;
+          width: 16px;
+          height: 10px;
+          background-image: url('assets/svg/institucional-arrow.svg');
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: 16px;
+          margin-left: 16px;
+        }
+      }
+    }
+  }
+}
+
+.sliderTrack {
+  &--sobre-slider {
+    gap: 32px;
+
+    @media (max-width: $m) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &--cases-slider {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 397px);
+    padding-top: 63px;
+    align-items: baseline;
+  }
+
+  &--designers-slider {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 160px);
+    gap: 8px;
+
+    @media (min-width: $l) {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 288px);
+      gap: 32px;
+    }
+  }
+
+  &Container {
+    &--cases-slider {
+      overflow: visible;
+    }
+  }
+
+  &--premios {
+    gap: 16px;
+    padding: 5px 0;
+    margin-bottom: 48px;
+
+    :global(.vtex-slider-layout-0-x-imageElement) {
+      max-width: 50%;
+    }
+
+    @media (min-width: $m) {
+      margin-bottom: 112px;
+
+      :global(.vtex-slider-layout-0-x-imageElement) {
+        max-width: fit-content;
+      }
+    }
+  }
+
+  &--galeria-designer {
+    transform: none !important;
+    width: fit-content !important;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 8px;
+    margin: 0 16px;
+    margin-bottom: 72px;
+
+    @media (min-width: $l) {
+      width: 1000px !important;
+      margin: 0;
+      gap: 16px;
+    }
+  }
+}
+
+.slider {
+  &Layout {
+    &Container {
+      &--case-slider {
+        .sliderLeftArrow {
+          padding: 0;
+          position: absolute;
+          top: -59px;
+          right: 60px;
+          margin: 0;
+
+          @media (min-width: $m) {
+            top: -77px;
+          }
+
+          &::before {
+            content: '';
+            display: block;
+            width: 10px;
+            height: 21px;
+            background-image: url('assets/svg/hpa-left-arrow.svg');
+            background-repeat: no-repeat;
+            background-size: 10px;
+            margin-left: auto;
+
+            @media (min-width: $m) {
+              width: 16px;
+              height: 28px;
+              background-size: 16px;
+            }
+          }
+
+          .caretIcon {
+            display: none;
+          }
+        }
+
+        .sliderRightArrow {
+          padding: 0;
+          position: absolute;
+          top: -60px;
+          right: 0;
+          margin: 0;
+
+          @media (min-width: $m) {
+            top: -77px;
+          }
+
+          &::before {
+            content: '';
+            display: block;
+            width: 10px;
+            height: 21px;
+            background-image: url('assets/svg/hpa-right-arrow.svg');
+            background-repeat: no-repeat;
+            background-size: 10px;
+            margin-left: auto;
+
+            @media (min-width: $m) {
+              width: 16px;
+              height: 28px;
+              background-size: 16px;
+            }
+          }
+
+          .caretIcon {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.slide {
+  &--sobre-slider {
+    @media (max-width: $m) {
+      width: 100% !important;
+    }
+  }
+
+  &--cases-slider {
+    width: 397px !important;
+    padding-bottom: 116px;
+
+    @media (max-width: $m) {
+      width: 92vw !important;
+      margin: auto;
+      padding-bottom: 48px;
+    }
+  }
+
+  &--case-slider {
+    :global(.vtex-store-components-3-x-imageElement--case-slider) {
+      max-height: none !important;
+    }
+  }
+
+  &--designers-slider {
+    width: 161px !important;
+
+    @media (min-width: $l) {
+      width: 295px !important;
+    }
+  }
+
+  &--premios {
+    min-width: 134px;
+    width: 134px !important;
+    height: 64px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+
+    @media (min-width: $m) {
+      min-width: none;
+      width: 244px !important;
+      height: 116px;
+    }
+  }
+
+  &--galeria-designer {
+    width: 30% !important;
+
+    @media (min-width: $m) {
+      width: 152px !important;
+      height: 152px;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@import 'variables/all';
+
+// COMMON
+@import 'mixins/responsive';
+
+//HOME
+@import 'components/home/modal/flex';
+@import 'components/home/modal/structure';
+@import 'components/home/modal/text';
+
+//PDP
+@import 'components/product/structure';

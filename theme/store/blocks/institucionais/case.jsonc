@@ -1,0 +1,186 @@
+{
+  "store.custom#institucional-template-case": {
+    "blocks": [
+      "flex-layout.row#case-container",
+      "flex-layout.row#quote",
+      "info-card#case-banner-inforcard",
+      "flex-layout.row#case"
+    ]
+  },
+  "flex-layout.row#case": {
+    "children": ["flex-layout.col#case-text-2", "flex-layout.col#case-slider"],
+    "props": {
+      "blockClass": "institucional-container"
+    }
+  },
+
+  // texto do case + imagem ----------------------------
+  "flex-layout.row#case-container": {
+    "title": "institucional | texto case + imagem",
+    "children": ["flex-layout.col#institucional-case", "image#case-image"],
+    "props": {
+      "blockClass": ["case-container"]
+    }
+  },
+  "flex-layout.col#institucional-case": {
+    "title": "institucional | container de textos",
+    "children": [
+      "rich-text#title-case",
+      "rich-text#subtitle-case",
+      "rich-text#content-case"
+    ],
+    "props": {
+      "blockClass": ["case-template"]
+    }
+  },
+  "rich-text#title-case": {
+    "title": "institucional | título",
+    "props": {
+      "blockClass": "institucional-title--case",
+      "text": "itaú bba"
+    }
+  },
+  "rich-text#subtitle-case": {
+    "props": {
+      "blockClass": ["institucional-subtitle--case"],
+      "text": "nova sede do itaú bba\n15 mil m² de iluminação em led"
+    }
+  },
+  "rich-text#content-case": {
+    "title": "institucional | conteúdo",
+    "props": {
+      "blockClass": "institucional-content",
+      "text": "ponto de partida\n\no itaú bba inaugurou, no primeiro semestre de 2014, sua nova sede em são paulo. construída com o objetivo de concentrar as operações do banco na cidade e abrigar a maioria de seus funcionários, a sede ocupa seis pavimentos e mais de 15 mil m² de escritórios, salas de reunião e ambientes para staff em um ponto nobre da avenida faria lima. o projeto tem arquitetura do escritório kom, arquitetura de interiores do piratininga arquitetos associados, iluminação externa do studio ix e de interiores da foco luz e desenho.\n\n\ndesafio\n\ncomo premissa principal, a iluminação do novo espaço deveria seguir o mesmo conceito do projeto da antiga sede, porém incorporando os rigorosos critérios de certificação leed. “até então, eram usadas luminárias quadradas para fluorescente tubular T8 com fechamento em acrílico translúcido, embutidas em forro modular. no entanto, essa solução não atendia às normas da certificação – que, neste caso, o limite de consumo era de 9,8w por m2”, explica a lighting designer junia azenha, sócia da foco luz e desenho."
+    }
+  },
+  "image#case-image": {
+    "title": "institucional | imagem",
+    "props": {
+      "blockClass": ["case-image"],
+      "maxHeight": 470,
+      "src": "assets/img/institucional/itaubba.png"
+    }
+  },
+  // quote ----------------------------
+  "flex-layout.row#quote": {
+    "title": "institucional | citação",
+    "children": ["rich-text#quote"],
+    "props": {
+      "blockClass": ["quote"]
+    }
+  },
+  "rich-text#quote": {
+    "props": {
+      "blockClass": ["institucional-quote"],
+      "text": "“ficou além das expectativas.\ntodas as luminárias apresentam temperatura de cor e fluxo completamente iguais e uma distribuição de luz muito homogênea’ junia azenha, lighting designer responsável pelo projeto de iluminação de interiores”"
+    }
+  },
+  // banner ----------------------------
+  "info-card#case-banner-inforcard": {
+    "title": "institucional | banner",
+    "props": {
+      "id": "case-banner",
+      "isFullModeStyle": true,
+      "textPosition": "left",
+      "imageUrl": "assets/img/institucional/case-banner.png",
+      "mobileImageUrl": "assets/img/institucional/case-banner-mobile.png",
+      "callToActionText": "",
+      "callToActionUrl": "",
+      "blockClass": "case-banner",
+      "textAlignment": "left"
+    }
+  },
+  // texto 2 paragrafos ----------------------------
+  "flex-layout.col#case-text-2": {
+    "title": "institucional | parágrafos",
+    "children": ["flex-layout.row#case-text-2"],
+    "props": {
+      "blockClass": ["case-paragraphs"]
+    }
+  },
+  "flex-layout.row#case-text-2": {
+    "children": ["rich-text#paragraph-1", "rich-text#paragraph-2"],
+    "props": {
+      "blockClass": ["case-paragraphs"]
+    }
+  },
+
+  "rich-text#paragraph-1": {
+    "props": {
+      "blockClass": ["paragraph-1"],
+      "text": "resultado\n\nconfiando nos benefícios do led, o escritório foco conseguiu um resultado completo, capaz de atender a especificidades estéticas, com ótima qualidade de luz e baixo consumo energético. ‘ficou além das expectativas. todas as luminárias apresentam temperatura de cor e fluxo completamente iguais e uma distribuição de luz muito homogênea. apesar do alto fluxo e do fechamento sem controle óptico, não temos ofuscamento gerado pela fonte de luz. conseguimos um ambiente confortável e ao mesmo tempo estimulante, perfeito para um espaço de trabalho que exige sofisticação’, garante junia.\nalém disso, acrescenta, ‘houve uma diminuição de consumo de cerca de 45%, sem considerar a economia com o ar condicionado e o menor custo de manutenção’."
+    }
+  },
+  "rich-text#paragraph-2": {
+    "props": {
+      "blockClass": ["paragraph-2"],
+      "text": "solução\n\npara chegar à equação desejada, a equipe do escritório foco optou por uma solução praticamente 100% led. ‘com o led, conseguimos baixar o consumo de 99w para 54w por luminária’, conta.\n\nem todo o projeto, foi usado um total de 1.800 luminárias e uma temperatura de cor média de 3.000k. nas salas de reunião e áreas de staff, os lighting designers optaram por led wides embutidas em forro modulado em substituição às luminárias quadradas para t8 do projeto original. para uma iluminação difusa e homogênea das áreas de circulação, foram utilizadas linea led embutidas em forro de gesso. já na recepção, a equipe combinou downleds pro de diferentes tamanhos, garantindo um acabamento sofisticado e uma iluminação agradável. as downleds pro foram usadas ainda em forro de madeira com o objetivo de destacar – de forma intensa e pontual – o piso de pedra que faz a ligação entre as alas norte e sul."
+    }
+  },
+  // slider imagens ----------------------------
+  "flex-layout.col#case-slider": {
+    "title": "institucional | carrossel de banners",
+    "children": ["flex-layout.row#case-slider"],
+    "props": {
+      "blockClass": ["case-container-slider"]
+    }
+  },
+  "flex-layout.row#case-slider": {
+    "children": [
+      "rich-text#title-slider-gallery",
+      "list-context.image-list#slider-case"
+    ],
+    "props": {
+      "blockClass": ["case-container-slider"]
+    }
+  },
+  "rich-text#title-slider-gallery": {
+    "props": {
+      "blockClass": "institucional-title--case",
+      "text": "galeria de fotos"
+    }
+  },
+  "list-context.image-list#slider-case": {
+    "title": "institucional | galeria",
+    "children": ["slider-layout#slider-case"],
+    "props": {
+      "blockClass": ["case-gallery"],
+      "images": [
+        {
+          "image": "assets/img/institucional/case-galeria.png",
+          "mobileImage": "assets/img/institucional/case-galeria.png"
+        },
+        {
+          "image": "assets/img/institucional/case-galeria.png",
+          "mobileImage": "assets/img/institucional/case-galeria.png"
+        },
+        {
+          "image": "assets/img/institucional/case-galeria.png",
+          "mobileImage": "assets/img/institucional/case-galeria.png"
+        },
+        {
+          "image": "assets/img/institucional/case-galeria.png",
+          "mobileImage": "assets/img/institucional/case-galeria.png"
+        },
+        {
+          "image": "assets/img/institucional/case-galeria.png",
+          "mobileImage": "assets/img/institucional/case-galeria.png"
+        }
+      ]
+    }
+  },
+  "slider-layout#slider-case": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": true,
+      "showPaginationDots": "never",
+      "showNavigationArrows": "always",
+      "blockClass": "case-slider"
+    }
+  }
+}

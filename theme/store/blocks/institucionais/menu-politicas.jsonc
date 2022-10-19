@@ -1,0 +1,358 @@
+{
+  // Titulo 1
+  "menu-item#menu-titulo-1-col-1": {
+    "title": "Menu Lateral - Titulo 1",
+    "props": {
+      "blockClass": ["menu-lateral-title"],
+      "id": "menu-item-titulo-col-1",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Titulo 1",
+        "text": "SOBRE NÓS"
+      }
+    },
+    "blocks": ["vtex.menu@2.x:submenu.accordion#institutional-1"]
+  },
+  "vtex.menu@2.x:submenu.accordion#institutional-1": {
+    "props": { "blockClass": "institutional-submenu", "isOpen": true },
+    "children": ["vtex.menu@2.x:menu#menu-lateral-1"]
+  },
+  "vtex.menu@2.x:menu#menu-lateral-1": {
+    "title": "Menu Lateral 1",
+    "props": {
+      "orientation": "vertical",
+      "textType": "heading4",
+      "blockClass": ["menu-lateral-1", "menu-lateral"]
+    },
+    "children": [
+      // "menu-item#menu-itens-col-1",
+      // "menu-item#menu-itens-col-2",
+      // "menu-item#menu-itens-col-3",
+      // "menu-item#menu-itens-col-4",
+      // "menu-item#menu-itens-col-5",
+      // "menu-item#menu-itens-col-6"
+    ]
+  },
+
+  "menu-item#menu-itens-col-1": {
+    "title": "Menu lateral 1-1",
+    "props": {
+      "id": "menu-item-lateral-col-1",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "Sub Categoria",
+        "text": "Quem Somos"
+      }
+    }
+  },
+  "menu-item#menu-itens-col-2": {
+    "title": "Menu lateral 1-2",
+    "props": {
+      "id": "menu-item-lateral-col-2",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "Sub Categoria",
+        "text": "Trabalhe Conosco"
+      }
+    }
+  },
+  "menu-item#menu-itens-col-3": {
+    "title": "Menu lateral 1-3",
+    "props": {
+      "id": "menu-item-lateral-col-3",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "Sub Categoria",
+        "text": "Dicas e Novidades"
+      }
+    }
+  },
+  "menu-item#menu-itens-col-4": {
+    "title": "Menu lateral 1-4",
+    "props": {
+      "id": "menu-item-lateral-col-4",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "Sub Categoria",
+        "text": "Certificados"
+      }
+    }
+  },
+  "menu-item#menu-itens-col-5": {
+    "title": "Menu lateral 1-5",
+    "props": {
+      "id": "menu-item-lateral-col-5",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "Sub Categoria",
+        "text": "Nossas Lojas"
+      }
+    }
+  },
+  "menu-item#menu-itens-col-6": {
+    "title": "Menu lateral 1-6",
+    "props": {
+      "id": "menu-item-lateral-col-6",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "Sub Categoria",
+        "text": "Contato"
+      }
+    }
+  },
+  // Titulo 2
+
+  "menu-item#menu-titulo-2-col-1": {
+    "title": "Menu Lateral - Titulo 2",
+    "props": {
+      "blockClass": ["menu-lateral-title"],
+      "id": "menu-item-titulo-col-1",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Titulo 2",
+        "text": "INSTITUCIONAL"
+      }
+    },
+    "blocks": ["vtex.menu@2.x:submenu.accordion#institutional-2"]
+  },
+  "vtex.menu@2.x:submenu.accordion#institutional-2": {
+    "props": { "blockClass": "institutional-submenu" },
+    "children": ["vtex.menu@2.x:menu#menu-lateral-2"]
+  },
+  "vtex.menu@2.x:menu#menu-lateral-2": {
+    "title": "Menu Lateral 2",
+    "props": {
+      "orientation": "vertical",
+      "blockClass": ["menu-lateral-2", "menu-lateral"]
+    },
+    "children": [
+      // "menu-item#menu-itens-2-col-1",
+      // "menu-item#menu-itens-2-col-2",
+      // "menu-item#menu-itens-2-col-3",
+      // "menu-item#menu-itens-2-col-4",
+      // "menu-item#menu-itens-2-col-5",
+      // "menu-item#menu-itens-2-col-6"
+    ]
+  },
+
+  "menu-item#menu-itens-2-col-1": {
+    "title": "Menu lateral 2-1",
+    "props": {
+      "id": "menu-item-lateral-col-1",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "Sub Categoria",
+        "text": "Dúvidas Frequentes"
+      }
+    }
+  },
+  "menu-item#menu-itens-2-col-2": {
+    "title": "Menu lateral 2-2",
+    "props": {
+      "id": "menu-item-lateral-col-2",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "Sub Categoria",
+        "text": "Trabalhe Conosco"
+      }
+    }
+  },
+  "menu-item#menu-itens-2-col-3": {
+    "title": "Menu lateral 2-3",
+    "props": {
+      "id": "menu-item-lateral-col-3",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "Sub Categoria",
+        "text": "Trocas e Devoluções"
+      }
+    }
+  },
+  "menu-item#menu-itens-2-col-4": {
+    "title": "Menu lateral 2-4",
+    "props": {
+      "id": "menu-item-lateral-col-4",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "Sub Categoria",
+        "text": "Política de Privacidade"
+      }
+    }
+  },
+  "menu-item#menu-itens-2-col-5": {
+    "title": "Menu lateral 2-5",
+    "props": {
+      "id": "menu-item-lateral-col-5",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "Sub Categoria",
+        "text": "Política de Entrega"
+      }
+    }
+  },
+  "menu-item#menu-itens-2-col-6": {
+    "title": "Menu lateral 2-6",
+    "props": {
+      "id": "menu-item-lateral-col-6",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "Sub Categoria",
+        "text": "Termos de Uso"
+      }
+    }
+  },
+  // Titulo 3
+
+  "menu-item#menu-titulo-3-col-1": {
+    "title": "Menu Lateral - Titulo 3",
+    "props": {
+      "blockClass": ["menu-lateral-title"],
+      "id": "menu-item-titulo-col-1",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "noFollow": false,
+        "tagTitle": "Titulo 3",
+        "text": "MINHA CONTA"
+      }
+    },
+    "blocks": ["vtex.menu@2.x:submenu.accordion#institutional-3"]
+  },
+  "vtex.menu@2.x:submenu.accordion#institutional-3": {
+    "props": { "blockClass": "institutional-submenu" },
+    "children": ["vtex.menu@2.x:menu#menu-lateral-3"]
+  },
+  "vtex.menu@2.x:menu#menu-lateral-3": {
+    "title": "Menu Lateral 3",
+    "props": {
+      "orientation": "vertical",
+      "blockClass": ["menu-lateral-3", "menu-lateral"]
+    },
+    "children": [
+      // "menu-item#menu-itens-3-col-1",
+      // "menu-item#menu-itens-3-col-2",
+      // "menu-item#menu-itens-3-col-3"
+    ]
+  },
+  "menu-item#menu-itens-3-col-1": {
+    "title": "Menu lateral 3-1",
+    "props": {
+      "blockClass": ["menu-item-lateral-col-3"],
+      "id": "menu-item-lateral-col-1",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "Sub Categoria",
+        "text": "Minha Conta"
+      }
+    }
+  },
+  "menu-item#menu-itens-3-col-2": {
+    "title": "Menu lateral 3-2",
+    "props": {
+      "blockClass": ["menu-item-lateral-col-3"],
+      "id": "menu-item-lateral-col-2",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "Sub Categoria",
+        "text": "Meus Pedidos"
+      }
+    }
+  },
+  "menu-item#menu-itens-3-col-3": {
+    "title": "Menu lateral 3-3",
+    "props": {
+      "blockClass": ["menu-item-lateral-col-3"],
+      "id": "menu-item-lateral-col-3",
+      "type": "custom",
+      "iconId": null,
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "Sub Categoria",
+        "text": "Meus Favoritos"
+      }
+    }
+  }
+}

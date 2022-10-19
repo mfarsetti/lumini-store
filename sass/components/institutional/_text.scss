@@ -1,0 +1,321 @@
+@import 'mixins/links';
+@import 'mixins/text';
+
+.container {
+  &--institucional-title {
+    justify-content: flex-start;
+    text-transform: lowercase;
+
+    .paragraph {
+      font-family: $main-font;
+      @include text($font-size-xlg, $text-color-1-500, $regular);
+      margin: 32px 0 18px 0;
+      text-transform: lowercase;
+
+      @media (min-width: $l) {
+        @include text($font-24, $text-color-1-500, $regular);
+        margin: 76px 0 25px 0;
+      }
+    }
+
+    &--sobre {
+      .paragraph {
+        font-size: $font-size-h3;
+        margin: 40px 0 16px 0;
+
+        @media (min-width: $l) {
+          font-size: $font-c-1;
+        }
+      }
+    }
+
+    &--showrooms {
+      .paragraph {
+        font-family: $main-font;
+        font-size: $font-size-xlg;
+        margin: 48px 0 16px 0;
+
+        @media (min-width: $l) {
+          font-size: $font-c-1;
+          margin: 96px 0 24px 0;
+        }
+      }
+    }
+
+    &--case {
+      .paragraph {
+        font-family: $main-font;
+        font-size: $font-size-xlg;
+        margin-bottom: 32px !important;
+        margin: 0;
+
+        @media (min-width: $m) {
+          font-size: $font-c-1;
+        }
+      }
+    }
+  }
+
+  &--institucional-subtitle {
+    &--case {
+      .paragraph {
+        font-family: $main-font;
+        font-size: $font-size-xlg;
+        margin-bottom: 34px !important;
+        margin: 0;
+      }
+    }
+  }
+
+  &--institucional-quote {
+    .paragraph {
+      font-family: $main-font;
+      @include text($font-size-lg, $text-color-1-500, $regular);
+      padding: 32px 15px;
+      margin: 0;
+
+      @media (min-width: $l) {
+        @include text($font-size-h3, $text-color-1-500, $regular);
+        margin: auto;
+        max-width: 65%;
+        padding: 114px 0;
+        margin: auto;
+      }
+    }
+  }
+
+  &--cases-title {
+    .paragraph {
+      font-family: $main-font;
+      @include text($font-size-xlg, $text-color-1-500, $regular);
+
+      @media (min-width: $l) {
+        font-size: $font-24;
+        padding-left: 10px;
+      }
+    }
+  }
+
+  &--institucional-content {
+    .link {
+      font-family: $main-font;
+      @include text($font-size-sm, $text-color-1-400, $regular);
+
+      @media (min-width: $l) {
+        font-size: $font-size-md;
+      }
+    }
+
+    .wrapper {
+      font-family: $main-font;
+      @include text($font-size-sm, $text-color-1-400, $regular);
+
+      @media (min-width: $l) {
+        font-size: $font-size-md;
+      }
+    }
+  }
+
+  &--paragraph-1,
+  &--paragraph-2 {
+    .paragraph {
+      font-family: $main-font;
+      @include text($font-size-sm, $text-color-1-400, $regular);
+
+      @media (min-width: $l) {
+        font-size: $font-size-md;
+      }
+    }
+  }
+
+  &--sobre-button {
+    .link {
+      font-family: $main-font;
+      @include text($font-size-sm, $text-color-1-500, $regular);
+      border: 1px solid $text-color-1;
+      text-decoration: none;
+      padding: 10px 24px;
+      display: block
+    }
+  }
+
+  &--designers-title {
+    .paragraph {
+      @include text($font-size-h3, $text-color-1-500, $regular);
+      margin: 32px 0 18px 0;
+      text-transform: lowercase;
+
+      @media (min-width: $l) {
+        margin: 0;
+      }
+    }
+  }
+
+  &--designers-text-content {
+    .paragraph {
+      @include text($font-size-sm, $text-color-1-500, $regular);
+      text-transform: lowercase;
+
+      @media (min-width: $l) {
+        @include text($font-size-md, $text-color-1-500, $regular);
+        margin: 0;
+      }
+    }
+  }
+
+  &--institucional-title--designer {
+    .paragraph {
+      @include text($font-size-h3, $text-color-1-500, $regular);
+      margin: 32px 0 18px 0;
+      text-transform: lowercase;
+
+      @media (min-width: $l) {
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+
+  &--institucional-title--collection {
+    @extend %container;
+
+    .paragraph {
+      @include text($font-size-xlg, $text-color-1-500, $regular);
+      margin: 48px 0 18px 15px;
+      text-transform: lowercase;
+
+      @media (min-width: $l) {
+        font-size: $font-c-1;
+        margin: 0 0 24px;
+      }
+    }
+  }
+
+  &--institucional-title--galeria {
+    .paragraph {
+      @include text($font-size-xlg, $text-color-1-500, $regular);
+      margin: 48px 0 18px 15px;
+      text-transform: lowercase;
+
+      @media (min-width: $l) {
+        font-size: $font-c-1;
+        white-space: nowrap;
+        margin: 0;
+      }
+    }
+  }
+
+  &--institucional-title-contato {
+    @include text($font-size-h3, $text-color-1-500, $regular);
+    justify-content: center;
+    padding-top: 58px;
+
+    @media (min-width: $l) {
+      padding-bottom: 32px;
+    }
+
+    .paragraph {
+      margin: 0;
+    }
+  }
+
+  &--contato-descricao {
+    @include text($font-size-md, $text-color-1-500, $regular);
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 62px;
+
+    .paragraph {
+      margin: 0;
+    }
+  }
+
+  &--phone-text,
+  &--celphone-text {
+    .paragraph {
+      font-size: $font-size-xs !important;
+    }
+  }
+
+  &--phone-text,
+  &--contato-phone,
+  &--celphone-text,
+  &--contato-celphone {
+    .paragraph {
+      margin: 0;
+      @include text($font-size-md, $text-color-1-500, $regular);
+    }
+  }
+
+  &--contato-email {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: $font-size-md;
+    font-weight: $regular;
+
+    @media (max-width: $m) {
+      margin-top: 20px;
+      justify-content: center;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      width: 27px;
+      height: 22px;
+      background-image: url('assets/svg/email.svg');
+      background-repeat: no-repeat;
+      background-size: 27px;
+      margin-right: 15px;
+    }
+
+    .link {
+      color: $text-color-1 !important;
+      text-decoration: none;
+    }
+  }
+  &--designers-title {
+    .paragraph {
+      @include text($font-size-h3, $text-color-1-500, $regular);
+      margin: 32px 0 18px 0;
+      text-transform: lowercase;
+
+      @media (min-width: $l) {
+        margin: 0;
+      }
+    }
+  }
+
+  &--designers-text-content {
+    .paragraph {
+      @include text($font-size-sm, $text-color-1-500, $regular);
+
+      @media (min-width: $l) {
+        @include text($font-size-md, $text-color-1-500, $regular);
+        margin: 0;
+      }
+    }
+  }
+
+  &--institucional-title--designer {
+    .paragraph {
+      @include text($font-size-h3, $text-color-1-500, $regular);
+      margin: 32px 0 18px 0;
+      text-transform: lowercase;
+
+      @media (min-width: $l) {
+        margin: 0;
+      }
+    }
+  }
+}
+
+:global(.vtex-subtitle) {
+  font-family: $main-font;
+  @include text($font-size-sm, $text-color-1-500, $regular);
+
+  @media (min-width: $l) {
+    @include text($font-size-md, $text-color-1-500, $regular);
+  }
+}

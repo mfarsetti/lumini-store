@@ -1,0 +1,81 @@
+@import 'extends/container';
+@import 'extends/buttons';
+@import 'mixins/text';
+@import 'extends/inputs';
+
+.newsletterForm {
+  border-bottom: 1px solid $text-color-2;
+  border: none;
+  @media (min-width: $l) {
+    border: none;
+    padding-top: 0 !important;
+  }
+
+  &--footer__newsletter {
+    max-width: 340px;
+    min-width: 200px;
+    padding: 6% 0;
+    margin: 0 15px;
+
+    @media (min-width: $l) {
+      margin: 0;
+    }
+
+    :global(.vtex-store-components-3-x-container) {
+      padding: 0px;
+    }
+
+    :global(.vtex-button) {
+      font-size: 0;
+      border: none;
+      background: transparent;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 24px;
+        height: 24px;
+        background-image: url('assets/svg/hpa-newsletter-row.svg');
+        background-repeat: no-repeat;
+        background-size: 24px;
+        margin-left: auto;
+      }
+
+      &:hover {
+        border: none;
+        background: transparent;
+      }
+    }
+
+    :global(.vtex-input-prefix__group) {
+      border: none;
+      height: auto;
+      margin-bottom: 10px;
+      position: relative;
+
+      &:hover,
+      &:focus,
+      &:active {
+        border: none;
+      }
+
+      :global(.vtex-styleguide-9-x-input) {
+        border: none;
+      }
+    }
+
+    :global(.vtex-styleguide-9-x-input) {
+      @extend %input-text-news;
+      padding: 4px;
+      height: 40px;
+    }
+
+    :global(.vtex-checkbox__label) {
+      @include text($font-size-xs, $text-color-1-400, $normal);
+
+      @media (max-width: $l) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

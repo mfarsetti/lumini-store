@@ -1,0 +1,465 @@
+:global(.vtex-account) {
+  @media (min-width: $l) {
+    margin: 0 50px;
+  }
+}
+
+:global(.vtex-account__page-body) {
+  span,
+  strong,
+  div,
+  h2,
+  th {
+    text-transform: lowercase;
+    font-weight: $regular;
+    font-family: $main-font !important;
+  }
+
+  div {
+    section {
+      :global(.tracked-mega) {
+        text-transform: lowercase;
+        font-weight: $regular;
+        font-size: $font-size-md;
+        letter-spacing: 0.04em;
+        color: $text-color-1-500;
+
+        @media (min-width: $m) {
+          font-size: $font-size-lg;
+        }
+      }
+
+      strong,
+      div {
+        color: $text-color-1-400;
+      }
+
+      :global(.address-summary) {
+        color: $text-color-1-400;
+      }
+    }
+  }
+
+  svg {
+    fill: $text-color-1;
+  }
+
+  // TITLE
+  :global(.t-heading-4) {
+    font-family: $main-font !important;
+    color: $text-color-1-500;
+    font-size: $font-size-xlg;
+    text-transform: lowercase;
+    font-weight: $regular;
+
+    :global(.c-on-base) {
+      color: $text-color-1-500;
+      font-size: $font-size-xlg;
+    }
+  }
+
+  // BUTTON
+  :global(.c-action-primary) {
+    font-family: $main-font !important;
+    font-size: $font-size-md;
+    font-weight: $semi-bold;
+    text-transform: uppercase;
+  }
+
+  :global(.vtex-button) {
+    font-family: $main-font !important;
+    background: transparent;
+  }
+
+  :global(.vtex-my-orders-app-3-x-orderCard) {
+    border: 1px solid $color-border;
+    border-radius: 0;
+    margin: 0;
+    @media (max-width: $m) {
+      margin-bottom: 40px;
+    }
+  }
+
+  :global(.vtex-my-orders-app-3-x-orderHeader) {
+    background: #f8f8f8;
+    border-bottom: 1px solid $color-border;
+    div {
+      :nth-child(3) {
+        div {
+          border-radius: 0;
+          background: $text-color-1;
+          span{
+            color: $white;
+
+          }
+        }
+      }
+
+      :nth-child(2) {
+        div:nth-child(2) {
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  :global(.dib.br2.pv2.ph3.f7.fw5.tc.bg-muted-1) {
+    border-radius: 0;
+  }
+
+  :global(.vtex-my-orders-app-3-x-orderHeaderLabel) {
+    font-family: $main-font !important;
+    text-transform: lowercase;
+    font-weight: $regular;
+    font-size: $font-size-md;
+    color: $color-2;
+  }
+
+  :global(.vtex-my-orders-app-3-x-orderHeaderValue) {
+    font-family: $main-font !important;
+    text-transform: lowercase;
+    font-weight: $regular;
+    font-size: $font-size-md;
+    color: $text-color-1-400;
+  }
+
+  :global(.vtex-my-orders-app-3-x-orderHeaderLabel) {
+    font-family: $main-font !important;
+    text-transform: lowercase;
+    font-weight: $regular;
+    font-size: $font-size-md;
+  }
+
+  :global(.vtex-my-orders-app-3-x-orderId) {
+    font-family: $main-font !important;
+    color: $text-color-1-500;
+    font-size: $font-size-md;
+  }
+
+  :global(.vtex-my-orders-app-3-x-orderProduct) {
+    display: flex;
+    flex-direction: row;
+    @media (min-width: $l) {
+      img {
+        max-width: none;
+        width: 50px;
+        display: block;
+        margin: 0 auto;
+        object-fit: contain;
+      }
+    }
+  }
+
+  :global(.vtex-my-orders-app-3-x-orderProductShipping) {
+    font-family: $main-font !important;
+    text-transform: lowercase;
+    font-size: $font-size-xs;
+    font-weight: $regular;
+    color: $text-color-1-500;
+  }
+
+  :global(.vtex-my-orders-app-3-x-orderProductName) {
+    font-family: $main-font !important;
+    text-transform: lowercase;
+    font-weight: $regular;
+    color: $color-2;
+    font-size: $font-size-md;
+    
+  }
+
+  :global(.vtex-my-orders-app-3-x-orderProduct) :global(.lh-copy ){
+    display: flex;
+    flex-direction: column;
+    :global(.vtex-my-orders-app-3-x-orderProductShipping){
+      order: 2;
+    }
+    :global(.vtex-my-orders-app-3-x-orderProductQuantityValue){
+      order: 3;
+    }
+  }
+
+  :global(.vtex-my-orders-app-3-x-orderProduct) :global(.mz-sku-specs) {
+    font-family: $main-font;
+    color: rgb(41, 41, 41);
+    font-size: .875rem;
+  }
+
+  :global(.vtex-my-orders-app-3-x-productInfo) :global(.overflow-hidden) :global(.mz-sku-specs) {
+    text-transform: lowercase;
+    font-weight: 400;
+    font-family: "Univers",sans-serif!important;
+    font-size: .75rem;
+    color: #727273;
+    order: -1;
+  }
+
+  :global(.vtex-my-orders-app-3-x-orderProductQuantity) {
+    font-family: $main-font !important;
+    font-weight: $regular;
+    font-size: $font-size-md;
+  }
+
+  :global(.vtex-my-orders-app-3-x-orderProductValue) {
+    font-family: $main-font !important;
+    font-weight: $regular;
+    font-size: $font-size-md;
+  }
+
+  :global(.vtex-my-orders-app-3-x-detailsBtn) {
+    width: 218px;
+    font-family: $main-font !important;
+    margin: auto;
+    margin-top: 29px;
+    background: $text-color-1;
+    color: $white;
+    border-radius: 0px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: lowercase;
+    font-size: $font-size-md;
+    font-weight: $regular;
+    border: 1px solid transparent;
+    padding: 5px;
+    clear: both;
+
+    @media (min-width: $l) {
+      margin-left: auto;
+      margin-right: 20px;
+      margin-top: auto;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $text-color-1 !important;
+      background: $white;
+      border: 1px solid $text-color-1;
+    }
+  }
+
+  :global(.vtex-my-orders-app-3-x-reorderBtn) {
+    @media (min-width: $l) {
+      justify-content: flex-end;
+    }
+
+    svg {
+      fill: $text-color-1;
+    }
+    span {
+      font-family: $main-font !important;
+      text-transform: lowercase;
+      text-decoration: underline;
+      color: $text-color-1;
+      font-size: $font-size-sm;
+      font-weight: $regular;
+    }
+  }
+
+  :global(.vtex-my-orders-app-3-x-cancelBtn) {
+    display: none!important;
+    @media (min-width: $l) {
+      justify-content: flex-end;
+    }
+
+    svg {
+      fill: $text-color-1;
+    }
+
+    span {
+      font-family: $main-font !important;
+      text-transform: lowercase;
+      text-decoration: underline;
+      color: $text-color-1;
+      font-size: $font-size-sm;
+      font-weight: $regular;
+    }
+  }
+
+  :global(.vtex-my-account-1-x-boxContainerBody) {
+    :global(.vtex-button) {
+      font-family: $main-font !important;
+      margin: auto;
+      background: $text-color-1;
+      color: $white;
+      border-radius: 0px;
+      text-align: center;
+      text-decoration: none;
+      text-transform: lowercase;
+      font-size: $font-size-md;
+      font-weight: $regular;
+      border: 1px solid transparent;
+      padding: 5px;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: $text-color-1 !important;
+        background: $white;
+        border: 1px solid $text-color-1;
+      }
+    }
+  }
+
+  :global(.vtex_my-authentication_authenticationScreen_container) {
+    padding: 0;
+
+    :global(.vtex_my-authentication_box_container) {
+      border: 1px solid $color-border;
+      border-radius: 0;
+    }
+  }
+
+  :global(.vtex-my-orders-app-3-x-productName) {
+    font-family: $main-font !important;
+    color: $text-color-1;
+  }
+}
+
+:global(.vtex-account__order-details) {
+  :global(.c-link) {
+    color: $text-color-1 !important;
+    font-size: $font-size-md;
+  }
+}
+
+:global(.vtex-pageHeader-link__container) {
+  :global(.vtex-button) {
+    text-decoration: underline;
+    border: 0;
+
+    &:hover {
+      background: transparent;
+    }
+
+    div {
+      padding: 0;
+    }
+
+    span {
+      color: $color-2;
+      font-weight: $regular !important;
+      text-transform: lowercase !important;
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      &::before {
+        content: '';
+        display: block;
+        width: 16px;
+        height: 19px;
+        background-image: url('assets/svg/back-arrow.svg');
+        background-repeat: no-repeat;
+        background-size: 19px;
+        margin-right: 5px;
+      }
+    }
+
+    svg {
+      display: none;
+    }
+  }
+}
+
+:global(.vtex-my-orders-app-3-x-ordersList.vtex-account__orders-list) {
+  @media (min-width: $l) {
+    width: 1080px !important;
+  }
+}
+
+:global(.vtex-account__order-details) {
+  @media (min-width: $l) {
+    width: 1080px !important;
+  }
+}
+
+:global(.vtex-my-orders-app-3-x-orderHeaderValue.db.w-100.f6.fw5.c-muted-1.tr.tl-ns.f5-l) {
+  text-transform: uppercase;
+}
+
+#iFrameResizer0 {
+  span,
+  div {
+    text-transform: lowercase;
+    font-weight: $regular;
+    font-family: $main-font !important;
+  }
+}
+
+
+:global(.vtex-my-orders-app-3-x-productImage){
+  margin-top: 6px;
+}
+
+:global(.vtex-my-orders-app-3-x-invoiceBtn){
+  color: $text-color-1-500;
+  float: right;
+  padding: 18px 12px;
+  width: auto;
+  margin: 0 17px;
+  &:hover,
+  &:focus,
+  &:active{
+    color: $text-color-1-500;
+  }
+}
+
+:global(.vtex-my-orders-app-3-x-orderProductShipping){
+  color: $text-color-1-500;
+}
+
+:global(.myo-progress-bar){
+  :global(.justify-center){
+    >div{
+      :global(.myo-progress-bar__subtitle){
+        font-size: 0;
+        color: transparent;
+        &:before{
+          font-size: $font-size-xs;
+          color: $text-color-1-500;
+          content: "teste";
+        }
+      }
+      &:nth-child(1){
+        :global(.myo-progress-bar__subtitle){
+          &:before{
+            content: "pedido confirmado";
+          }
+        }
+      }
+      &:nth-child(3){
+        :global(.myo-progress-bar__subtitle){
+          &:before{
+            content: "pagamento aprovado";
+          }
+        }
+      }
+      &:nth-child(5){
+        :global(.myo-progress-bar__subtitle){
+          &:before{
+            content: "em fabricação";
+          }
+        }
+      }
+      &:nth-child(7){
+        :global(.myo-progress-bar__subtitle){
+          &:before{
+            content: "pedido enviado";
+          }
+        }
+      }
+      &:nth-child(9){
+        :global(.myo-progress-bar__subtitle){
+          &:before{
+            content: "pedido entregue";
+          }
+        }
+      }      
+    }
+  }
+}
+
+:global(.vtex-my-orders-app-3-x-sellerName){
+  display: none;
+}

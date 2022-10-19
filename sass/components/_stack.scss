@@ -1,0 +1,94 @@
+.stack {
+  &Container {
+    &--product {
+      @media (min-width: $l) {
+        position: sticky;
+        max-width: 700px;
+        bottom: 20px;
+        top: 50px;
+      }
+    }
+
+    .stackItem {
+      &--shelf__price {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        right: 0;
+        left: initial;
+        top: 30px;
+
+        :global(.vtex-product-highlights-2-x-productHighlightWrapper--collection) {
+          margin-bottom: 8px;
+        }
+
+        &--product__content {
+          :global(.vtex-product-specifications-1-x-specificationName) {
+            display: none;
+          }
+
+          :global(.vtex-product-specifications-1-x-specificationValue) {
+            opacity: 0;
+          }
+
+          :global(.vtex-product-specifications-1-x-specificationValue) {
+            &[data-specification-name="aplicação"] {
+              display: block !important;
+              opacity: 1 !important;
+              position: absolute;
+              right: 0;
+              bottom: -56px;
+            }
+          }
+        }
+      }
+      &--product__highlight{
+        left: auto;
+        right: 0;
+        padding: 0;
+      }
+    }
+    &--shelf__price {
+      .stackItem {
+        &:last-child {
+          z-index: 2;
+          position: absolute;
+          right: 0;
+          left: 0;
+          width: 100%;
+          bottom: 0;
+          top: inherit;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+
+        &--mz-shelf {
+          &__wishlist {
+            left: 53px;
+            right: initial;
+            top: 0;
+
+            @media (max-width: $m) {
+              left: 43px;
+              right: initial;
+              top: -6px;
+            }
+
+            :global(.vtex-button) {
+              opacity: 1;
+              visibility: visible;
+              position: inherit;
+              background: transparent;
+            }
+
+            :global(.vtex-button__label) {
+              justify-content: flex-end;
+            }
+          }
+        }
+      }
+    }
+  }
+}

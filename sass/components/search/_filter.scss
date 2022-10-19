@@ -1,0 +1,474 @@
+@import 'extends/titles';
+@import 'extends/buttons';
+@import 'mixins/text';
+
+.filter,
+.accordionFilter {
+  &Message {
+    font-size: 0;
+
+    &::before {
+      content: 'filtrar por';
+      @include text($font-size-h5, $text-color-1-500 $regular);
+      text-transform: lowercase;
+      margin: 0 0 20px !important;
+    }
+  }
+
+  &Accordion {
+    &Breadcrumbs {
+      border-bottom: 1px solid $color-5-600;
+    }
+
+    &ItemBox {
+      border-bottom: 1px solid $color-5-600;
+      font-size: $font-size-lg;
+      padding: 20px 0;
+      border-radius: 0;
+      min-height: auto;
+      margin-bottom: 0 !important;
+    }
+  }
+
+  .accordion {
+    &Filter {
+      &Container {
+        padding: 0 16px;
+      }
+
+      &Content {
+        padding: 0;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+
+        :global(.vtex-tag) {
+          background-color: $color-2;
+          border-radius: 0;
+          position: absolute;
+          right: 30px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+
+      &Open {
+        padding: 20px 16px 4.4rem;
+
+        .filterAccordionItemBox {
+          padding: 0;
+          border: none;
+          margin: 20px 0;
+
+          :global(.vtex-checkbox__label) {
+            font-size: $font-size-xs;
+            color: $text-color-1-500;
+            line-height: 1;
+          }
+
+          :global(.vtex-checkbox__line-container) {
+            align-items: center !important;
+          }
+
+          :global(.vtex-checkbox__container) {
+            display: block;
+            width: 25px;
+          }
+        }
+      }
+    }
+  }
+
+  &Breadcrumbs {
+    &Content,
+    &Item {
+      padding: 0 !important;
+    }
+
+    &Item {
+      .caretIcon {
+        display: none;
+      }
+      &::before {
+        content: '';
+        display: block;
+        width: 25px;
+        height: 25px;
+        background-image: url('assets/svg/arrow-filters.svg');
+        background-repeat: no-repeat;
+        transform: rotate(90deg);
+        background-size: 25px;
+        margin: 0 5px;
+      }
+
+      &Name {
+        padding: 0;
+        margin: 0 !important;
+        text-transform: lowercase;
+        @include text($font-size-lg, $text-color-1-500, $regular);
+      }
+    }
+  }
+
+  &Buttons {
+    &Box {
+      border-top: 1px solid $color-5-700;
+      background: $color-5-400;
+      padding: 25px 16px;
+      height: auto;
+
+      .filter {
+        &ClearButtonWrapper {
+          padding-left: 0;
+
+          :global(.vtex-button) {
+            @extend %primary-button;
+          }
+        }
+
+        &ApplyButtonWrapper {
+          padding-right: 0;
+
+          :global(.vtex-button) {
+            @extend %primary-button;
+            color: $white !important;
+            background-color: $text-color-1-500 !important;
+          }
+        }
+      }
+    }
+  }
+
+  &Title,
+  .accordionFilterItemTitle {
+    font-weight: $regular;
+    font-size: $font-size-lg;
+    line-height: normal;
+    color: $text-color-1-500;
+    text-transform: lowercase;
+  }
+
+  &Template {
+    &Overflow {
+      margin-bottom: 10px;
+
+      &::-webkit-scrollbar {
+        width: 8px;
+        margin: 10px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background-color: $color-5-600;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: $color-5-900;
+      }
+
+      :global(.vtex-slider__selector),
+      :global(.vtex-slider__base-internal) {
+        background-color: $color-2-500 !important;
+      }
+
+      :global(.vtex-slider__left-value),
+      :global(.vtex-slider__right-value) {
+        color: $color-2-500 !important;
+      }
+    }
+  }
+
+  &Icon,
+  .accordionFilterItemIcon {
+    color: $color-2-500;
+    padding: 0;
+
+    @media (max-width: $l) {
+      .caretIcon {
+        display: none;
+      }
+
+      &::before {
+        content: '';
+        display: block;
+        width: 30px;
+        height: 30px;
+        background-image: url('assets/svg/arrow-filters.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        transform: rotate(90deg);
+        background-size: 30px;
+      }
+    }
+  }
+
+  &Item {
+    &--preto :global(.vtex-checkbox__box) {
+      background-color: black;
+    }
+    &--verde-salvia :global(.vtex-checkbox__box) {
+      background-color: #97A8A7;
+    }
+    &--marrom-corten :global(.vtex-checkbox__box) {
+      background-color: #4E3629;
+    }
+    &--marinho :global(.vtex-checkbox__box) {
+      background-color: #8196B2;
+    }
+    &--branco :global(.vtex-checkbox__box) {
+      background-color: #FAFAFA;
+      :global(.vtex__icon-check) {
+        color: #000;
+      }
+    }
+    &--titanio :global(.vtex-checkbox__box) {
+      background-color: #D2D6D9;
+    }
+    &--grafite :global(.vtex-checkbox__box) {
+      background-color: #636266;
+    }
+    &--cinza-areia :global(.vtex-checkbox__box) {
+      background-color: #BFB6AF;
+    }
+    &--cinza-medio :global(.vtex-checkbox__box) {
+      background-color: #B3B4B3;
+    }
+    &--amarelo :global(.vtex-checkbox__box) {
+      background-color: #FFD200;
+    }
+    &--laranja :global(.vtex-checkbox__box) {
+      background-color: #FF8000;
+    }
+    &--vermelho :global(.vtex-checkbox__box) {
+      background-color: #ED1C24;
+    }
+    &--amarelo :global(.vtex-checkbox__box) {
+      background-color: #FFD200;
+    }
+    &--rosa-nude :global(.vtex-checkbox__box) {
+      background-color: #E0CED0;
+    }
+    &--rosa-medio :global(.vtex-checkbox__box) {
+      background-color: #CC7D8C;
+    }
+    &--fuscia :global(.vtex-checkbox__box) {
+      background-color: #92278F;
+    }
+    &--azul-sp :global(.vtex-checkbox__box) {
+      background-color: #9FB3C3;
+    }
+    &--azul-medio :global(.vtex-checkbox__box) {
+      background-color: #8196BE;
+    }
+    &--azul-turquesa :global(.vtex-checkbox__box) {
+      background-color: #029686;
+    }
+    &--verde-indico :global(.vtex-checkbox__box) {
+      background-color: #73B9AF;
+    }
+    &--verde-selva :global(.vtex-checkbox__box) {
+      background-color: #435946;
+    }
+    &--alum-escovado :global(.vtex-checkbox__box) {
+      background-color: #C4C9CC;
+    }
+    &--latao :global(.vtex-checkbox__box) {
+      background-color: #9C8A5C;
+    }
+    &--cobre :global(.vtex-checkbox__box) {
+      background-color: #D19571;
+    }
+
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    :global(.vtex-checkbox__inner-container) {
+      border-color: $color-5-700 !important;
+    }
+
+    :global(.vtex-checkbox__line-container) {
+      align-items: center !important;
+    }
+
+    :global(.vtex-checkbox__label) {
+      font-size: $font-size-xs;
+      color: $text-color-1-500;
+    }
+
+    &--selected {
+      :global(.vtex-checkbox__inner-container) {
+        border-color: $text-color-1-500 !important;
+        background-color: $text-color-1-500 !important;
+        border-radius: 0;
+      }
+
+      :global(.vtex-checkbox__box) {
+        color: $white !important;
+      }
+    }
+
+    &--search-filters--selected {
+      :global(.vtex-checkbox__box-wrapper) {
+        background: $color-2;
+      }
+    }
+
+    &Tag {
+      &--close-search-filter {
+        &:nth-child(even) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__container {
+    // TAMANHO
+    padding: 10px;
+    min-height: auto;
+    margin-bottom: 0 !important;
+  }
+
+  &Popup {
+    &Button {
+      padding: 0;
+      height: 40px;
+      width: 100%;
+      border: none;
+      border-radius: 30px;
+      align-items: center;
+      justify-content: flex-start;
+
+      &::before {
+        content: 'filtrar por';
+        @include text($font-size-sm, $text-color-1-500 $regular);
+        text-transform: lowercase;
+        text-decoration: underline;
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        width: 22px;
+        height: 16px;
+        background-image: url('assets/svg/search-filter.svg');
+        background-repeat: no-repeat;
+        background-size: 16px;
+        margin-left: 5px;
+      }
+
+      .filterIcon {
+        display: none;
+      }
+    }
+
+    &Title {
+      display: none;
+    }
+
+    &Arrow {
+      &Icon {
+        margin: 0 5px 0 0;
+        padding: 0;
+        height: 13px;
+      }
+    }
+  }
+}
+
+.filter__container {
+  &--selectedFilters {
+    display: none;
+  }
+
+  .caretIcon {
+    display: none;
+  }
+
+  .filterIcon {
+    &::before {
+      content: '';
+      display: block;
+      width: 30px;
+      height: 30px;
+      background-image: url('assets/svg/arrow-filters.svg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      transform: rotate(180deg);
+      background-size: 30px;
+    }
+  }
+
+  .filterIsOpen {
+    .filterIcon {
+      &::before {
+        content: '';
+        display: block;
+        width: 30px;
+        height: 30px;
+        background-image: url('assets/svg/arrow-filters.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        transform: rotate(0deg);
+        background-size: 30px;
+      }
+    }
+  }
+}
+
+.filter {
+  &BreadcrumbsText {
+    font-size: 0;
+    color: $text-color-1-500;
+
+    &::before {
+      content: 'filtrar por';
+      @include text($font-size-h5, $text-color-1-500 $regular);
+      text-transform: lowercase;
+      margin: 0 0 20px !important;
+    }
+  }
+
+  &TitleSpan {
+    &--search-filters {
+      :global(.vtex-tag) {
+        border-radius: 0;
+        background-color: $color-2;
+        padding: 5px 10px;
+      }
+    }
+  }
+}
+
+.filters {
+  &--layout {
+    padding: 20px 38px;
+
+    @media (max-width: $l) {
+      padding: 0 !important;
+    }
+  }
+}
+
+.sidebar {
+  .closeIconButton {
+    .closeIcon {
+      display: none;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 20px;
+      background-image: url('assets/svg/delete-icon.svg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 17px;
+      padding: 8px;
+    }
+  }
+}

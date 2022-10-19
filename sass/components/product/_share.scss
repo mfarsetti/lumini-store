@@ -1,0 +1,28 @@
+@import 'mixins/text';
+
+.share {
+  &Container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+  }
+
+  &Label {
+    @include text($font-size-md, $text-color-1-500, $regular);
+    font-family: $main-font;
+    text-transform: lowercase;
+    margin: 10px 0 20px;
+
+    @media (min-width: $l) {
+      font-size: $font-size-lg;
+    }
+  }
+
+  &Social {
+    &Icon {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}

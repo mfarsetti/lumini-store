@@ -1,0 +1,28 @@
+@import 'mixins/text';
+
+.product {
+  &Description {
+    &Container {
+      padding: 15px 5px;
+    }
+
+    &Title {
+      font-size: 0;
+      &::before {
+        content: 'sobre o produto';
+        @include text($font-size-md, $text-color-1-500, $regular);
+      }
+    }
+
+    &Text {
+      @include text($font-size-md, $text-color-1-400, $regular);
+    }
+  }
+}
+
+.fadeBottom {
+  background-image: linear-gradient(transparent, $color-5-400);
+}
+.pointerEventsAuto {
+  background-color: $color-5-400;
+}

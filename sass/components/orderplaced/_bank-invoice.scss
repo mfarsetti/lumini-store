@@ -1,0 +1,16 @@
+:global(.vtex-order-placed-2-x-section--bank-invoice) {
+  width: 100% !important;
+  margin: 30px auto 0;
+  padding: 0;
+  text-transform: lowercase;
+
+  &:first-child {
+    font-size: $font-size-sm  !important;
+    font-family: $main-font  !important;
+    text-transform: lowercase !important;
+  }
+
+  :global(.vtex-order-placed-2-x-printHintWrapper) {
+    margin: 20px 0 0;
+  }
+}

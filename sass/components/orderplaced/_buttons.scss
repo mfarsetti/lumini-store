@@ -1,0 +1,50 @@
+.link {
+  &--mz-orderplaced {
+    &__buttons {
+      &--meus-pedidos {
+        font-family: $main-font;
+        color: $text-color-1;
+        text-decoration: underline;
+        font-size: $font-size-md;
+        font-weight: $regular;
+        text-transform: lowercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+          text-decoration: none;
+        }
+
+        @media (min-width: $m) {
+          margin-right: 29px;
+        }
+
+        @media (max-width: $m) {
+          font-size: $font-size-xxs;
+        }
+      }
+
+      &--nova-compra {
+        border: 1px solid $text-color-1;
+        color: $text-color-1;
+        background: $white;
+        text-transform: lowercase;
+        text-decoration: none;
+        padding: 12px 68px;
+        font-size: $font-size-sm;
+
+        &:hover,
+        &:focus,
+        &:active {
+          background: $text-color-1;
+          color: $white;
+        }
+
+        @media (max-width: $m) {
+          width: 100% !important;
+        }
+      }
+    }
+  }
+}

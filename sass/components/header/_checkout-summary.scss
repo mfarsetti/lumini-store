@@ -1,0 +1,41 @@
+@import 'mixins/text';
+@import 'extends/container';
+
+.summary {
+  &Item {
+    &Container {
+      .summaryItemLabel,
+      .summaryItemPrice {
+        // display: none;
+      }
+      .summaryItemLabel {
+        @include text($font-size-sm, $text-color-1-500, $regular);
+        text-transform: lowercase;
+      }
+      .summaryItemLabel,
+      .summaryItemPrice {
+        display: block;
+      }
+      &:last-child {
+        .summaryItemLabel {
+          @include text($font-size-lg, $text-color-1-500, $normal);
+          text-transform: lowercase;
+        }
+        .summaryItemLabel,
+        .summaryItemPrice {
+          display: block;
+        }
+      }
+    }
+
+    &Price {
+      .price {
+        color: $text-color-1;
+      }
+    }
+  }
+
+  &SmallDisclaimer {
+    display: none;
+  }
+}

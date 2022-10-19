@@ -1,0 +1,105 @@
+{
+  "store.custom#contato-template": {
+    "title": "institucional | contato",
+    "children": ["flex-layout.row#contato-container-row"],
+    "props": {
+      "blockClass": "institucional-container"
+    }
+  },
+  "flex-layout.row#contato-container-row": {
+    "children": [
+      "rich-text#title-contato",
+      "rich-text#contato-descricao",
+      "flex-layout.col#contato-container"
+    ],
+    "props": {
+      "blockClass": ["contato-container-row"]
+    }
+  },
+  "rich-text#title-contato": {
+    "title": "contato título",
+    "props": {
+      "blockClass": ["institucional-title-contato"],
+      "font": "t-body",
+      "text": "fale conosco"
+    }
+  },
+  "rich-text#contato-descricao": {
+    "title": "contato descrição",
+    "props": {
+      "blockClass": ["contato-descricao"],
+      "text": "entre em contato com a gente, que está há que estamos trabalhando com dedicação para oferecer a você somente o que há de melhor."
+    }
+  },
+  "flex-layout.col#contato-container": {
+    "title": "telefone e email",
+    "children": ["flex-layout.row#contato-wrapper"],
+    "props": {
+      "blockClass": ["contato-container"]
+    }
+  },
+  "flex-layout.row#contato-wrapper": {
+    "children": ["flex-layout.row#phones-container", "rich-text#contato-email"],
+    "props": {
+      "blockClass": "contato-wrapper"
+    }
+  },
+  "flex-layout.row#phones-container": {
+    "children": [
+      "flex-layout.col#phone",
+      "flex-layout.col#celphone"
+    ],
+    "props": {
+      "blockClass": ["phone-container"]
+    }
+  },
+  "flex-layout.col#phone": {
+    "children": ["rich-text#contato-phone", "rich-text#phone-text"]
+  },
+  "flex-layout.col#celphone": {
+    "children": ["rich-text#contato-celphone", "rich-text#celphone-text"]
+  },
+  "rich-text#contato-phone": {
+    "props": {
+      "blockClass": ["contato-phone"],
+      "text": "(011) 3437-5582"
+    }
+  },
+  "rich-text#phone-text": {
+    "props": {
+      "blockClass": ["phone-text"],
+      "text": "de seg a sex das 09h ás 18h"
+    }
+  },
+  "rich-text#contato-email": {
+    "props": {
+      "blockClass": ["contato-email"],
+      "text": "sac@lumini.com"
+    }
+  },
+  "flex-layout.col#contato-cel-container": {
+    "title": "telefone e email",
+    "children": ["flex-layout.row#celphone-container"],
+    "props": {
+      "blockClass": ["contato-cel-container"]
+    }
+  },
+  "flex-layout.row#celphone-container": {
+    "children": ["rich-text#contato-celphone", "rich-text#celphone-text"],
+    "props": {
+      "blockClass": ["celphone-container"]
+    }
+  },
+  "rich-text#contato-celphone": {
+    "props": {
+      "blockClass": ["contato-celphone"],
+      "text": "(011) 97387-0784"
+    }
+  },
+  "rich-text#celphone-text": {
+    "props": {
+      "blockClass": ["celphone-text"],
+      "text": "de seg a sex das 09h ás 18h"
+    }
+  }
+}

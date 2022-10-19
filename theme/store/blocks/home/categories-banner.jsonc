@@ -1,0 +1,60 @@
+{
+  "flex-layout.row#categories-banner-main": {
+    "title": "MZ | Categorias",
+    "children": ["list-context.image-list#categories"],
+    "props": {
+      "blockClass": "home__categories-banner"
+    }
+  },
+
+  "list-context.image-list#categories": {
+    "title": "MZ | Categorias - Lista de imagens",
+    "children": ["slider-layout#shelf-categories"],
+    "props": {
+      "blockClass": "shelf-categories",
+      "images": [
+        {
+          "image": "assets/img/categorias/categoria-mesa.png"
+        },
+        {
+          "image": "assets/img/categorias/categoria-teto.png"
+        },
+        {
+          "image": "assets/img/categorias/categoria-piso.png"
+        },
+        {
+          "image": "assets/img/categorias/categoria-pendente.png"
+        },
+        {
+          "image": "assets/img/categorias/categoria-externa.png"
+        },
+        {
+          "image": "assets/img/categorias/categoria-embutida.png"
+        },
+        {
+          "image": "assets/img/categorias/categoria-parede.png"
+        }
+      ]
+    }
+  },
+  "slider-layout#shelf-categories": {
+    "title": "MZ | Categorias - Slider",
+    "props": {
+      "itemsPerPage": {
+        "desktop": 6,
+        "tablet": 4,
+        "phone": 2
+      },
+      "centerMode": {
+        "desktop": "disabled",
+        "tablet": "disabled",
+        "phone": "to-the-left"
+      },      
+      // "infinite": true,
+      "fullWidth": false,
+      "showNavigationArrows": "desktopOnly",
+      "showPaginationDots": "never",
+      "blockClass": "shelf-categories"
+    }
+  }
+}

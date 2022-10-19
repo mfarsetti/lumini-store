@@ -1,0 +1,152 @@
+@import 'mixins/links';
+
+.menu {
+  &Container {
+    &Nav {
+      &--search__drop {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+
+        .styledLink {
+          &Content {
+            &::before {
+              content: '';
+              display: block;
+              width: 24px;
+              height: 24px;
+              background-image: url('assets/svg/search-desk.svg');
+              background-repeat: no-repeat;
+              background-size: 24px;
+            }
+          }
+
+          &Container {
+            margin: 0;
+          }
+        }
+      }
+
+      &--mz-product__wishlist {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media (max-width: $m) {
+          justify-content: flex-start;
+          margin: 0 15px;
+          padding: 10px 20px;
+        }
+
+        .styledLink {
+          font-size: 0;
+
+          &Icon {
+            display: none;
+          }
+
+          &Content {
+            &::before {
+              content: '';
+              display: block;
+              width: 24px;
+              height: 24px;
+              background-image: url('assets/svg/hpa-heart-menu.svg');
+              background-repeat: no-repeat;
+              background-size: 24px;
+            }
+
+            @media (max-width: $m) {
+              display: flex;
+              align-items: center;
+
+              &::after {
+                content: 'favoritos';
+                font-size: $font-size-sm;
+                margin-left: 10px;
+                display: block;
+              }
+            }
+          }
+
+          &:hover,
+          &:focus,
+          &:active {
+            color: $text-color-1-200;
+          }
+
+          &Container {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &Item {
+    &--product__menu {
+      width: 100%;
+      padding: 15px 0;
+      background-color: $color-5-400;
+      border-bottom: 1px solid $color-5-600;
+
+      .accordion {
+        &Icon {
+          &--isClosed {
+            font-size: 0;
+
+            &::before {
+              content: '';
+              width: 14px;
+              height: 14px;
+              display: block;
+              background-image: url('assets/svg/hpa-plus-filter.svg');
+              background-repeat: no-repeat;
+              background-size: 100%;
+              background-position: center center;
+              transition: 0.2s;
+            }
+          }
+
+          &--isOpen {
+            font-size: 0;
+
+            &::before {
+              content: '';
+              width: 14px;
+              height: 14px;
+              display: block;
+              background-image: url('assets/svg/hpa-plus-filter.svg');
+              background-repeat: no-repeat;
+              background-size: 100%;
+              background-position: center center;
+              transform: rotate(45deg);
+              transition: 0.2s;
+            }
+          }
+        }
+      }
+
+      .styled {
+        &Link {
+          @include link($font-size-xlg, $text-color-1-500, $regular, none);
+          text-transform: lowercase;
+
+          &--highlight {
+            @include link($font-size-xlg, $text-color-1-500, $regular, none);
+            text-transform: lowercase;
+          }
+        }
+      }
+
+      & :last-child {
+        height: auto !important;
+      }
+
+      :global(.vtex-flex-layout-0-x-flexRowContent) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,377 @@
+{
+  "flex-layout.row#product-main": {
+    "props": {
+      "blockClass": "product"
+    },
+    "children": [
+      "flex-layout.col#stack",
+      "flex-layout.col#right-col"
+    ]
+  },
+  // LEFT
+  "flex-layout.col#stack": {
+    "children": [
+      "stack-layout"
+    ],
+    "props": {
+      "width": "58%",
+      "rowGap": 0
+    }
+  },
+  "stack-layout": {
+    "props": {
+      "blockClass": "product"
+    },
+    "children": [
+      "flex-layout.row#product-image",
+      "flex-layout.row#highlights",
+      "product-bookmark"
+    ]
+  },
+  // RIGHT
+  "flex-layout.col#right-col": {
+    "props": {
+      "preventVerticalStretch": true,
+      "rowGap": 0,
+      "blockClass": "product__main"
+    },
+    "children": [
+      "disposition-layout#product-main"
+    ]
+  },
+  "disposition-layout#product-main": {
+    "children": [
+      "responsive-layout.desktop#breadcrumb",
+      "flex-layout.row#ref",
+      "flex-layout.row#name-share",
+      "flex-layout.row#category-label",
+      // "flex-layout.row#highlights",
+      "sku-selector",
+      "product-separator",
+      "flex-layout.row#list-price#pdp",
+      // "flex-layout.row#price-pdp", //original vtex
+      "mz-customprice-AppPdp",
+      "product-installments",
+      "flex-layout.row#product-qqt",
+      "flex-layout.row#tempo-producao",
+      "product-separator",
+      "shipping-simulator",
+      "flex-layout.row#sticky-container-pdp"
+    ],
+    "props": {
+      "disposition": [
+        {
+          "order": 1
+        },
+        {
+          "order": 2
+        },
+        {
+          "order": 3
+        },
+        {
+          "order": 4
+        },
+        {
+          "order": 5
+        },
+        {
+          "order": 6
+        },
+        {
+          "order": 7
+        },
+        {
+          "order": 8
+        },
+        {
+          "order": 9
+        },
+        {
+          "order": 10
+        },
+        {
+          "order": 11
+        },
+        {
+          "order": 12
+        },
+        {
+          "order": 13
+        },
+        {
+          "order": 14
+        }
+      ]
+    }
+  },
+  //ref + nome produto + modal share ------------------------------------
+  "flex-layout.row#ref": {
+    "children": [
+      "product-identifier.product",
+      "responsive-layout.mobile#wishlist"
+    ],
+    "props": {
+      "blockClass": [
+        "ref"
+      ]
+    }
+  },
+  "responsive-layout.mobile#wishlist": {
+    "children": [
+      "flex-layout.col#wishlist-share"
+    ]
+  },
+  "flex-layout.row#category-label": {
+    "children": [
+      "product-specification-group#category-label"
+    ],
+    "props": {
+      "blockClass": "category-label"
+    }
+  },
+  "product-specification-group#category-label": {
+    "children": [
+      "flex-layout.row#spec-group"
+    ],
+    "props": {
+      "blockClass": "category-label",
+      "filter": {
+        "specificationGroups": [
+          "Geral"
+        ],
+        "type": "show"
+      }
+    }
+  },
+  "flex-layout.row#name-share": {
+    "children": [
+      "vtex.store-components:product-name",
+      "responsive-layout.desktop#wishlist"
+    ],
+    "props": {
+      "blockClass": [
+        "name-share"
+      ]
+    }
+  },
+  "responsive-layout.desktop#wishlist": {
+    "children": [
+      "flex-layout.col#wishlist-share"
+    ]
+  },
+  "flex-layout.col#wishlist-share": {
+    "children": [
+      "add-to-list-btn#pdp",
+      "modal-trigger#modal-share"
+    ],
+    "props": {
+      "blockClass": [
+        "container-share"
+      ]
+    }
+  },
+  "add-to-list-btn#pdp": {
+    "props": {
+      "blockClass": [
+        "product__wishlist"
+      ]
+    }
+  },
+  "modal-trigger#modal-share": {
+    "children": [
+      "image#modal-share",
+      "modal-layout#modal-share"
+    ],
+    "props": {
+      "blockClass": [
+        "modal-share-trigger"
+      ]
+    }
+  },
+  "image#modal-share": {
+    "props": {
+      "src": "assets/svg/share.svg",
+      "maxHeight": "",
+      "maxWidth": "",
+      "blockClass": "modal-trigger"
+    }
+  },
+  "modal-layout#modal-share": {
+    "children": [
+      "share#default",
+      "modal-actions.close"
+    ],
+    "props": {
+      "blockClass": [
+        "modal-share-pdp"
+      ]
+    }
+  },
+  "share#default": {
+    "props": {
+      "social": {
+        "Facebook": true,
+        "WhatsApp": true,
+        "Twitter": true
+      }
+    }
+  },
+  //Breadcrumb ------------------------------------
+  "responsive-layout.desktop#breadcrumb": {
+    "children": [
+      "flex-layout.row#product-breadcrumb"
+    ]
+  },
+  "flex-layout.row#highlights": {
+    "props": {
+      "blockClass": "product__highlight",
+      "colSizing": "auto"
+    },
+    "children": [
+      "vtex.product-highlights@2.x:product-highlights#collection"
+    ]
+  },
+  //sku selector ------------------------------------
+  "sku-selector": {
+    "props": {
+      "disableUnavailableSelectOptions": true,
+      "hideImpossibleCombinations": false,
+      "thumbnailImage": [
+        "skucor"
+      ],
+      "variationsSpacing": 3,
+      "showValueForVariation": "all",
+      "initialSelection": "empty",
+      "maxItems": 50
+    }
+  },
+  //quantidade + botao de compra ------------------------------------
+  "flex-layout.row#product-qqt": {
+    "props": {
+      "blockClass": "product__main--btn"
+    },
+    "children": [
+      "product-quantity",
+      "add-to-cart-button#product"
+    ]
+  },
+  "add-to-cart-button#product": {
+    "props": {
+      "text": "adicionar ao carrinho",
+      "customPixelEventId": "add-to-cart-button",
+      "addToCartFeedback": "customEvent"
+    }
+  },
+  "flex-layout.row#buy-button": {
+    "children": [
+      "add-to-cart-button#product"
+    ]
+  },
+  //Texto "tempo de produção: x dias" ------------------------------------
+  "flex-layout.row#tempo-producao": {
+    "children": [
+      "rich-text#title-tempo-producao",
+      "rich-text#text-tempo-producao"
+    ],
+    "props": {
+      "blockClass": [
+        "tempo-producao"
+      ]
+    }
+  },
+  "rich-text#title-tempo-producao": {
+    "props": {
+      "blockClass": [
+        "title-tempo-producao"
+      ],
+      "font": "t-body",
+      "text": "tempo de produção: "
+    }
+  },
+  "rich-text#text-tempo-producao": {
+    "props": {
+      "blockClass": [
+        "text-tempo-producao"
+      ],
+      "font": "t-body",
+      "text": "30 dias úteis"
+    }
+  },
+  // botao flutuante -------------------------------------------------------
+  "flex-layout.row#sticky-container-pdp": {
+    "children": [
+      "sticky-layout#buy-button"
+    ],
+    "props": {
+      "blockClass": [
+        "sticky-container-pdp"
+      ]
+    }
+  },
+  "sticky-layout#buy-button": {
+    "props": {
+      "position": "bottom",
+      "blockClass": "sticky-pdp"
+    },
+    "children": [
+      "responsive-layout.desktop#nome-produto",
+      "responsive-layout.mobile#nome-produto"
+    ]
+  },
+  "responsive-layout.desktop#nome-produto": {
+    "children": [
+      "flex-layout.row#sticky-buy-button"
+    ]
+  },
+  "responsive-layout.mobile#nome-produto": {
+    "children": [
+      "flex-layout.row#sticky-buy-button-mobile"
+    ]
+  },
+  "flex-layout.row#sticky-buy-button": {
+    "props": {
+      "marginTop": 5,
+      "marginBottom": 0,
+      "paddingBottom": 0,
+      "blockClass": "sticky-pdp"
+    },
+    "children": [
+      "flex-layout.col#container-sticky"
+    ]
+  },
+  "flex-layout.col#container-sticky": {
+    "children": [
+      "vtex.store-components:product-name",
+      "flex-layout.row#sticky-buybutton"
+    ],
+    "props": {
+      "blockClass": [
+        "container-sticky"
+      ]
+    }
+  },
+  "flex-layout.row#sticky-buybutton": {
+    "children": [
+      "product-quantity",
+      "buy-button"
+    ],
+    "props": {
+      "blockClass": [
+        "sticky-buybutton"
+      ]
+    }
+  },
+  "flex-layout.row#sticky-buy-button-mobile": {
+    "props": {
+      "marginTop": 5,
+      "marginBottom": 0,
+      "paddingBottom": 0,
+      "blockClass": "sticky-pdp"
+    },
+    "children": [
+      "product-quantity",
+      "buy-button"
+    ]
+  }
+}

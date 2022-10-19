@@ -1,0 +1,82 @@
+@import 'extends/buttons';
+@import 'extends/links';
+@import 'extends/inputs';
+
+.newsletterForm {
+  &--mz-modal-news__input {
+    flex-direction: column;
+    font-family: $main-font;
+
+    .formSubmitContainer {
+
+      :global(.vtex-button) {
+        border-color: $color-c-6;
+        background: $color-c-6;
+        color: $text-color-1-500;
+        border-radius: 0;
+        width: 100%;
+        margin: auto;
+        min-height: 30px;
+        font-size: $font-size-sm;
+        &:focus,
+        &:active,
+        &:hover {
+          background:$color-c-6;
+        }
+        :global(.vtex-button__label){
+          padding: 0!important;
+          margin: 0!important;
+          font-size: $font-size-sm;
+        }
+      }
+    }
+
+    .confirmationCheckboxContainer {
+      :global(.vtex-checkbox__inner-container) {
+        border: 1px solid $color-border !important;
+        border-radius: 0;
+      }
+
+      :global(.vtex__icon-check) {
+        background: $text-color-1 !important;
+      }
+
+      :global(.vtex-checkbox__label) {
+        font-size: $font-size-sm;
+      }
+    }
+
+    .emailInputContainer,
+    .nameInputContainer {
+      :global(.vtex-input-prefix__group) {
+        border: 1px solid $color-border;
+        border-radius: 0;
+        margin-bottom: 10px;
+        height: 30px;
+
+        :global(.vtex-styleguide-9-x-input) {
+          padding-left: 6px;
+          border-radius: 0;
+          background: $color-c-3;
+          color: $text-color-1;
+          font-family: $main-font;
+          font-size: $font-size-md;
+          width: 100%;
+
+          &::placeholder {
+            color: $color-c-6;
+            font-family: $main-font;
+            font-size: $font-size-md;
+          }
+        }
+      }
+    }
+  }
+}
+
+.defaultSuccessMessage {
+  font-family: $main-font;
+  color: $text-color-1;
+  text-transform: lowercase;
+  font-weight: $regular;
+}

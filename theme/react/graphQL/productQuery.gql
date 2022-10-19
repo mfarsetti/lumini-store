@@ -1,0 +1,6 @@
+query ProductQuery($slug: String) {
+  product(identifier: { field: slug, value: $slug}) @context(provider: "vtex.search-graphql") {
+    productName
+  }
+}
+

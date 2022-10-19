@@ -1,0 +1,12 @@
+@import 'mixins/text';
+
+.product-identifier {
+  @include text($font-size-xxs, $text-color-1-300, $normal);
+  text-transform: lowercase;
+  display: block;
+
+  @media (min-width: $l) {
+    margin-bottom: 5px;
+    padding-top: 20px;
+  }
+}

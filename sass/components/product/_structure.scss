@@ -1,0 +1,41 @@
+.paper {
+  &--modal-share-pdp {
+    width: 311px;
+    height: 110px;
+    border: 1px solid $text-color-1-300;
+    border-radius: 0;
+    background-color: $color-5-400;
+
+    .closeButton {
+      width: 40px;
+      position: absolute;
+      right: 0;
+      background: transparent;
+      border: none;
+
+      &:hover {
+        background: transparent;
+        border: none;
+      }
+
+      &::before {
+        content: 'X';
+        color: $text-color-1;
+      }
+
+      .closeButtonLabel {
+        display: none;
+      }
+    }
+  }
+}
+
+.headerContainer {
+}
+
+.triggerContainer {
+  &--modal-share-trigger {
+    width: 24px !important;
+    height: 24px;
+  }
+}

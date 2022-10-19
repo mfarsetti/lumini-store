@@ -1,0 +1,504 @@
+{
+  "store.custom#nossas-lojas": {
+    "title": "institucional | nossas lojas lumini",
+    "children": ["flex-layout.row#showrooms"]
+  },
+  // infocards showrooms ----------------------------
+  "flex-layout.row#showrooms": {
+    "title": "institucional | showrooms",
+    "children": ["flex-layout.col#showrooms"]
+  },
+  "flex-layout.col#showrooms": {
+    "title": "institucional | showrooms",
+    "children": [
+      "rich-text#title-showrooms",
+      "flex-layout.col#sobre-info-card"
+    ],
+    "props": {
+      "blockClass": ["showrooms"]
+    }
+  },
+  "rich-text#title-showrooms": {
+    "title": "institucional | título",
+    "props": {
+      "blockClass": ["institucional-title--showrooms"],
+      "text": "Showrooms"
+    }
+  },
+  "flex-layout.col#sobre-info-card": {
+    "props": {
+      "blockClass": "sobre-infocards"
+    },
+    "children": [
+      "flex-layout.row#lojas-row-0",
+      "flex-layout.row#lojas-row-1",
+      "flex-layout.row#lojas-row-2",
+      "flex-layout.row#lojas-row-3",
+      "flex-layout.row#lojas-row-4",
+      "flex-layout.row#lojas-row-5",
+      "flex-layout.row#lojas-row-6",
+      "flex-layout.row#lojas-row-7"
+    ]
+  },
+  "flex-layout.row#lojas-row-0": {
+    "title": "institucional | Linha de lojas 0",
+    "children": [
+      "info-card#campinas",
+      "info-card#rj",
+      "info-card#sp"
+    ]
+  },
+  "info-card#sp": {
+    "title": "SP",
+    "props": {
+      "imageUrl": "assets/img/institucional/showroom-1.png",
+      "headline": "campinas",
+      "subhead": "espaço lumini | unique <br /> av nordte-sul 1000 <br /> 13090-615 campinas - sp <br /> brasil <br /> +55 19 3251 6362 <br /><br /> lojacampinas@luminic.om.br <br /> seg-sex, das 9h às 18h sáb, das 9h às 13h",
+      "callToActionText": "ver no mapa",
+      "callToActionUrl": "/",
+      "blockClass": "info-card-showrooms",
+      "textAlignment": "left"
+    }
+  },
+  "info-card#rj": {
+    "title": "RJ",
+    "props": {
+      "imageUrl": "assets/img/institucional/showroom-2.png",
+      "headline": "rio de janeiro",
+      "subhead": "casa shopping <br /> av ayrton senna 2150 <br /> bloco m lojas 107-109 <br /> 22775-900 rio de janeiro - rj <br /> brasil <br /> +55 21 3325 4959 <br /> lojario@lumini.com.br <br /> seg-sáb, das 10h às 20h dom, das 14h às 20h",
+      "callToActionText": "ver no mapa",
+      "callToActionUrl": "/",
+      "blockClass": "info-card-showrooms",
+      "textAlignment": "left"
+    }
+  },
+  "info-card#campinas": {
+    "title": "Campinas",
+    "props": {
+      "imageUrl": "assets/img/institucional/showroom-3.png",
+      "headline": "são paulo",
+      "subhead": "casa shopping <br /> av ayrton senna 2150 <br /> bloco m lojas 107-109 <br /> 22775-900 rio de janeiro - rj <br /> brasil <br /> +55 21 3325 4959 <br /> lojario@lumini.com.br <br /> seg-sáb, das 10h às 20h dom, das 14h às 20h",
+      "callToActionText": "ver no mapa",
+      "callToActionUrl": "/",
+      "blockClass": "info-card-showrooms",
+      "textAlignment": "left"
+    }
+  },
+
+  // DUMMY CARDS
+  "flex-layout.row#lojas-row-1": {
+    "title": "institucional | Linha de lojas 1",
+    "children": [
+      "experimental__visibility-layout#dummy-1",
+      "experimental__visibility-layout#dummy-2",
+      "experimental__visibility-layout#dummy-3"
+    ]
+  },
+  "flex-layout.row#lojas-row-2": {
+    "title": "institucional | Linha de lojas 2",
+    "children": [
+      "experimental__visibility-layout#dummy-4",
+      "experimental__visibility-layout#dummy-5",
+      "experimental__visibility-layout#dummy-6"
+    ]
+  },
+  "flex-layout.row#lojas-row-3": {
+    "title": "institucional | Linha de lojas 3",
+    "children": [
+      "experimental__visibility-layout#dummy-7",
+      "experimental__visibility-layout#dummy-8",
+      "experimental__visibility-layout#dummy-9"
+    ]
+  },
+  "flex-layout.row#lojas-row-4": {
+    "title": "institucional | Linha de lojas 4",
+    "children": [
+      "experimental__visibility-layout#dummy-10",
+      "experimental__visibility-layout#dummy-11",
+      "experimental__visibility-layout#dummy-12"
+    ]
+  },
+  "flex-layout.row#lojas-row-5": {
+    "title": "institucional | Linha de lojas 5",
+    "children": [
+      "experimental__visibility-layout#dummy-13",
+      "experimental__visibility-layout#dummy-14",
+      "experimental__visibility-layout#dummy-15"
+    ]
+  },
+  "flex-layout.row#lojas-row-6": {
+    "title": "institucional | Linha de lojas 6",
+    "children": [
+      "experimental__visibility-layout#dummy-16",
+      "experimental__visibility-layout#dummy-17",
+      "experimental__visibility-layout#dummy-18"
+    ]
+  },
+  "flex-layout.row#lojas-row-7": {
+    "title": "institucional | Linha de lojas 7",
+    "children": [
+      "experimental__visibility-layout#dummy-19",
+      "experimental__visibility-layout#dummy-20"
+    ]
+  },
+  "experimental__visibility-layout#dummy-1": {
+    "title": "Visibilidade | Loja 1",
+    "children": ["info-card#loja-1"],
+    "props": {
+      "visible": false
+    }
+  },
+  "info-card#loja-1": {
+    "props": {
+      "imageUrl": "assets/img/institucional/showroom-3.png",
+      "headline": "são paulo",
+      "subhead": "espaço lumini | unique <br /> av nordte-sul 1000 <br /> 13090-615 campinas - sp <br /> brasil <br /> +55 19 3251 6362 <br /><br /> lojacampinas@luminic.om.br <br /> seg-sex, das 9h às 18h sáb, das 9h às 13h",
+      "callToActionText": "ver no mapa",
+      "callToActionUrl": "/",
+      "blockClass": "info-card-showrooms",
+      "textAlignment": "left"
+    }
+  },
+  "experimental__visibility-layout#dummy-2": {
+    "title": "Visibilidade | Loja 2",
+    "children": ["info-card#loja-2"],
+    "props": {
+      "visible": false
+    }
+  },
+  "info-card#loja-2": {
+    "props": {
+      "imageUrl": "assets/img/institucional/showroom-3.png",
+      "headline": "são paulo",
+      "subhead": "espaço lumini | unique <br /> av nordte-sul 1000 <br /> 13090-615 campinas - sp <br /> brasil <br /> +55 19 3251 6362 <br /><br /> lojacampinas@luminic.om.br <br /> seg-sex, das 9h às 18h sáb, das 9h às 13h",
+      "callToActionText": "ver no mapa",
+      "callToActionUrl": "/",
+      "blockClass": "info-card-showrooms",
+      "textAlignment": "left"
+    }
+  },
+  "experimental__visibility-layout#dummy-3": {
+    "title": "Visibilidade | Loja 3",
+    "children": ["info-card#loja-3"],
+    "props": {
+      "visible": false
+    }
+  },
+  "info-card#loja-3": {
+    "props": {
+      "imageUrl": "assets/img/institucional/showroom-3.png",
+      "headline": "são paulo",
+      "subhead": "espaço lumini | unique <br /> av nordte-sul 1000 <br /> 13090-615 campinas - sp <br /> brasil <br /> +55 19 3251 6362 <br /><br /> lojacampinas@luminic.om.br <br /> seg-sex, das 9h às 18h sáb, das 9h às 13h",
+      "callToActionText": "ver no mapa",
+      "callToActionUrl": "/",
+      "blockClass": "info-card-showrooms",
+      "textAlignment": "left"
+    }
+  },
+  "experimental__visibility-layout#dummy-4": {
+    "title": "Visibilidade | Loja 4",
+    "children": ["info-card#loja-4"],
+    "props": {
+      "visible": false
+    }
+  },
+  "info-card#loja-4": {
+    "props": {
+      "imageUrl": "assets/img/institucional/showroom-3.png",
+      "headline": "são paulo",
+      "subhead": "espaço lumini | unique <br /> av nordte-sul 1000 <br /> 13090-615 campinas - sp <br /> brasil <br /> +55 19 3251 6362 <br /><br /> lojacampinas@luminic.om.br <br /> seg-sex, das 9h às 18h sáb, das 9h às 13h",
+      "callToActionText": "ver no mapa",
+      "callToActionUrl": "/",
+      "blockClass": "info-card-showrooms",
+      "textAlignment": "left"
+    }
+  },
+  "experimental__visibility-layout#dummy-5": {
+    "title": "Visibilidade | Loja 5",
+    "children": ["info-card#loja-5"],
+    "props": {
+      "visible": false
+    }
+  },
+  "info-card#loja-5": {
+    "props": {
+      "imageUrl": "assets/img/institucional/showroom-3.png",
+      "headline": "são paulo",
+      "subhead": "espaço lumini | unique <br /> av nordte-sul 1000 <br /> 13090-615 campinas - sp <br /> brasil <br /> +55 19 3251 6362 <br /><br /> lojacampinas@luminic.om.br <br /> seg-sex, das 9h às 18h sáb, das 9h às 13h",
+      "callToActionText": "ver no mapa",
+      "callToActionUrl": "/",
+      "blockClass": "info-card-showrooms",
+      "textAlignment": "left"
+    }
+  },
+  "experimental__visibility-layout#dummy-6": {
+    "title": "Visibilidade | Loja 6",
+    "children": ["info-card#loja-6"],
+    "props": {
+      "visible": false
+    }
+  },
+  "info-card#loja-6": {
+    "props": {
+      "imageUrl": "assets/img/institucional/showroom-3.png",
+      "headline": "são paulo",
+      "subhead": "espaço lumini | unique <br /> av nordte-sul 1000 <br /> 13090-615 campinas - sp <br /> brasil <br /> +55 19 3251 6362 <br /><br /> lojacampinas@luminic.om.br <br /> seg-sex, das 9h às 18h sáb, das 9h às 13h",
+      "callToActionText": "ver no mapa",
+      "callToActionUrl": "/",
+      "blockClass": "info-card-showrooms",
+      "textAlignment": "left"
+    }
+  },
+  "experimental__visibility-layout#dummy-7": {
+    "title": "Visibilidade | Loja 7",
+    "children": ["info-card#loja-7"],
+    "props": {
+      "visible": false
+    }
+  },
+  "info-card#loja-7": {
+    "props": {
+      "imageUrl": "assets/img/institucional/showroom-3.png",
+      "headline": "são paulo",
+      "subhead": "espaço lumini | unique <br /> av nordte-sul 1000 <br /> 13090-615 campinas - sp <br /> brasil <br /> +55 19 3251 6362 <br /><br /> lojacampinas@luminic.om.br <br /> seg-sex, das 9h às 18h sáb, das 9h às 13h",
+      "callToActionText": "ver no mapa",
+      "callToActionUrl": "/",
+      "blockClass": "info-card-showrooms",
+      "textAlignment": "left"
+    }
+  },
+  "experimental__visibility-layout#dummy-8": {
+    "title": "Visibilidade | Loja 8",
+    "children": ["info-card#loja-8"],
+    "props": {
+      "visible": false
+    }
+  },
+  "info-card#loja-8": {
+    "props": {
+      "imageUrl": "assets/img/institucional/showroom-3.png",
+      "headline": "são paulo",
+      "subhead": "espaço lumini | unique <br /> av nordte-sul 1000 <br /> 13090-615 campinas - sp <br /> brasil <br /> +55 19 3251 6362 <br /><br /> lojacampinas@luminic.om.br <br /> seg-sex, das 9h às 18h sáb, das 9h às 13h",
+      "callToActionText": "ver no mapa",
+      "callToActionUrl": "/",
+      "blockClass": "info-card-showrooms",
+      "textAlignment": "left"
+    }
+  },
+  "experimental__visibility-layout#dummy-9": {
+    "title": "Visibilidade | Loja 9",
+    "children": ["info-card#loja-9"],
+    "props": {
+      "visible": false
+    }
+  },
+  "info-card#loja-9": {
+    "props": {
+      "imageUrl": "assets/img/institucional/showroom-3.png",
+      "headline": "são paulo",
+      "subhead": "espaço lumini | unique <br /> av nordte-sul 1000 <br /> 13090-615 campinas - sp <br /> brasil <br /> +55 19 3251 6362 <br /><br /> lojacampinas@luminic.om.br <br /> seg-sex, das 9h às 18h sáb, das 9h às 13h",
+      "callToActionText": "ver no mapa",
+      "callToActionUrl": "/",
+      "blockClass": "info-card-showrooms",
+      "textAlignment": "left"
+    }
+  },
+  "experimental__visibility-layout#dummy-10": {
+    "title": "Visibilidade | Loja 10",
+    "children": ["info-card#loja-10"],
+    "props": {
+      "visible": false
+    }
+  },
+  "info-card#loja-10": {
+    "props": {
+      "imageUrl": "assets/img/institucional/showroom-3.png",
+      "headline": "são paulo",
+      "subhead": "espaço lumini | unique <br /> av nordte-sul 1000 <br /> 13090-615 campinas - sp <br /> brasil <br /> +55 19 3251 6362 <br /><br /> lojacampinas@luminic.om.br <br /> seg-sex, das 9h às 18h sáb, das 9h às 13h",
+      "callToActionText": "ver no mapa",
+      "callToActionUrl": "/",
+      "blockClass": "info-card-showrooms",
+      "textAlignment": "left"
+    }
+  },
+  "experimental__visibility-layout#dummy-11": {
+    "title": "Visibilidade | Loja 11",
+    "children": ["info-card#loja-11"],
+    "props": {
+      "visible": false
+    }
+  },
+  "info-card#loja-11": {
+    "props": {
+      "imageUrl": "assets/img/institucional/showroom-3.png",
+      "headline": "são paulo",
+      "subhead": "espaço lumini | unique <br /> av nordte-sul 1000 <br /> 13090-615 campinas - sp <br /> brasil <br /> +55 19 3251 6362 <br /><br /> lojacampinas@luminic.om.br <br /> seg-sex, das 9h às 18h sáb, das 9h às 13h",
+      "callToActionText": "ver no mapa",
+      "callToActionUrl": "/",
+      "blockClass": "info-card-showrooms",
+      "textAlignment": "left"
+    }
+  },
+  "experimental__visibility-layout#dummy-12": {
+    "title": "Visibilidade | Loja 12",
+    "children": ["info-card#loja-12"],
+    "props": {
+      "visible": false
+    }
+  },
+  "info-card#loja-12": {
+    "props": {
+      "imageUrl": "assets/img/institucional/showroom-3.png",
+      "headline": "são paulo",
+      "subhead": "espaço lumini | unique <br /> av nordte-sul 1000 <br /> 13090-615 campinas - sp <br /> brasil <br /> +55 19 3251 6362 <br /><br /> lojacampinas@luminic.om.br <br /> seg-sex, das 9h às 18h sáb, das 9h às 13h",
+      "callToActionText": "ver no mapa",
+      "callToActionUrl": "/",
+      "blockClass": "info-card-showrooms",
+      "textAlignment": "left"
+    }
+  },
+  "experimental__visibility-layout#dummy-13": {
+    "title": "Visibilidade | Loja 13",
+    "children": ["info-card#loja-13"],
+    "props": {
+      "visible": false
+    }
+  },
+  "info-card#loja-13": {
+    "props": {
+      "imageUrl": "assets/img/institucional/showroom-3.png",
+      "headline": "são paulo",
+      "subhead": "espaço lumini | unique <br /> av nordte-sul 1000 <br /> 13090-615 campinas - sp <br /> brasil <br /> +55 19 3251 6362 <br /><br /> lojacampinas@luminic.om.br <br /> seg-sex, das 9h às 18h sáb, das 9h às 13h",
+      "callToActionText": "ver no mapa",
+      "callToActionUrl": "/",
+      "blockClass": "info-card-showrooms",
+      "textAlignment": "left"
+    }
+  },
+  "experimental__visibility-layout#dummy-14": {
+    "title": "Visibilidade | Loja 14",
+    "children": ["info-card#loja-14"],
+    "props": {
+      "visible": false
+    }
+  },
+  "info-card#loja-14": {
+    "props": {
+      "imageUrl": "assets/img/institucional/showroom-3.png",
+      "headline": "são paulo",
+      "subhead": "espaço lumini | unique <br /> av nordte-sul 1000 <br /> 13090-615 campinas - sp <br /> brasil <br /> +55 19 3251 6362 <br /><br /> lojacampinas@luminic.om.br <br /> seg-sex, das 9h às 18h sáb, das 9h às 13h",
+      "callToActionText": "ver no mapa",
+      "callToActionUrl": "/",
+      "blockClass": "info-card-showrooms",
+      "textAlignment": "left"
+    }
+  },
+  "experimental__visibility-layout#dummy-15": {
+    "title": "Visibilidade | Loja 15",
+    "children": ["info-card#loja-15"],
+    "props": {
+      "visible": false
+    }
+  },
+  "info-card#loja-15": {
+    "props": {
+      "imageUrl": "assets/img/institucional/showroom-3.png",
+      "headline": "são paulo",
+      "subhead": "espaço lumini | unique <br /> av nordte-sul 1000 <br /> 13090-615 campinas - sp <br /> brasil <br /> +55 19 3251 6362 <br /><br /> lojacampinas@luminic.om.br <br /> seg-sex, das 9h às 18h sáb, das 9h às 13h",
+      "callToActionText": "ver no mapa",
+      "callToActionUrl": "/",
+      "blockClass": "info-card-showrooms",
+      "textAlignment": "left"
+    }
+  },
+  "experimental__visibility-layout#dummy-16": {
+    "title": "Visibilidade | Loja 16",
+    "children": ["info-card#loja-16"],
+    "props": {
+      "visible": false
+    }
+  },
+  "info-card#loja-16": {
+    "props": {
+      "imageUrl": "assets/img/institucional/showroom-3.png",
+      "headline": "são paulo",
+      "subhead": "espaço lumini | unique <br /> av nordte-sul 1000 <br /> 13090-615 campinas - sp <br /> brasil <br /> +55 19 3251 6362 <br /><br /> lojacampinas@luminic.om.br <br /> seg-sex, das 9h às 18h sáb, das 9h às 13h",
+      "callToActionText": "ver no mapa",
+      "callToActionUrl": "/",
+      "blockClass": "info-card-showrooms",
+      "textAlignment": "left"
+    }
+  },
+  "experimental__visibility-layout#dummy-17": {
+    "title": "Visibilidade | Loja 17",
+    "children": ["info-card#loja-17"],
+    "props": {
+      "visible": false
+    }
+  },
+  "info-card#loja-17": {
+    "props": {
+      "imageUrl": "assets/img/institucional/showroom-3.png",
+      "headline": "são paulo",
+      "subhead": "espaço lumini | unique <br /> av nordte-sul 1000 <br /> 13090-615 campinas - sp <br /> brasil <br /> +55 19 3251 6362 <br /><br /> lojacampinas@luminic.om.br <br /> seg-sex, das 9h às 18h sáb, das 9h às 13h",
+      "callToActionText": "ver no mapa",
+      "callToActionUrl": "/",
+      "blockClass": "info-card-showrooms",
+      "textAlignment": "left"
+    }
+  },
+  "experimental__visibility-layout#dummy-18": {
+    "title": "Visibilidade | Loja 18",
+    "children": ["info-card#loja-18"],
+    "props": {
+      "visible": false
+    }
+  },
+  "info-card#loja-18": {
+    "props": {
+      "imageUrl": "assets/img/institucional/showroom-3.png",
+      "headline": "são paulo",
+      "subhead": "espaço lumini | unique <br /> av nordte-sul 1000 <br /> 13090-615 campinas - sp <br /> brasil <br /> +55 19 3251 6362 <br /><br /> lojacampinas@luminic.om.br <br /> seg-sex, das 9h às 18h sáb, das 9h às 13h",
+      "callToActionText": "ver no mapa",
+      "callToActionUrl": "/",
+      "blockClass": "info-card-showrooms",
+      "textAlignment": "left"
+    }
+  },
+  "experimental__visibility-layout#dummy-19": {
+    "title": "Visibilidade | Loja 19",
+    "children": ["info-card#loja-19"],
+    "props": {
+      "visible": false
+    }
+  },
+  "info-card#loja-19": {
+    "props": {
+      "imageUrl": "assets/img/institucional/showroom-3.png",
+      "headline": "são paulo",
+      "subhead": "espaço lumini | unique <br /> av nordte-sul 1000 <br /> 13090-615 campinas - sp <br /> brasil <br /> +55 19 3251 6362 <br /><br /> lojacampinas@luminic.om.br <br /> seg-sex, das 9h às 18h sáb, das 9h às 13h",
+      "callToActionText": "ver no mapa",
+      "callToActionUrl": "/",
+      "blockClass": "info-card-showrooms",
+      "textAlignment": "left"
+    }
+  },
+  "experimental__visibility-layout#dummy-20": {
+    "title": "Visibilidade | Loja 20",
+    "children": ["info-card#loja-20"],
+    "props": {
+      "visible": false
+    }
+  },
+  "info-card#loja-20": {
+    "props": {
+      "imageUrl": "assets/img/institucional/showroom-3.png",
+      "headline": "são paulo",
+      "subhead": "espaço lumini | unique <br /> av nordte-sul 1000 <br /> 13090-615 campinas - sp <br /> brasil <br /> +55 19 3251 6362 <br /><br /> lojacampinas@luminic.om.br <br /> seg-sex, das 9h às 18h sáb, das 9h às 13h",
+      "callToActionText": "ver no mapa",
+      "callToActionUrl": "/",
+      "blockClass": "info-card-showrooms",
+      "textAlignment": "left"
+    }
+  }
+}

@@ -1,0 +1,111 @@
+@import 'mixins/text';
+@import 'mixins/links';
+
+.container {
+  &--a-partir-de {
+    .paragraph {
+      @include text($font-24, $text-color-1, $regular);
+      padding-right: 6px;
+      margin: 0;
+
+      @media (max-width: $l) {
+        font-size: 20px;
+      }
+    }
+  }
+
+  &--product__description {
+    .wrapper {
+      width: 100%;
+      text-align: center;
+    }
+
+    .heading {
+      @extend %big-title-section;
+    }
+  }
+
+  &--title-tempo-producao {
+    .paragraph {
+      @include text($font-size-xlg, $text-color-1, $regular);
+      text-transform: lowercase;
+      margin: 0;
+    }
+  }
+
+  &--text-tempo-producao {
+    .paragraph {
+      padding-top: 3px;
+      @include text($font-size-lg, $text-color-1-400, $lighter);
+      text-transform: lowercase;
+      margin: 0;
+    }
+  }
+
+  &--product__unavaible {
+    height: 15px;
+
+    .paragraph {
+      margin: 0 !important;
+    }
+
+    &::before {
+      content: '';
+      background-color: rgba(255, 255, 255, 0.5);
+      width: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+    }
+
+    .wrapper {
+      width: 100%;
+      text-align: start;
+    }
+
+    .strong {
+      @include text($font-size-sm, $text-color-1-400, $regular);
+      text-transform: lowercase;
+    }
+
+    .link {
+      @include link($font-size-xs, $color-2-500, $normal, underline);
+      text-transform: lowercase;
+    }
+  }
+
+  &--product__description-title {
+    .paragraph {
+      @include text($font-size-xlg, $text-color-1-500, $regular);
+      text-transform: lowercase;
+      margin: 10px 0;
+
+      @media (min-width: $l) {
+        @include text($font-size-h3, $text-color-1-500, $regular);
+        margin: 20px 0;
+      }
+    }
+  }
+  &--home__deals--product {
+    .strong {
+      @include text($font-size-xs, $color-2-500, $regular);
+    }
+  }
+
+  &--product__description {
+    padding: 5px;
+
+    .paragraph {
+      @include text($font-size-md, $text-color-1-400, $regular);
+      text-align: initial;
+      text-transform: lowercase;
+
+      @media (min-width: $l) {
+        @include text($font-size-md, $text-color-1-400, $regular);
+        margin: 10px 0;
+      }
+    }
+  }
+}

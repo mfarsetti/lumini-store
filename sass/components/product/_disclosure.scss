@@ -1,0 +1,114 @@
+@import 'extends/container';
+@import 'extends/buttons';
+@import 'mixins/text';
+@import 'extends/titles';
+@import 'mixins/links';
+
+.trigger {
+  &--product__description-title {
+    @extend %container;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: $color-5-400;
+    border-bottom: 1px solid $color-5-800;
+    padding: 0;
+  }
+
+  &--product__vr {
+    display: none;
+  }
+}
+
+.content {
+  @extend %container;
+  border-bottom: 1px solid $color-5-800;
+  padding-bottom: 20px;
+
+  &--product__description-content {
+    display: flex;
+
+    :global(.vtex-product-specifications-1-x-specificationName) {
+      &[data-specification-group="dimensões"] {
+        display: none;
+      }
+
+    }
+
+    :global(.vtex-flex-layout-0-x-flexRowContent--productSpecification) {
+      padding-top: 0;
+    }
+  }
+
+  &--product__vr {
+    border: none;
+
+    :global(.vtex-flex-layout-0-x-flexRow--productSpecificationGroup) {
+      position: absolute;
+      top: -75px;
+      padding: 0 15px;
+      height: auto;
+      display: flex;
+      margin: 0;
+      width: 100%;
+      max-width: 1250px;
+
+      @media (max-width: $m) {
+        padding: 0;
+        top: -58px;
+      }
+
+      :global(.vtex-flex-layout-0-x-flexRowContent--productSpecification) {
+        width: 100%;
+        max-width: none;
+
+        @media (max-width: $m) {
+          padding: 0;
+        }
+      }
+
+      :global(.vtex-flex-layout-0-x-flexCol--productSpecificationName) {
+        display: none;
+      }
+    }
+  }
+}
+
+:global(.vtex-store-icons-0-x-plusIcon) {
+  &:first-child {
+    display: none;
+  }
+
+  &::before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    display: block;
+    background-image: url('assets/svg/hpa-plus-filter.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center center;
+    transition: 0.2s;
+  }
+}
+
+:global(.vtex-store-icons-0-x-minusIcon) {
+  &:first-child {
+    display: none;
+  }
+
+  &::before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    display: block;
+    background-image: url('assets/svg/hpa-plus-filter.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center center;
+    transform: rotate(45deg);
+    transition: 0.2s;
+  }
+}

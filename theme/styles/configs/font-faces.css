@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'Univers Next Pro';
+  src: local('Univers Next Pro Light'), local('UniversNextPro-Light'),
+      url('assets/fonts/UniversNextPro-Light.woff2') format('woff2'),
+      url('assets/fonts/UniversNextPro-Light.ttf') format('ttf'),
+      url('assets/fonts/UniversNextPro-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Univers Next Pro';
+  src: local('Univers Next Pro Regular'), local('UniversNextPro-Regular'),
+      url('assets/fonts/UniversNextPro-Regular.woff2') format('woff2'),
+      url('assets/fonts/UniversNextPro-Regular.ttf') format('ttf'),
+      url('assets/fonts/UniversNextPro-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Univers Next Pro';
+  src: local('Univers Next Pro Bold'), local('UniversNextPro-Bold'),
+      url('assets/fonts/UniversNextPro-Bold.woff2') format('woff2'),
+      url('assets/fonts/UniversNextPro-Bold.ttf') format('ttf'),
+      url('assets/fonts/UniversNextPro-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+

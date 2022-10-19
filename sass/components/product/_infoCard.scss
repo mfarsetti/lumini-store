@@ -1,0 +1,40 @@
+.infoCard {
+  &Container {
+    &--info-card-showrooms {
+      display: flex;
+      flex-flow: column-reverse;
+      align-self: flex-start;
+    }
+  }
+
+  &TextContainer,
+  &ImageContainer {
+    &--info-card-showrooms {
+      width: 100% !important;
+      padding: 0;
+    }
+  }
+
+  &CallActionContainer--info-card-showrooms :global(.vtex-button__label) {
+    &::after {
+      content: '';
+      display: block;
+      width: 16px;
+      height: 10px;
+      background-image: url('assets/svg/institucional-arrow.svg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 16px;
+      margin-left: 16px;
+    }
+  }
+
+  &Headline {
+    &--info-card-showrooms {
+      @media (max-width: $m) {
+        font-size: 18px !important;
+        margin-top: 16px;
+      }
+    }
+  }
+}

@@ -1,0 +1,109 @@
+@import 'extends/buttons';
+@import 'extends/links';
+@import 'extends/inputs';
+
+.form {
+  &Title {
+    color: $text-color-1-500;
+    font-weight: $bold;
+    font-size: $font-size-sm;
+    padding: 0;
+  }
+
+  &Footer {
+    border: none;
+
+    .sendButton {
+      :global(.vtex-button) {
+        @extend %primary-button;
+        width: 100%;
+      }
+    }
+
+    .backButton {
+      :global(.vtex-button) {
+        @extend %primary-button;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.options {
+  &Sticky {
+    .accessCodeOptionBtn,
+    .emailPasswordOptionBtn {
+      :global(.vtex-button) {
+        @extend %primary-button;
+        background: $text-color-1;
+        color: $white;
+        width: 100%;
+
+        &:hover {
+          background: $white;
+
+          span {
+            color: $text-color-1;
+          }
+        }
+      }
+    }
+  }
+
+  .formTitle {
+    text-align: start;
+  }
+}
+
+.content {
+  &Form {
+    :global(.vtex-input-prefix__group) {
+      border: none;
+    }
+
+    :global(.vtex-styleguide-9-x-input) {
+      @extend %input-text;
+    }
+
+    :global(.vtex-input__suffix) {
+      padding: 0;
+    }
+
+    .eyeSightIcon {
+      width: 24px;
+    }
+
+    .eyeIcon {
+      &--visible,
+      &--invisible {
+        position: absolute;
+        right: 0;
+        color: $text-color-1-500;
+      }
+    }
+
+    .forgotPasswordLink,
+    .dontHaveAccount {
+      @extend %link;
+      text-decoration: underline;
+    }
+
+    .formTitle {
+      text-align: start;
+    }
+
+    :global(.vtex-button) {
+      @extend %primary-button;
+      background: $text-color-1;
+      color: $white;
+
+      &:hover {
+        background: $white !important;
+
+        span {
+          color: $text-color-1;
+        }
+      }
+    }
+  }
+}

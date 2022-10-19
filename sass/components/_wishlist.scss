@@ -1,0 +1,69 @@
+.wishlist {
+  &Icon {
+    &--summary__wishlist {
+      &.iconSize {
+        @media (min-width: $l) {
+          width: 33px !important;
+          height: 33px !important;
+        }
+      }
+    }
+
+    &--product__wishlist {
+      &.iconSize {
+        width: 24px !important;
+        height: 24px !important;
+      }
+    }
+
+    &.outline {
+      background: url('assets/svg/hpa-heart-menu.svg');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: center;
+      width: 24px;
+      height: 24px;
+    }
+
+    &.fill {
+      background: url('assets/svg/hpa-heart-menu.svg');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: center;
+      width: 24px;
+      height: 24px;
+    }
+
+    &Container {
+      display: block;
+
+      &--product__wishlist {
+        display: block !important;
+      }
+
+      &--summary__wishlist {
+        @media (min-width: $l) {
+          display: none;
+        }
+      }
+
+      :global(.vtex-button) {
+        border: none;
+
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: transparent;
+          outline: transparent;
+        }
+      }
+
+      :global(.vtex-button__label) {
+        padding: 0;
+      }
+    }
+  }
+}
+
+:global(.vtex-toast) {
+}

@@ -1,0 +1,19 @@
+@import 'mixins/text';
+
+.product {
+  &Brand {
+    @include text($font-size-h3 - 7, $text-color-1-500, $regular);
+    justify-content: flex-start;
+    text-transform: lowercase;
+    white-space: nowrap;    
+  }
+  
+  &ImagesThumbCaret--pdp__images{
+    background: none;
+    padding: 0;
+  }
+}
+
+.discountInsideContainer {
+  z-index: 3;
+}

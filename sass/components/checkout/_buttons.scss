@@ -1,0 +1,130 @@
+
+#cart-shipping-calculate,
+#new-address-button,
+#edit-address-button,
+#back-to-address-list,
+#open-shipping,
+#btn-client-pre-email,
+#shipping-preview-container #shipping-calculate-link {
+  border: solid 1px $color-2-500;
+  background: $white;
+  font-weight: normal;
+  padding: 10px 35px;
+  border-radius: 0;
+  text-transform: lowercase;
+  font-size: $font-size-sm;
+  color: $color-2-500;
+  box-shadow: none;
+  text-shadow: none;
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+    box-shadow: none;
+    text-shadow: none;
+    background: $white;
+    color: $color-2-500;
+  }
+}
+
+#new-address-button,
+#edit-address-button,
+#back-to-address-list,
+#open-shipping{
+  display: block;
+  padding: 4px 0;
+  text-align: center;
+  margin-top: 10px;
+}
+
+#btn-client-pre-email {
+  padding: 0;
+  height: 32px;
+  width: 136px;
+  position: static;
+  float: right;
+  margin: 0;
+}
+
+.summary-coupon {
+  .link-coupon-add {
+    color: $color-2-500;
+    font-size: $font-size-md;
+    letter-spacing: 1px;
+    text-decoration: underline;
+    text-transform: lowercase;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    span:first-child {
+      &:before {
+        position: relative;
+        top: 5px;
+        left: -5px;
+        ;
+        content: "";
+        display: inline-block;
+        height: 18px;
+        width: 19px;
+        background-image: url("data:image/svg+xml,%3Csvg width='19' height='18' viewBox='0 0 19 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.4843 10.6052L11.1264 16.9056C10.9617 17.069 10.7661 17.1986 10.5509 17.287C10.3356 17.3755 10.1048 17.421 9.87172 17.421C9.63866 17.421 9.40789 17.3755 9.1926 17.287C8.9773 17.1986 8.78171 17.069 8.617 16.9056L1 9.36617V0.57901H9.86729L17.4843 8.12718C17.8146 8.45646 18 8.90189 18 9.36617C18 9.83046 17.8146 10.2759 17.4843 10.6052V10.6052Z' stroke='%231D1D1B' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M5.43066 4.97247H5.43893' stroke='%231D1D1B' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+      }
+    }
+  }
+}
+
+#is-corporate-client,
+#orderform-to-cart,
+.link-choose-more-products-wrapper a {
+  color: $color-2-500;
+  font-size: $font-size-md;
+  letter-spacing: 1px;
+  text-decoration: underline;
+  text-transform: lowercase;
+  margin: 0;
+
+  &:focus,
+  &:active,
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+#orderform-to-cart {
+  font-size: $font-size-sm;
+}
+
+.btn-success[disabled],
+.modal .btn,
+.btn-success {
+  border-radius: 0;
+  background: $color-2-500;
+  color: $white;
+  box-shadow: none;
+  text-shadow: none;
+  letter-spacing: 1px;
+  display: inline-block;
+  box-sizing: border-box;
+  text-transform: lowercase;
+
+  &.btn-place-order {
+    width: 100%;
+
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    box-shadow: none;
+    text-shadow: none;
+    color: $white;
+    background: $color-2-500;
+  }
+}
+
+.step .btn-success{
+  width: 100%;
+}

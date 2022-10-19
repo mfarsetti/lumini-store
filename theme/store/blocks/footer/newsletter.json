@@ -1,0 +1,59 @@
+{
+  "newsletter-form#footer": {
+    "title": "MZ | Footer - Newsletter",
+    "props": {
+      "blockClass": "footer__newsletter"
+    },
+    "children": [
+      "rich-text#footer-newsletter",
+      "flex-layout.row#newsletter"
+    ]
+  },
+  "rich-text#footer-newsletter": {
+    "title": "MZ | Footer - Newsletter - Texto",
+    "props": {
+      "text": "seja o primeiro a ficar sabendo das novidades e promoções",
+      "blockClass": "footer__newsletter"
+    }
+  },
+  "flex-layout.row#newsletter": {
+    "props": {
+      "blockClass": "footer__newsletter"
+    },
+    "children": [
+      "flex-layout.col#newsletter-col-1",
+      "flex-layout.col#newsletter-col-2"
+    ]
+  },
+  "flex-layout.col#newsletter-col-1": {
+    "props": {
+      "blockClass": "footer__newsletter",
+      "width": "grow"
+    },
+    "children": [
+      "newsletter-input-email#footer"
+    ]
+  },
+  "flex-layout.col#newsletter-col-2": {
+    "props": {
+      "blockClass": "footer__newsletter",
+      "width": "grow"
+    },
+    "children": [
+      "newsletter-submit#footer"
+    ]
+  },
+  "newsletter-input-email#footer": {
+    "title": "MZ | Campo de email",
+    "props": {
+      "placeholderText": "insira seu e-mail"
+    }
+  },
+  "newsletter-submit#footer": {
+    "title": "MZ | Botão enviar",
+    "props": {
+      "submitButtonLabel": "enviar",
+      "blockClass": "footer__newsletter-button"
+    }
+  }
+}

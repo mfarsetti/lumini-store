@@ -1,0 +1,100 @@
+{
+  "search-result-layout.mobile": {
+    "title": "Mobile",
+    "children": [
+      "flex-layout.row#searchbread",
+      "flex-layout.row#searchtitle",
+      "flex-layout.row#searchinfomobile",
+      "flex-layout.row#total-layout",
+      "flex-layout.row#fetchprevious",
+      "flex-layout.row#contentmobile",
+      "flex-layout.row#fetchmore"
+    ],
+    "props": {
+      "blockClass": "mz-search",
+      "pagination": "show-more",
+      "mobileLayout": {
+        "mode1": "small",
+        "mode2": "normal"
+      },
+      "defaultGalleryLayout": "list",
+      "hiddenFacets": {
+        "priceRange": true
+      }
+    }
+  },
+
+  //INFO
+  "flex-layout.row#total-layout": {
+    "children": ["total-products.v2", "gallery-layout-switcher#mobile"],
+    "props": {
+      "blockClass": ["total-layout-mobile"]
+    }
+  },
+
+  // INFO
+  "flex-layout.row#searchinfomobile": {
+    "children": ["order-by.v2", "flex-layout.col#filter"],
+    "props": {
+      "blockClass": "mz-search__order--mobile",
+      "preserveLayoutOnMobile": true,
+      "colSizing": "auto",
+      "colJustify": "around"
+    }
+  },
+  // RESULT FILTER
+  "flex-layout.col#filter": {
+    "children": ["filter-navigator.v3#mobile"],
+    "props": {
+      "width": "22%",
+      "blockClass": "mz-search__filter"
+    }
+  },
+
+  "filter-navigator.v3#mobile": {
+    "blocks": ["sidebar-close-button"],
+    "props": {
+      "blockClass": "close-search-filter",
+      "updateOnFilterSelectionOnMobile": true,
+      "showClearByFilter": true,
+      "fullWidthOnMobile": false,
+      "drawerDirectionMobile": "drawerRight"
+    }
+  },
+
+  "drawer-close-button#search-mobile": {},
+
+  // RESULT
+  "flex-layout.row#contentmobile": {
+    "children": ["search-content"],
+    "props": {
+      "blockClass": ["mz-search__products", "mz-search__products--mobile"],
+      "preserveLayoutOnMobile": true
+    }
+  },
+
+  // LAYOUT GALLERY: GRID/LIST
+  "gallery-layout-switcher#mobile": {
+    "children": [
+      "gallery-layout-option#list-mobile",
+      "gallery-layout-option#grid-mobile"
+    ],
+    "props": {
+      "blockClass": "gallery-layout-mobile"
+    }
+  },
+  "gallery-layout-option#list-mobile": {
+    "props": {
+      "name": "list",
+      "blockClass": "icon-list"
+    },
+    "children": ["icon-inline-grid"]
+  },
+  "gallery-layout-option#grid-mobile": {
+    "props": {
+      "name": "grid",
+      "blockClass": "icon-grid"
+    },
+    "children": ["icon-grid"]
+  }
+}

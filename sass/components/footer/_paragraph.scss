@@ -1,0 +1,102 @@
+@import 'mixins/text';
+@import 'extends/titles';
+
+.container {
+  &--footer__newsletter {
+    .wrapper {
+      width: 100%;
+    }
+
+    .paragraph {
+      @include text($font-size-md, $text-color-1, $regular);
+      margin-top: 0px;
+      display: flex;
+      flex-direction: column;
+
+      &::before {
+        content: 'newsletter';
+        font-size: $font-size-md;
+        padding-bottom: 15px;
+
+        @media (min-width: $l) {
+          font-size: $font-size-lg;
+        }
+      }
+    }
+  }
+
+  &--footer__title {
+    @include text($font-size-md, $text-color-1, $regular);
+
+    @media (min-width: $l) {
+      font-size: $font-size-lg;
+    }
+
+    .wrapper {
+      & :last-child {
+        margin-top: 0;
+        padding: 10px 0;
+
+        @media (min-width: $l) {
+          padding-top: 0;
+        }
+      }
+    }
+  }
+
+  &--footer__tooltip--text,
+  &--footer_methods--title {
+    @media (min-width: $l) {
+      padding-right: 10px;
+    }
+
+    .heading {
+      @include text($font-size-sm, $text-color-1, $regular);
+      text-transform: lowercase;
+      white-space: nowrap;
+      margin-top: 10px;
+
+      @media (min-width: $l) {
+        font-size: $font-size-lg;
+      }
+    }
+
+    .paragraph {
+      @include text($font-size-sm, $text-color-1, $regular);
+      text-transform: lowercase;
+      margin-top: 10px;
+
+      @media (min-width: $l) {
+        font-size: $font-size-lg;
+      }
+    }
+  }
+
+  &--footer_methods--title {
+
+    .heading,
+    .paragraph {
+      @media (min-width: $l) {
+        font-size: $font-size-md;
+      }
+    }
+  }
+
+  &--footer__legal-information {
+    .paragraph {
+      @include text($font-size-xs, $text-color-1-400, $normal);
+    }
+  }
+
+  &--powered-by,
+  &--developed-by {
+    justify-content: flex-start;
+    padding-right: 20px;
+
+    .paragraph {
+      @include text($font-size-xxs, $text-color-1-400, $regular);
+      line-height: 1;
+      margin: 2px 0;
+    }
+  }
+}

@@ -1,0 +1,6 @@
+query Filter($id: ID){
+  fieldValues(fieldId: $id) {
+    value
+    isActive
+  }
+}

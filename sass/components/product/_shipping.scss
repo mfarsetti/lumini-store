@@ -1,0 +1,159 @@
+@import 'extends/inputs';
+@import 'extends/buttons';
+
+.shipping {
+  &Table {
+    margin: 20px 0;
+    text-transform: lowercase;
+
+    &Head {
+      display: block;
+      background-color: $text-color-1-500;
+
+      &Delivery {
+        &Name {
+          display: none;
+        }
+
+        &Price {
+          @include text($font-size-xs, $white, $lighter);
+          padding-left: 10px;
+          margin: auto 0;
+        }
+
+        &Estimate {
+          font-size: 0;
+          padding-left: 20px;
+          margin: auto 0;
+
+          &::before {
+            content: 'prazo de entrega';
+            @include text($font-size-xs, $white, $lighter);
+          }
+        }
+      }
+    }
+
+    &Cell {
+      margin: auto 0;
+      text-transform: lowercase;
+
+      .shippingTableLabel {
+        display: none;
+      }
+    }
+
+    &Row {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      height: 30px;
+    }
+  }
+
+  &Container {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+
+    @media (min-width: $l) {
+      padding: 32px 0;
+    }
+
+    :global(.vtex-input__label) {
+      display: block;
+      font-size: 0;
+
+      &::before {
+        content: 'calcule seu frete e o prazo de entrega';
+        font-size: $font-size-sm;
+        font-family: $main-font;
+        white-space: nowrap;
+
+        @media (min-width: $l) {
+          font-size: $font-size-lg;
+        }
+      }
+    }
+
+    :global(.vtex-address-form__postalCode) {
+      padding-bottom: 0;
+    }
+
+    :global(.vtex-input-prefix__group) {
+      border: none;
+      height: auto;
+    }
+
+    :global(.vtex-address-form-4-x-input) {
+      @extend %input-text;
+      height: 48px;
+      margin-right: 10px;
+      background-color: $color-5-400;
+    }
+
+    :global(.vtex-input__suffix) {
+      padding: 0;
+    }
+
+    :global(.vtex-button) {
+      @extend %primary-button;
+      width: 124px;
+      height: 40px;
+      margin-top: -5px;
+
+      &::after {
+        content: 'calcular';
+        font-size: $font-size-xs;
+        font-family: $main-font;
+
+        @media (min-width: $l) {
+          font-size: $font-size-md;
+        }
+      }
+    }
+
+    :global(.vtex-button__label) {
+      display: none;
+    }
+
+    :global(.vtex-address-form__postalCode) {
+      width: 40%;
+    }
+
+    :global(.vtex-address-form__postalCode-forgottenURL) {
+      :first-child {
+        font-size: 0;
+        color: $text-color-1;
+        text-decoration: none;
+        font-family: $main-font;
+
+        &::after {
+          content: 'não lembra o CEP?';
+          font-size: $font-size-xs;
+
+          @media (min-width: $l) {
+            font-size: $font-size-md;
+          }
+        }
+
+        &:hover {
+          text-decoration: underline;
+        }
+
+        :first-child {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &NoMessage {
+    @include text($font-size-xs, $text-color-1, $lighter);
+    text-transform: lowercase;
+
+    @media (min-width: $l) {
+      font-size: $font-size-sm;
+    }
+  }
+}

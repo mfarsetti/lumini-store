@@ -1,0 +1,245 @@
+{
+  "store.home": {
+    "title": "Home",
+    "blocks": ["disposition-layout#home"],
+    "children": ["modal-trigger#mz-newsletter"]
+  },
+
+  "disposition-layout#home": {
+    "title": "Home - Disposição do conteúdo",
+    "children": [
+      "list-context.image-list#slider-full-home",
+      "responsive-layout.desktop#deals",
+      "responsive-layout.mobile#deals",
+      "flex-layout.row#categories-banner-main",
+      "flex-layout.row#info-cards-colecoes",
+      "flex-layout.row#shelf-home",
+      "__fold__.experimentalLazyAssets",
+      "info-card#info-card-colecao",
+      "info-card#info-card-solucoes",
+      "flex-layout.row#designers",
+      "buzzlead"
+    ],
+    "props": {
+      "disposition": [
+        {
+          "order": 1
+        },
+        {
+          "order": 2
+        },
+        {
+          "order": 3
+        },
+        {
+          "order": 4
+        },
+        {
+          "order": 5
+        },
+        {
+          "order": 6
+        },
+        {
+          "order": 7
+        },
+        {
+          "order": 8
+        },
+        {
+          "order": 9
+        },
+        {
+          "order": 10
+        },
+        {
+          "order": 11
+        },
+        {
+          "order": 12
+        },
+        {
+          "order": 13
+        },
+        {
+          "order": 14
+        },
+        {
+          "order": 15
+        }
+      ]
+    }
+  },
+
+  "flex-layout.row#sobre-a-lumini": {
+    "title": "Home | Sobre a Lumini",
+    "children": [
+      "rich-text#sobre-a-lumini-titulo",
+      "rich-text#sobre-a-lumini-texto"
+    ],
+    "props": {
+      "blockClass": ["home__sobre"]
+    }
+  },
+  "rich-text#sobre-a-lumini-titulo": {
+    "title": "Home | Sobre a Lumini - Título",
+    "props": {
+      "blockClass": ["sobre-a-lumini-titulo"],
+      "font": "t-body",
+      "text": "a lumini",
+      "textAlignment": "CENTER",
+      "textColor": "c-on-base",
+      "textPosition": "CENTER"
+    }
+  },
+  "rich-text#sobre-a-lumini-texto": {
+    "title": "Home | Sobre a Lumini - Texto",
+    "props": {
+      "blockClass": ["sobre-a-lumini-texto"],
+      "font": "t-body",
+      "text": "somos uma empresa brasileira de iluminação, nascida e criada na linguagem de arquitetos e lighting designers. <br> acreditamos na importância da iluminação para o bem- estar das pessoas e há 35 anos nos dedicamos a melhorar a qualidade de vida de nossos clientes.<p>nossos produtos são pautados pelo design, pela simplicidade e pela tecnologia.</p>",
+      "textAlignment": "CENTER",
+      "textColor": "c-on-base",
+      "textPosition": "CENTER"
+    }
+  },
+
+  "info-card#info-card-colecao": {
+    "title": "Home | Info Card 1",
+    "props": {
+      "id": "home__infoCard",
+      "isFullModeStyle": true,
+      "textPosition": "left",
+      "imageUrl": "assets/img/inforcard-home.png",
+      "mobileImageUrl": "assets/img/inforcard-home-mobile.png",
+      "callToActionText": "conheça toda a coleção",
+      "callToActionUrl": "/about",
+      "blockClass": "home__info-card",
+      "textAlignment": "left"
+    }
+  },
+  "info-card#info-card-solucoes": {
+    "title": "Home | Info Card 2",
+    "props": {
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "assets/img/inforcard-solucoes.png",
+      "mobileImageUrl": "assets/img/inforcard-solucoes-mobile.png",
+      "headline": "led solutions",
+      "callToActionText": "saiba mais sobre a led solutions",
+      "subhead": "o avanço da tecnologia LED é um dos maiores desafios no desenvolvimento de soluções em iluminação de testes de dissipação de calor a pesquisas de tonalidade de cor, a lumini vem desenvolvendo tecnologias e processos para o melhor equilibrio entre baixo consumo de energia, grande durabilidade e alta qualidade luminotécnica. <p> principais benefícios do led: </p>",
+      "callToActionUrl": "/about",
+      "blockClass": "home__info-card-solucoes",
+      "textAlignment": "left"
+    }
+  },
+
+  "flex-layout.row#designers": {
+    "children": [
+      "info-card#titulo-designers",
+      "list-context.info-card-list#info-card-designers"
+    ],
+    "props": {
+      "blockClass": ["home__designers"]
+    }
+  },
+  "info-card#titulo-designers": {
+    "title": "Home | Info Card - Título - Designers",
+    "props": {
+      "blockClass": "titulo-designers",
+      "isFullModeStyle": true,
+      "callToActionText": "conheça todos os nossos designers",
+      "headline": "designers",
+      "id": "titulo-designers",
+      "imageUrl": "",
+      "subhead": "peças assinadas por designers renomados, repletas de exclusividade e detalhes que foram pensados para os mais diversos ambientes. ",
+      "textAlignment": "center",
+      "textPosition": "center"
+    }
+  },
+  "list-context.info-card-list#info-card-designers": {
+    "title": "Home | Info Card - Lista - Designers",
+    "children": ["slider-layout#demo-infocards"],
+    "props": {
+      "blockClass": "home__container-designers",
+      "infoCards": [
+        {
+          "imageUrl": "assets/img/designers/fernando_prado.png",
+          "headline": "fernando prado",
+          "subhead": "brasil",
+          "callToActionText": "conheça o trabalho",
+          "callToActionUrl": "/",
+          "blockClass": "info-card-designer",
+          "textAlignment": "center"
+        },
+        {
+          "imageUrl": "assets/img/designers/alberto_meda.png",
+          "headline": "alberto meda",
+          "subhead": "itália",
+          "callToActionText": "conheça o trabalho",
+          "callToActionUrl": "/",
+          "blockClass": "info-card-designer",
+          "textAlignment": "center"
+        },
+        {
+          "imageUrl": "assets/img/designers/atelier_oi.png",
+          "headline": "atelier oï",
+          "subhead": "suiça",
+          "callToActionText": "conheça o trabalho",
+          "callToActionUrl": "/",
+          "blockClass": "info-card-designer",
+          "textAlignment": "center"
+        },
+        {
+          "imageUrl": "assets/img/designers/daniela_puppa.png",
+          "headline": "daniela puppa",
+          "subhead": "croácia",
+          "callToActionText": "conheça o trabalho",
+          "callToActionUrl": "/",
+          "blockClass": "info-card-designer",
+          "textAlignment": "center"
+        },
+        {
+          "imageUrl": "assets/img/designers/fernando_prado.png",
+          "headline": "fernando prado",
+          "subhead": "brasil",
+          "callToActionText": "conheça o trabalho",
+          "callToActionUrl": "/",
+          "blockClass": "info-card-designer",
+          "textAlignment": "center"
+        },
+        {
+          "imageUrl": "assets/img/designers/fernando_prado.png",
+          "headline": "fernando prado",
+          "subhead": "brasil",
+          "callToActionText": "conheça o trabalho",
+          "callToActionUrl": "/",
+          "blockClass": "info-card-designer",
+          "textAlignment": "center"
+        },
+        {
+          "imageUrl": "assets/img/designers/fernando_prado.png",
+          "headline": "fernando prado",
+          "subhead": "brasil",
+          "callToActionText": "conheça o trabalho",
+          "callToActionUrl": "/",
+          "blockClass": "info-card-designer",
+          "textAlignment": "center"
+        }
+      ]
+    }
+  },
+  "slider-layout#demo-infocards": {
+    "title": "Home | Slider - Info Cards",
+    "props": {
+      "blockClass": "home__container-designers",
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 3,
+        "phone": 2
+      },
+      "infinite": false,
+      "usePagination": false
+    }
+  }
+}

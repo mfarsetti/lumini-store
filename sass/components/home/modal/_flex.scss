@@ -1,0 +1,45 @@
+.flex {
+  &Row {
+    &Content {
+      &--mz-modal-news {
+        &__content {
+          background: $white;
+        }
+      }
+    }
+  }
+
+  &Col {
+    &--mz-modal-news {
+      &__content {
+        &--form {
+          padding: 0 25px;
+        }
+
+        @media (max-width: $m) {
+          &--form {
+            padding: 20px;
+          }
+
+          &--image {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &Child {
+      &--mz-modal-news {
+        &__content {
+          &--form {
+            height: auto !important;
+
+            @media (max-width: $m) {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

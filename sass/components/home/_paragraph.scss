@@ -1,0 +1,146 @@
+@import 'mixins/text';
+@import 'extends/titles';
+@import 'mixins/links';
+
+.container {
+  &--home__deals {
+    .paragraph {
+      @include text($font-size-md, $text-color-1-500, $regular);
+      margin: 0;
+    }
+  }
+
+  &--shelf__title {
+    //@extend %container;
+    @include text($font-size-h5, $text-color-1, $regular);
+
+    @media (min-width: $l) {
+      @include text($font-size-h2, $text-color-1, $regular);
+
+      .paragraph {
+        margin-bottom: 24px !important;
+      }
+    }
+
+    .wrapper {
+      width: 90%;
+      text-align: left;
+      margin: auto;
+
+      @media (min-width: $l) {
+        width: 100%;
+      }
+    }
+  }
+
+  &--search__categories-banner {
+    .wrapper {
+      width: 100%;
+      text-align: left;
+    }
+
+    .heading {
+      @extend %big-title-section;
+      margin: 0 !important;
+    }
+
+    .paragraph {
+      @include text($font-size-sm, $text-color-1-400, $normal);
+      text-transform: lowercase;
+    }
+
+    .link {
+      @include link($font-size-xs, $color-2-500, $bold, underline);
+      text-transform: lowercase;
+    }
+  }
+
+  &--text-link {
+    margin-top: 32px;
+
+    @media (min-width: $l) {
+      margin-top: 48px;
+    }
+
+    .paragraph {
+      margin: 0 !important;
+      @include text($font-size-h5, $text-color-1, $regular);
+      text-transform: lowercase;
+
+      @media (min-width: $l) {
+        @include text($font-size-h2, $text-color-1, $regular);
+      }
+    }
+
+    .link {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      @include text($font-size-xs, $text-color-1, $regular);
+      text-transform: lowercase;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 14px;
+        height: 14px;
+        background-image: url('assets/svg/hpa-plus-filter.svg');
+        background-repeat: no-repeat;
+        background-size: 15px;
+        margin-left: 8px;
+      }
+
+      @media (min-width: $l) {
+        @include text($font-size-md, $text-color-1, $regular);
+
+        &::after {
+          content: '';
+          display: block;
+          width: 24px;
+          height: 14px;
+          background-image: url('assets/svg/hpa-plus-filter.svg');
+          background-repeat: no-repeat;
+          background-size: 13px;
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+
+  &--sobre-a-lumini-titulo {
+    justify-content: flex-start;
+
+    @media (min-width: $l) {
+      justify-content: center;
+    }
+  }
+}
+
+.wrapper {
+  &--sobre-a-lumini-texto {
+    justify-content: flex-start;
+
+    .paragraph,
+    &:last-child {
+      text-align: initial;
+      line-height: 150%;
+      @include text($font-size-sm, $text-color-1-400, $lighter);
+      text-transform: lowercase;
+    }
+  }
+
+  &--sobre-a-lumini-titulo {
+    font-size: 28px;
+    font-family: $main-font;
+    color: $text-color-1;
+    font-weight: $regular;
+
+    @media (min-width: $l) {
+      margin: 10px 80px auto auto;
+    }
+
+    .paragraph {
+      margin: 5px 0;
+    }
+  }
+}

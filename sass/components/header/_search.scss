@@ -1,0 +1,89 @@
+@import 'mixins/text';
+
+.search {
+  &Bar {
+    &Icon {
+      &--header__search {
+        @media (min-width: $m) {
+          &::before {
+            content: 'pesquisar';
+            color: $text-color-1;
+          }
+        }
+
+        @media (max-width: $m) {
+          &::after {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 30px;
+            background-image: url('assets/svg/search-desk.svg');
+            background-repeat: no-repeat;
+            background-size: 24px;
+          }
+        }
+
+        :global(.vtex-store-components-3-x-closeIcon),
+        :global(.vtex-store-components-3-x-searchIcon--header__search) {
+          display: none;
+        }
+      }
+
+      &--header {
+        &__search {
+          padding: 0 5px;
+          color: $white;
+        }
+      }
+    }
+
+    &Container {
+      padding: 0;
+    }
+
+    &Inner {
+      &Container {
+        &--header__search {
+          :global(.vtex-input-prefix__group) {
+            border: none;
+            border-radius: 0;
+          }
+
+          :global(.vtex-styleguide-9-x-input) {
+            border-radius: 0;
+            background-color: $white;
+            margin-right: 20px;
+            @include text($font-size-sm, $text-color-1-400);
+
+            @media (min-width: $m) {
+              border-bottom: 1px solid $text-color-1;
+            }
+          }
+
+          :global(.vtex-input__suffix) {
+            @media (min-width: $m) {
+              border: 1px solid $text-color-1;
+              border-radius: 0;
+              color: $text-color-1;
+              background: $white;
+              border-color: $color-2;
+              padding: 0 50px;
+              font-size: $font-size-base;
+
+              &:hover,
+              &:focus {
+                background: $text-color-1;
+
+                :global(.vtex-store-components-3-x-searchBarIcon--header__search) {
+                  &::before {
+                    color: $white;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

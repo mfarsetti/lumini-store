@@ -1,0 +1,111 @@
+.orderBy {
+  &Button {
+    padding: 0 !important;
+    padding-right: 0;
+    padding-top: 0;
+    margin: 0;
+    border: none;
+
+    @media (max-width: $l) {
+      padding: 0;
+      height: 40px;
+    }
+
+    .filterPopup {
+      &Title {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 0;
+        font-weight: $regular;
+        color: $text-color-1-500;
+        position: relative;
+
+        &::after {
+          content: '';
+          display: block;
+          width: 22px;
+          height: 20px;
+          background-image: url('assets/svg/search-orderby.svg');
+          background-repeat: no-repeat;
+          background-size: 16px;
+          margin-left: 10px;
+
+          @media (min-width: $l) {
+            font-size: $font-size-lg;
+          }
+        }
+
+        @media (max-width: $l) {
+          width: 100%;
+          display: flex;
+          justify-content: flex-end;
+          text-decoration: underline;
+          height: 40px;
+          line-height: 36px;
+        }
+
+        &Text {
+          font-size: $font-size-xs;
+        }
+      }
+
+      &Button {
+        @media (max-width: $l) {
+          width: 100%;
+          padding: 0;
+        }
+      }
+
+      &ArrowIcon {
+        display: none;
+      }
+    }
+  }
+
+  &Dropdown {
+    padding: 0;
+    margin: 0;
+  }
+
+  &Text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: $regular;
+    font-size: $font-size-sm;
+    line-height: normal;
+    color: $text-color-1-500;
+    text-transform: lowercase;
+
+    @media (min-width: $l) {
+      font-size: $font-size-lg;
+    }
+  }
+
+  &Option {
+    &Item {
+      font-weight: $normal;
+      text-transform: lowercase;
+      color: $text-color-1-500;
+      font-size: $font-size-sm;
+      min-width: auto;
+    }
+  }
+
+  &Options {
+    &Container {
+      border: 1px solid $color-5-500;
+      box-shadow: none;
+      border-radius: 4px;
+      top: 23px;
+      width: 50%;
+      min-width: 130px;
+
+      @media (max-width: $l) {
+        width: 100%;
+        top: 39px;
+      }
+    }
+  }
+}

@@ -1,0 +1,323 @@
+{
+  "header": {
+    "title": "Header",
+    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+  },
+  "header.full": {
+    "title": "Header",
+    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+  },
+
+  // HEADER DESKTOP START
+  "header-layout.desktop": {
+    "children": [
+      "flex-layout.row#tooltip",
+      "sticky-layout#4-desktop",
+      "cookie-modal"
+    ]
+  },
+
+  "sticky-layout#4-desktop": {
+    "props": {
+      "blockClass": "header__sticky"
+    },
+    "children": ["flex-layout.row#4-desktop"]
+  },
+  "flex-layout.row#4-desktop": {
+    "title": "Header - Conteúdo - Desktop",
+    "props": {
+      "blockClass": "header__main",
+      "horizontalAlign": "center",
+      "verticalAlign": "center"
+    },
+    "children": ["disposition-layout#row-4"]
+  },
+  "disposition-layout#row-4": {
+    "title": "Header - Disposição do conteúdo",
+    "children": [
+      "flex-layout.col#logo-desktop",
+      "flex-layout.col#category-menu",
+      "flex-layout.col#links-desktop"
+    ],
+    "props": {
+      "blockClass": "header__main--order",
+      "disposition": [
+        {
+          "order": 1
+        },
+        {
+          "order": 2
+        },
+        {
+          "order": 3
+        }
+      ]
+    }
+  },
+  "flex-layout.col#logo-desktop": {
+    "title": "MZ | Header - Logo",
+    "props": {
+      "verticalAlign": "middle",
+      "width": "20%"
+    },
+    "children": ["logo#desktop"]
+  },
+  "flex-layout.col#links-desktop": {
+    "title": "MZ | Header - Links",
+    "children": ["flex-layout.row#links-desktop"],
+    "props": {
+      "verticalAlign": "middle",
+      "width": "30%"
+    }
+  },
+  "flex-layout.row#links-desktop": {
+    "title": "Header - Links e Barra de Busca",
+    "children": [
+      "disclosure-layout#search",
+      "menu#wishlist",
+      "login#header",
+      "minicart.v2#main-header"
+    ],
+    "props": {
+      "blockClass": "header__links"
+    }
+  },
+  // WISH LIST
+  "menu#wishlist": {
+    "children": ["menu-item#wishlist"],
+    "props": {
+      "orientation": "vertical",
+      "blockClass": "mz-product__wishlist"
+    },
+    "title": "MZ | Header - Link - Wishlist"
+  },
+  "menu-item#wishlist": {
+    "props": {
+      "id": "menu-item-icone",
+      "blockClass": "mz-product__wishlist--item",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "href": "/account/#/wishlist",
+        "noFollow": false,
+        "tagTitle": "Favoritos",
+        "text": ""
+      },
+      "iconProps": {
+        "id": "hpa-heart-full",
+        "size": 18,
+        "viewBox": "0 0 24 24",
+        "mutedClassName": "c-action-primary"
+      }
+    }
+  },
+  "search-bar": {
+    "blocks": ["autocomplete-result-list.v2"],
+    "props": {
+      "placeholder": "o que você procura?",
+      "openAutocompleteOnFocus": true,
+      "blockClass": "header__search"
+    }
+  },
+
+  "autocomplete-result-list.v2": {
+    "blocks": ["product-summary"],
+    "props": {
+      "autocompleteWidth": 2
+    }
+  },
+
+  "flex-layout.col#category-menu": {
+    "title": "Header - Menu de categorias",
+    "props": {
+      "horizontalAlign": "left",
+      "width": "100%"
+    },
+    "children": ["vtex.menu@2.x:menu#category-menu"]
+  },
+  "logo#desktop": {
+    "title": "Header - Logo",
+    "props": {
+      "title": "Logo Lumini",
+      "href": "/",
+      "url": "assets/img/logo/logo.svg",
+      "width": "130",
+      "height": "auto",
+      "blockClass": "header__logo"
+    }
+  },
+  "login#header": {
+    "title": "Header - Link - Login",
+    "props": {
+      "showIconProfile": true,
+      "blockClass": "header__login"
+    }
+  },
+
+  // HEADER DESKTOP END
+
+  // HEADER MOBILE START
+  "header-layout.mobile": {
+    "children": [
+      "flex-layout.row#tooltip",
+      "sticky-layout#1-mobile",
+      "cookie-modal"
+    ]
+  },
+  "sticky-layout#1-mobile": {
+    "children": ["flex-layout.row#1-mobile"]
+  },
+
+  "flex-layout.row#1-mobile": {
+    "title": "Header - Conteúdo - Mobile",
+    "children": [
+      "drawer#header-mobile",
+      "logo#mobile",
+      "flex-layout.row#mob-list"
+    ],
+    "props": {
+      "blockClass": "header__main",
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    }
+  },
+  "flex-layout.row#mob-list": {
+    "props": {
+      "blockClass": "header__main--mob"
+    },
+    "children": ["minicart.v2#main-header"]
+  },
+
+  "logo#mobile": {
+    "props": {
+      "title": "Logo Lumini",
+      "href": "/",
+      "url": "assets/img/logo/logo.svg",
+      "width": "103",
+      "height": "auto",
+      "blockClass": "header__logo"
+    }
+  },
+
+  "drawer#header-mobile": {
+    "props": {
+      "blockClass": "menu-search",
+      "isFullWidth": false,
+      "slideDirection": "horizontal"
+    },
+    "blocks": ["drawer-header#header-mobile"],
+    "children": ["menu#drawer", "flex-layout.row#login-wishlist-mobile"]
+  },
+
+  "flex-layout.row#login-wishlist-mobile": {
+    "children": ["login#header-mobile", "menu#wishlist"],
+    "props": {
+      "blockClass": ["login-wishlist-mobile"]
+    }
+  },
+
+  "drawer-header#header-mobile": {
+    "children": ["search-bar", "drawer-close-button"],
+    "props": {
+      "blockClass": "mz-drawer__menu--mobile",
+      "backdropMode": "default"
+    }
+  },
+
+  "menu#drawer": {
+    "children": [
+      "menu-item#menu-luminarias",
+      "menu-item#menu-decoracao",
+      "menu-item#sobre-a-lumini",
+      "menu-item#atendimento"
+    ],
+    "props": {
+      "orientation": "vertical",
+      "blockClass": "header_menu--mob"
+    }
+  },
+
+  "menu-item#menu-luminarias": {
+    "props": {
+      "id": "menu-item-all-categories",
+      "type": "custom",
+      "iconId": null,
+      "highlight": true,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "luminárias",
+        "text": "luminárias"
+      }
+    },
+    "blocks": ["vtex.menu@2.x:submenu.accordion#menu-luminarias-mob"]
+  },
+  "menu-item#menu-decoracao": {
+    "props": {
+      "id": "menu-item-all-categories",
+      "type": "custom",
+      "iconId": null,
+      "highlight": true,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "decoração",
+        "text": "decoração"
+      }
+    }
+    // "blocks": ["vtex.menu@2.x:submenu.accordion#menu-decoracao-mob"]
+  },
+
+  "menu-item#sobre-a-lumini": {
+    "props": {
+      "id": "menu-item-all-categories",
+      "type": "custom",
+      "iconId": null,
+      "highlight": true,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "link sobre",
+        "text": "sobre a lumini"
+      }
+    }
+  },
+
+  "menu-item#atendimento": {
+    "props": {
+      "id": "menu-item-all-categories",
+      "type": "custom",
+      "iconId": null,
+      "highlight": true,
+      "itemProps": {
+        "type": "internal",
+        "href": "/",
+        "noFollow": false,
+        "tagTitle": "link atendimento",
+        "text": "atendimento"
+      }
+    }
+  },
+
+  "vtex.menu@2.x:submenu.accordion#menu-luminarias-mob": {
+    "children": ["vtex.menu@2.x:menu#luminarias"]
+  },
+
+  "vtex.menu@2.x:submenu.accordion#menu-decoracao-mob": {
+    "children": ["vtex.menu@2.x:menu#categories-decoracao"]
+  },
+
+  "login#header-mobile": {
+    "title": "Login",
+    "props": {
+      "showIconProfile": true,
+      "blockClass": "header__login--mob"
+    }
+  }
+
+  // HEADER MOBILE END
+}

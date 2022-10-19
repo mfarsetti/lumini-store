@@ -1,0 +1,98 @@
+@import 'mixins/text';
+@import 'extends/buttons';
+
+.biggy-autocomplete {
+  @media (max-width: $m) {
+    min-width: 311px;
+    right: 0;
+  }
+
+  @media (min-width: $m) {
+    width: max-content;
+    margin-top: 20px;
+    right: 0;
+  }
+}
+
+.tileList {
+  padding-left: 10px;
+}
+
+.itemList {
+  @include text($font-size-sm, $text-color-1-400);
+  text-transform: lowercase;
+
+  .itemListSubItemLink {
+    @include text($font-size-sm, $text-color-1-500, $regular);
+    text-transform: lowercase;
+  }
+}
+
+.itemListTitle {
+  @include text($font-size-lg, $text-color-1-500);
+  text-transform: lowercase;
+  margin-top: 5px;
+}
+
+.tileListTitle {
+  @include text($font-size-lg, $text-color-1-500, $regular);
+  text-transform: lowercase;
+
+  @media (min-width: $l) {
+    padding-left: 15px;
+    margin-top: 0;
+  }
+}
+
+.tileListSeeMore {
+  text-transform: lowercase;
+}
+
+.tileListItem {
+  :global(.vtex-button) {
+    @extend %primary-button;
+  }
+
+  .element {
+    align-items: flex-start;
+  }
+
+  .productBrand,
+  .priceContainer {
+    @include text($font-size-md, $text-color-1-500);
+    text-transform: lowercase;
+  }
+
+  .currencyContainer {
+    @include text($font-size-xs, $text-color-1-500, $regular);
+    text-transform: capitalize !important;
+
+    &::before {
+      content: 'a partir de ';
+    }
+  }
+
+  :global(.vtex-product-summary-2-x-containerNormal) {
+    max-width: 300px !important;
+    padding: 10px;
+  }
+
+  :global(.vtex-product-summary-2-x-productBrand) {
+    font-size: $font-size-xs !important;
+    text-transform: lowercase;
+  }
+
+  @media (min-width: $l) {
+    :global(.vtex-product-summary-2-x-productBrand) {
+      font-size: $font-size-sm !important;
+    }
+  }
+
+  :global(.vtex-product-summary-2-x-nameContainer) {
+    padding: 0;
+  }
+
+  :global(.vtex-store-components-3-x-sellingPrice) {
+    @include text($font-size-sm, $text-color-1-500);
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "store.custom#institucional-template-politicas": {
+    "title": "institucional | template de texto",
+    "blocks": ["flex-layout.row#politicas"]
+  },
+  "flex-layout.row#politicas": {
+    "title": "institucional | containers",
+    "props": {
+      "blockClass": ["politica-container"],
+      "colSizing": "auto",
+      "preventVerticalStretch": true
+    },
+    "children": [ "experimental__visibility-layout#menu-lateral", "flex-layout.col#politicas"]
+  },
+  "experimental__visibility-layout#menu-lateral": {
+    "title": "Controle de visibilidade - Menu Lateral",
+    "children": [
+      "flex-layout.col#institucional-col-1"
+    ],
+    "props": {
+      "visible": false,
+      "blockClass": ["mz-menu-lateral"]
+    }
+  },
+  "flex-layout.col#politicas": {
+    "title": "institucional | container de textos",
+    "props": {
+      "blockClass": "politica-container"
+    },
+    "children": ["rich-text#title-politicas", "rich-text#content-politicas"]
+  },
+  "rich-text#title-politicas": {
+    "title": "institucional | título",
+    "props": {
+      "blockClass": "institucional-title",
+      "text": "política de troca e devolução"
+    }
+  },
+  "rich-text#content-politicas": {
+    "title": "institucional | conteúdo",
+    "props": {
+      "blockClass": "institucional-content",
+      "text": "devolução por arrependimento ou insatisfação o consumidor tem até 7 (sete) dias corridos para comunicar a desistência, a contar da data de recebimento do produto. as desistências somente serão aceitas mediante formalização escrita, enviada ao email lojavirtual@lumini.com.br ou pelo formulário de contato. produto deve ser devolvido em sua embalagem original, sem que tenha sido utilizado ou instalado, juntamente com nota fiscal, manual e acessórios.\n\nse todas as condições acima forem respeitadas, a lumini aceitará o cancelamento da compra, providenciará a retirada da mercadoria no local onde foi entregue e fará o reembolso do valor total pago pelo consumidor.\n\ndevolução de produto com defeito constatado qualquer defeito de fabricação, o cliente poderá solicitar a troca do produto em até 10 dias corridos a contar da data de recebimento da mercadoria. a comunicação deve ser feita por email (lojavirtual@lumini.com.br) ou peloformulário de contato, os produtos deverão ser devolvidos na embalagem original, junto com a nota fiscal, manual e acessórios. na lumini tem até 30 dias corridos para analisar e/ou solucionar o problema, a partir da data do recebimento do produto em nossa fábrica. uma vez comprovado o defeito, o consumidor poderá solicitar a troca do produto com defeito ou o cancelamento da compra e a restituição integral do valor pago.caso não seja identificado qualquer defeito no produto, o mesmo será reenviado ao cliente. os custos de reenvio serão de obrigação do cliente.\n\nrestituições de valores\no cliente que optar pelo ressarcimento do valor pago – uma vez atendidas as exigências para tal – terá seu dinheiro restituído da seguinte forma: \no valor pago pelo produto será devolvido integralmente da mesma forma que foi transacionado. para cartões de crédito, a administradora do cartão será notificada e o estorno poderá acontecer em até 2 (duas) faturas subsequentes, sendo esse prazo de responsabilidade da administradora do cartão.\n\nem caso de devolução, a restituição dos valores será processada somente após o recebimento e análise do(s) produto(s).\n\nmontagem de terceiros\nnão nos responsabilizamos pela montagem ou instalação realizada por terceiros. qualquer consequência de má manipulação do produto é de responsabilidade do cliente. nesses casos, não será permitida a troca ou devolução da mercadoria.\n\ncomo devolver um produto\na solicitação de devolução deverá ser comunicada ao setor de atendimento em até 7 (sete) dias corridos em caso de desistência ou em até 10 (dez) dias corridos em caso de produtos com defeito, a contar da data do recebimento. a devolução pode ser feita de duas maneiras:\npostagem em uma agência dos correios: \no envio do(s) produto(s) é gratuito. após comunicar a intenção de devolução ao nosso setor de atendimento, você receberá por e-mail o código de postagem que deve ser apresentado na agência dos correios. para realizar o procedimento, siga as instruções abaixo:\n· acondicione o produto em sua embalagem original;\n· inclua todos os itens/acessórios que acompanham o produto;\n· junte a segunda via do DANFE (documento auxiliar da nota fiscal eletrônica) recebida no ato da entrega. o envio do DANFE é imprescindível para que o produto seja identificado. relate, no verso do documento, o motivo da devolução.\n\nIMPORTANTE: as agências dos correios franqueadas (ACF) não utilizam o instrumento de habilitação de postagem.\n\ncoleta no local da entrega:\na lumini coleta o(s) produto(s) no mesmo endereço onde foi realizada a entrega. as coletas são feitas de segunda a sexta feira, das 8h às 18h. para realizar o procedimento, siga as instruções abaixo:\n· acondicione o produto em sua embalagem original;\n· inclua todos os itens/acessórios que acompanham o produto;\n· junte a segunda via do DANFE (documento auxiliar da nota fiscal eletrônica) recebida no ato da entrega. o envio do DANFE é imprescindível para que o produto seja identificado. relate, no verso do documento, o motivo da devolução.\n· peça um comprovante de recolhimento ao transportador. caso o transportador não tenha o protocolo, não entregue a mercadoria e comunique o fato à nossa central de atendimento.\n\n\nem caso de dúvidas, entre em contato conosco."
+    }
+  },
+
+  "flex-layout.col#institucional-col-1": {
+    "title": "Institucional - Menus laterais",
+    "props": {
+      "width": "20%",
+      "orientation": "vertical",
+      "blockClass": "menus-institucional"
+    },
+    "children": [
+      "menu-item#menu-titulo-1-col-1"
+      // "menu-item#menu-titulo-2-col-1",
+      // "menu-item#menu-titulo-3-col-1"
+    ]
+  }
+}

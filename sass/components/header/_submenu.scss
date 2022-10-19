@@ -1,0 +1,63 @@
+@import 'extends/container';
+
+.submenu {
+  &--header__menu {
+    justify-content: flex-start;
+    max-width: 520px;
+    min-width: auto;
+    margin: auto;
+
+    .menu {
+      &Container {
+        &Nav {
+          padding-left: 50px;
+
+          &:first-child {
+            padding-left: 0;
+            border-left: none;
+          }
+        }
+      }
+    }
+  }
+
+  &Wrapper {
+    &--header__menu,
+    &--header__search {
+      @extend %no-container;
+      width: 100%;
+      border: none;
+      padding: 0 !important;
+      transform: translateY(15px);
+      .styled {
+        &Link {
+          @include link($font-size-sm, $text-color-1-400, $regular, none);
+
+          @media (min-width: $l) {
+            @include link($font-size-md, $text-color-1-400, $regular, none);
+          }
+
+          &--highlight {
+            @include link($font-size-sm, $text-color-1-400, $bold, none);
+
+            @media (min-width: $l) {
+              @include link($font-size-lg, $text-color-1-500, $regular, none);
+            }
+          }
+
+          &Container {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+
+    &--header__menu {
+      .menuItem {
+        .styledLinkContainer {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,193 @@
+@import 'extends/container';
+@import 'extends/buttons';
+@import 'mixins/text';
+
+.orderPlaced {
+  &MainWrapper {
+    @extend %container;
+    margin-top: 64px !important;
+
+    @media (max-width: $m) {
+      width: 100%;
+      margin-top: 32px !important;
+    }
+  }
+
+  &Wrapper {
+    padding: 0;
+
+    @media (max-width: $m) {
+      padding: 0 1rem;
+    }
+  }
+
+  &Header {
+    @extend %container;
+
+    .confirmationTitle {
+      margin: 0;
+      text-align: left;
+      font-weight: $regular;
+      color: $text-color-1;
+      text-transform: lowercase;
+      font-size: 0;
+
+      &::before {
+        content: 'seu pedido foi processado com sucesso';
+        font-size: $font-size-lg;
+      }
+    }
+
+    .confirmationMessage {
+      margin: 20px 0 0 0;
+      text-align: left;
+      font-size: $font-size-sm;
+      font-weight: $regular;
+      line-height: 20px;
+      color: $text-color-1;
+    }
+  }
+}
+
+.orderNumber {
+  font-size: $font-size-h5;
+  font-weight: $regular;
+  color: $text-color-1;
+  text-transform: lowercase;
+}
+
+.orderDatetime {
+  font-size: $font-size-md;
+  font-weight: $regular;
+  color: $text-color-1;
+  text-transform: lowercase;
+}
+
+// Resumo da compra
+:global(.vtex-order-placed-2-x-section) {
+  border: none;
+
+  // Endereço
+  :global(.vtex-order-placed-2-x-package) {
+    margin: 12px 0 0 0;
+
+    :global(.vtex-order-placed-2-x-packageHeaderColumn) {
+      width: 100%;
+
+      :global(.vtex-order-placed-2-x-packageAddressWrapper) {
+        margin: 0;
+
+        :global(.vtex-order-placed-2-x-addressContainer) {
+          font-size: $font-size-sm;
+          line-height: 22px;
+          font-weight: $regular;
+          color: $text-color-1;
+          font-family: $main-font;
+        }
+      }
+    }
+  }
+
+  // Pagamento
+  :global(.vtex-order-placed-2-x-orderPaymentWrapper) {
+    :global(.vtex-order-placed-2-x-orderPaymentItem) {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+
+      :global(.vtex-order-placed-2-x-paymentGroup),
+      :global(.vtex-order-placed-2-x-paymentValue) {
+        margin: 12px 0 20px;
+        font-size: $font-size-sm;
+        font-weight: $regular;
+        color: $text-color-1;
+        font-family: $main-font;
+      }
+      [data-testid="button-link"]{
+        text-decoration: none;
+      }
+      :global(.vtex-button) {
+        @extend %primary-button;
+        font-size: $font-size-sm;
+        text-decoration: none;
+        .vtex-button__label,
+        &:hover{
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+// Valores
+:global(.vtex-order-placed-2-x-totalListWrapper) {
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  :global(.vtex-order-placed-2-x-totalList) {
+    margin: 12px 0 0 0;
+    width: 100%;
+
+    :global(.vtex-order-placed-2-x-totalListItem) {
+
+      :global(.vtex-order-placed-2-x-totalListItemLabel),
+      :global(.vtex-order-placed-2-x-totalListItemValue) {
+        font-size: $font-size-sm;
+        line-height: 22px;
+        font-weight: $regular;
+        color: $text-color-1;
+        font-family: $main-font;
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+
+.packageDeliveryTitle {
+  @include text($font-size-h5, $text-color-1, $regular);
+  font-family: $main-font  !important;
+  text-transform: lowercase !important;
+  font-size: 0 !important;
+
+  &::before {
+    content: 'prazo de entrega';
+    font-size: $font-size-h5;
+  }
+}
+
+.packageShippingEstimate {
+  @include text($font-size-sm, $text-color-1-400, $regular);
+  font-family: $main-font  !important;
+  text-transform: lowercase !important;
+}
+
+.packageSLA {
+  display: none !important;
+}
+
+.confirmationMessage {
+  text-transform: lowercase !important;
+}
+
+.printButtonWrapper {
+  :global(.vtex-button){
+    @extend %primary-button;
+    font-size: $font-size-sm;
+    line-height: 2;
+  }
+}
+.printHintWrapper {
+  text-transform: lowercase;
+}
+.bankInvoiceEmbedWrapper {
+  border: none;
+  :global(.vtex-button){
+    background: $white;
+    &:hover{
+      background: $white;
+    }
+  }
+}
+.bankInvoiceEmbedBackground {
+  background: $white!important;
+}

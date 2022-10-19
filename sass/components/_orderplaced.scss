@@ -1,0 +1,197 @@
+@import 'extends/container';
+@import 'extends/buttons';
+@import 'mixins/text';
+
+.orderPlacedWrapper {
+  @extend %container;
+  padding-top: 0;
+  padding-bottom: 187px;
+
+  @media (max-width: $l) {
+    padding: 0 15px;
+  }
+}
+
+.orderPlacedHeader {
+  &--orderplaced {
+    margin-top: 24px;
+    text-align: center;
+
+    @media (min-width: $l) {
+      margin-top: 66px;
+      text-align: start;
+    }
+
+    // &::before {
+    //   content: 'pedido confirmado';
+    //   width: 100%;
+    //   font-size: $font-24;
+    //   color: $text-color-1;
+    // }
+  }
+}
+
+.confirmationMessage {
+  text-align: start;
+}
+
+.confirmationTitle {
+  text-align: start;
+  font-size: 0;
+  margin-top: 0;
+
+  &::before {
+    content: 'seu pedido foi processado com sucesso';
+    font-size: $font-size-lg;
+  }
+}
+
+.confirmationIconWrapper {
+  display: none;
+}
+
+.section {
+  &--confirmation {
+    border: 1px solid $color-border;
+    padding: 27px 24px;
+    margin: 32px 0;
+
+    :global(.vtex-button) {
+      @extend %primary-button;
+      background: $text-color-1;
+      color: $white;
+
+      &:hover {
+        background: $white;
+        color: $text-color-1;
+      }
+    }
+
+    @media (min-width: $l) {
+      :global(.vtex-button) {
+        justify-content: end;
+        position: relative;
+        transform: translate(410px, -60px);
+
+        min-width: 329px;
+      }
+    }
+  }
+
+  &--deliveryPackages {
+    border-bottom: none;
+  }
+}
+
+:global(.vtex-flex-layout-0-x-flexRowContent--confirmationButtons) {
+  height: 0;
+  margin: 0;
+}
+
+.noticesList {
+  display: none;
+}
+
+.orderWrapper {
+  .orderNumber {
+    @include text($font-size-h5, $text-color-1, $regular);
+    text-transform: lowercase;
+  }
+
+  .orderDatetime {
+    @include text($font-size-sm, $text-color-1-400, $regular);
+    text-transform: lowercase;
+  }
+
+  .orderSoldBy {
+    display: none;
+  }
+}
+
+.orderPlacedMainWrapper {
+  margin: 0;
+}
+
+:global(.vtex-button) {
+  @extend %primary-button;
+}
+
+.myOrdersButton,
+.updateOrderButton,
+.cancelOrderButton {
+  :first-child {
+    text-decoration: none;
+  }
+}
+
+.packageDeliveryTitle {
+  @include text($font-size-h5, $text-color-1, $regular);
+  font-family: $main-font !important;
+  text-transform: lowercase !important;
+  font-size: 0;
+
+  &::before {
+    content: 'prazo de entrega';
+    font-size: $font-size-h5;
+  }
+}
+
+.packageShippingEstimate {
+  @include text($font-size-sm, $text-color-1-400, $regular);
+  font-family: $main-font !important;
+  text-transform: lowercase !important;
+}
+
+.package {
+  &--delivery {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.packageSLA {
+  display: none;
+}
+
+.orderPlacedMainWrapper {
+  width: 100%;
+}
+
+.totalList {
+  width: 100%;
+
+  .totalListItem {
+    text-transform: lowercase;
+
+    .totalListItemLabel {
+      @include text($font-size-sm, $text-color-1, $regular);
+      text-transform: lowercase;
+    }
+
+    .totalListItemValue {
+      @include text($font-size-md, $text-color-1, $regular);
+      font-size: $font-size-md !important ;
+      text-transform: capitalize;
+    }
+  }
+}
+
+.productList {
+  width: 100%;
+  padding-top: 44px;
+  .productListItem {
+    width: 100%;
+    margin-top: 17px;
+    padding: 23px 0;
+    border-top: 1px solid $color-border;
+    border-bottom: 1px solid $color-border;
+  }
+}
+
+.productWrapper {
+  @media (max-width: $m) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+

@@ -1,0 +1,17 @@
+@import "extends/container";
+
+.video {
+    &Container {
+        &--home__parallax{
+            display: flex;
+            justify-content: center;
+        }
+        
+    }
+    &Element {
+        @media(max-width: $m){
+            width: 300px;
+            height: 164px;
+        }
+    }
+}

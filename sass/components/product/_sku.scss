@@ -1,0 +1,148 @@
+@import 'mixins/text';
+
+.skuSelector {
+  &Name {
+    @include text($font-size-lg, $text-color-1-500, $normal);
+    text-transform: lowercase;
+
+    &Separator {
+      @include text($font-size-lg, $text-color-1-500, $normal);
+    }
+  }
+
+  &Subcontainer {
+    padding-bottom: 25px;
+    margin-bottom: 0;
+
+    @media (min-width: $l) {
+      padding-bottom: 30px;
+    }
+  }
+
+  &OptionsList {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0;
+
+    .skuSelectorItem {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+
+  &Selector {
+    &Image {
+      &Value {
+        @include text($font-size-lg, $color-6-50, $normal);
+        text-transform: lowercase;
+      }
+    }
+  }
+
+  &Item {
+    &--selected {
+      .skuSelectorInternalBox {
+        border-color: $text-color-1-500;
+        background-color: $text-color-1-500;
+      }
+
+      .valueWrapper {
+        color: $white  !important;
+      }
+
+      .frameAround {
+        border: none;
+      }
+    }
+  }
+
+  &Internal {
+    &Box {
+      border: 1px solid $text-color-1;
+      box-sizing: border-box;
+      border-radius: 0;
+      padding: 0 10px;
+
+      &:hover {
+        background-color: $text-color-1;
+
+        .valueWrapper {
+          color: $white;
+
+          &--unavailable {
+            color: $text-color-2-400;
+          }
+        }
+      }
+
+      .valueWrapper {
+        @include text($font-size-md, $text-color-1, $normal);
+        width: 100%;
+        text-align: start;
+        text-transform: lowercase;
+
+        &--unavailable {
+          color: $text-color-2-400;
+        }
+      }
+
+      .diagonalCross {
+        background: $color-5-600;
+      }
+    }
+  }
+
+  //CORES
+  &Subcontainer--cor {
+    .skuSelectorOptionsList {
+      flex-direction: row;
+      flex-flow: wrap;
+    }
+
+    .skuSelectorInternalBox{
+      padding: 2px;
+      border-color: transparent;
+      &:hover{
+        background: none;
+        border-color: $text-color-1;
+      }
+    }
+
+    .skuSelectorItem{
+      width: 41px;
+      height: 41px;
+      &--selected{
+        .skuSelectorInternalBox{
+          background-color: $white;
+          border-color:  $text-color-1;
+        }
+      }
+    }
+
+    .skuSelectorItemImageValue{
+      max-width: 100%;
+    }
+
+    .skuSelectorItem {
+      .skuSelectorItemTextValue {
+        display: none;
+      }
+
+      .skuSelectorInternalBox {
+        .diagonalCross {
+          &::before {
+            content: '';
+            display: block;
+            border-top: 1px solid #353535 !important;
+            width: 50px;
+            transform: rotate(45deg);
+            position: relative;
+            top: 19px;
+            right: 5px;
+          }
+        }
+      }
+    }
+  }
+}

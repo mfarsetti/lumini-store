@@ -1,0 +1,25 @@
+@import 'variables/colors';
+.mz-CustomPrice{
+    font-size: 18px;
+    color:$text-color-1;
+    margin-top: 20px;
+    .mz-CustomPrice-text{
+        font-size: 20px;
+    }
+    @media (min-width:1024px) {
+        .mz-CustomPrice-text{
+            font-size: 1.5rem;
+        }
+        font-size: 1.5rem;
+    }
+}
+.mz-CustomPrice-shelf{
+    font-size: .75rem;
+    font-weight: 400;
+    color:$text-color-1;
+    margin-top: 5px;
+    @media (min-width:1024px) {
+        margin-top: 0;
+        font-size: 1rem;
+    }
+}

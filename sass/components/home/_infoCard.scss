@@ -1,0 +1,267 @@
+@import 'extends/container';
+@import 'mixins/text';
+@import 'extends/buttons';
+
+.infoCard {
+  &Container {
+    &--info-card-showrooms{
+      .infoCardHeadline{
+        font-size: $font-24;
+      }
+      .infoCardSubhead {
+        line-height: 1.5;
+      }
+    }
+    &--home__info-card {
+      flex-direction: row-reverse;
+      display: flex;
+      margin-top: 60px !important;
+      min-height: 640px;
+      border: none;
+
+      @media (max-width: $l) {
+        margin-top: 30px !important;
+        flex-direction: column-reverse;
+        min-height: 260px;
+        background-size: 100%!important;
+      }
+
+      .infoCardImageContainer,
+      .infoCardImage,
+      .infoCardTextContainer {
+        border-radius: 0;
+
+        @media (min-width: $l) {
+          height: 420px;
+          display: flex;
+          justify-content: center;
+        }
+      }
+
+      .infoCardTextContainer,
+      .infoCardCallActionContainer {
+        margin: auto;
+        margin-bottom: 0 !important;
+
+        @media (min-width: $l) {
+          margin-bottom: 10px !important;
+        }
+      }
+
+      .infoCard {
+        &Headline {
+          @include text($font-size-h2, $text-color-1-500, $normal);
+        }
+
+        &Subhead {
+          @include text($font-size-md, $text-color-1-400, $normal);
+        }
+
+        &CallActionContainer {
+          text-decoration: none;
+
+          &:hover,
+          &:focus,
+          &:active {
+            text-decoration: none;
+          }
+        }
+      }
+
+      :global(.vtex-button) {
+        margin: auto;
+        margin-bottom: 0;
+      }
+    }
+
+    &--titulo-designers {
+      border: none;
+      margin: 0 15px;
+      padding-left: 0;
+
+      @media (min-width: $l) {
+        justify-content: flex-start;
+        padding-left: 60px;
+      }
+
+      .infoCardTextContainer {
+        width: 100% !important;
+        align-items: flex-start;
+        margin: 0;
+
+        @media (min-width: $l) {
+          margin-right: 0;
+          width: 60% !important;
+        }
+      }
+
+      .infoCardImageContainer {
+        display: none;
+      }
+
+      .infoCardHeadline {
+        font-family: $main-font;
+      }
+
+      .infoCardSubhead {
+        text-align: inherit;
+        letter-spacing: 0.04em;
+        @include text($font-size-sm, $text-color-1-400, $lighter);
+      }
+
+      :global(.vtex-button__label) {
+        white-space: nowrap;
+      }
+    }
+
+    &--home__colecoes {
+      display: flex;
+      flex-direction: column-reverse;
+      border: none;
+      padding: 0;
+
+      .infoCardImageContainer,
+      .infoCardTextContainer {
+        width: 100%;
+        padding: 0;
+      }
+
+      .infoCardHeadline {
+        @include text($font-size-xlg, $text-color-1, $normal);
+        margin-top: 6px;
+
+        @media (min-width: $l) {
+          @include text($font-size-h3, $text-color-1, $normal);
+        }
+      }
+
+      .infoCardSubhead {
+        @include text($font-size-sm, $text-color-1-400, $lighter);
+
+        @media (min-width: $l) {
+          @include text($font-size-md, $text-color-1-400, $lighter);
+        }
+      }
+
+      .infoCardCallActionContainer {
+        :global(.vtex-button) {
+          min-width: 147px;
+          height: 32px;
+        }
+      }
+    }
+
+    &--home__info-card-solucoes {
+      margin: auto;
+      padding-top: 40px;
+      align-items: flex-start;
+
+      .infoCardTextContainer {
+        margin: auto;
+        padding: 0 15px;
+      }
+
+      .infoCardImage {
+        width: 100% !important;
+      }
+
+      @media (min-width: $l) {
+        width: 90%;
+        padding-right: 0;
+        margin-right: 0;
+        margin-left: auto;
+
+        .infoCardTextContainer {
+          width: 36%;
+          margin-left: 70px;
+          padding: 0;
+        }
+      }
+
+      .infoCardSubhead {
+        @include text($font-size-sm, $text-color-1-400, $lighter);
+        line-height: 150%;
+
+        &::after {
+          content: '';
+          display: block;
+          width: inherit;
+          height: 170px;
+          background-image: url('assets/img/info-card-2-beneficios-mobile.png');
+          background-repeat: no-repeat;
+          background-size: contain;
+          margin: 20px 0;
+        }
+
+        @media (min-width: $l) {
+          @include text($font-size-md, $text-color-1-400, $lighter);
+
+          &::after {
+            content: '';
+            display: block;
+            width: inherit;
+            height: 50px;
+            background-image: url('assets/img/info-card-2-beneficios.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin: 35px 0;
+          }
+        }
+      }
+
+      .infoCardHeadline {
+        font-family: $main-font;
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+
+        &::before {
+          content: 'conheça';
+          margin-bottom: 10px;
+          @include text($font-size-sm, $text-color-1-400, $lighter);
+        }
+      }
+    }
+
+    &--parallax {
+      background-attachment: fixed;
+      // background-size: auto 100%!important;
+
+      .infoCardTextContainer {
+        display: none;
+      }
+    }
+  }
+
+
+  &Image {
+    &Container {
+      &--home__info-card-solucoes {
+        @media (min-width: $l) {
+          padding-top: 60px;
+
+          width: 55% !important;
+
+          .infoCardImage {
+            width: 100% !important;
+            max-height: 507px !important;
+            object-fit: cover !important;
+            object-position: 50% 50%;
+          }
+        }
+      }
+    }
+  }
+
+  &Call {
+    &Action {
+      &Container {
+        text-decoration: none;
+
+        :global(.vtex-button) {
+          @extend %primary-button;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,106 @@
+.product {
+  &Images {
+    &Container {
+      background-color: $white;
+      margin: 0;
+
+      @media (min-width: $l) {
+        padding: 0 15px;
+      }
+    }
+
+    &Thumb {
+      &--pdp__images {
+        margin-right: 24px;
+        height: auto !important;
+        width: 115px !important;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+      .figure--video {
+        background-color: $color-2-500;
+        height: 100%;
+        display: flex;
+      }
+    }
+  }
+
+  &ImageTag {
+    &--pdp__images {
+      max-height: initial !important;
+    }
+  }
+}
+.productImagesThumbCaret {
+  /* .caretIcon{
+    display: none;
+  }
+   &::after {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 30px;
+    background-image: url('assets/svg/arrow-pdp.svg');
+    background-repeat: no-repeat;
+    background-size: 16px;
+    margin-right: 21px;
+    // transform: rotate(180deg);
+  } */
+}
+/* .swiperCaret {
+  // &--pdp__images {
+  &:first-child {
+    &::after {
+      content: '';
+      display: block;
+      width: 16px;
+      height: 30px;
+      background-image: url('assets/svg/arrow-pdp.svg');
+      background-repeat: no-repeat;
+      background-size: 16px;
+      margin-right: 21px;
+      transform: rotate(180deg);
+    }
+  }
+
+  &:last-child {
+    &::before {
+      content: '';
+      display: block;
+      width: 16px;
+      height: 30px;
+      background-image: url('assets/svg/arrow-pdp.svg');
+      background-repeat: no-repeat;
+      background-size: 16px;
+      margin-left: 21px;
+    }
+  }
+
+  .caretIcon {
+    display: none;
+  }
+} */
+
+.carouselGaleryThumbs {
+  &--pdp__images {
+    margin-top: 24px;
+  }
+}
+.caretIcon--pdp__images {
+  width: 48px;
+  height: 48px;
+  overflow: visible !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  :first-child {
+    overflow: visible !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.swiperCaretNext--pdp__images {
+}

@@ -1,0 +1,340 @@
+{
+  "store.custom#institucional-template-colecao-designer": {
+    "children": [
+      "flex-layout.row#institucional-designer",
+      "flex-layout.row#container-collection",
+      "flex-layout.row#designer-premios",
+      "list-context.image-list#premios",
+      "flex-layout.row#designer-galeria-fotos"
+    ]
+  },
+  "flex-layout.row#institucional-designer": {
+    "children": ["image#banner-colecao", "flex-layout.col#designer-sobre"],
+    "props": {
+      "blockClass": "institucional-designer"
+    }
+  },
+  "image#banner-colecao": {
+    "props": {
+      "blockClass": ["banner-colecao"],
+      "maxHeight": 634,
+      "src": "assets/img/institucional/designer1.png"
+    }
+  },
+
+  "flex-layout.col#designer-sobre": {
+    "title": "institucional | coleção designer",
+    "children": [
+      "rich-text#title-designer",
+      "rich-text#content-designer",
+      "social-networks#footer"
+    ],
+    "props": {
+      "blockClass": ["sobre-o-designer"]
+    }
+  },
+  "rich-text#title-designer": {
+    "title": "institucional | título",
+    "props": {
+      "blockClass": "institucional-title--designer",
+      "text": "fernando prado"
+    }
+  },
+  "rich-text#content-designer": {
+    "title": "institucional | conteúdo",
+    "props": {
+      "blockClass": "institucional-content",
+      "text": "formado em desenho industrial pela FAAP, são paulo, fernando prado iniciou sua carreira desenvolvendo luminárias para projetos de lighting design em um escritório de arquitetura\n\natualmente, prado é diretor de criação da lumini, diretor da ADP – associação dos designers de produto – e membro do conselho editorial da revista L+D\n\nem poucos anos de carreira, fernando prado conquistou importantes prêmios nacionais e internacionais como o red dot best of the best, iF gold, good design, design plus, german design award e museu da casa brasileira\n\nsuas peças aliam simplicidade, funcionalidade e tecnologia e são conhecidas e admiradas pela interação que propõem ao usuário. entre suas criações estão as luminárias bossa, lift e bauhaus 90, além da luminária luna, imortalizada em 2005 em um selo dos correios como representante da criatividade do design brasileiro"
+    }
+  },
+
+  // coleção de produtos do designer ---------------------
+  "flex-layout.row#container-collection": {
+    "children": [
+      "rich-text#title-collection",
+      "search-result-layout.customQuery#collection"
+    ],
+    "props": {
+      "blockClass": ["container-collection"]
+    }
+  },
+  "rich-text#title-collection": {
+    "title": "institucional | título",
+    "props": {
+      "blockClass": "institucional-title--collection",
+      "text": "lanternas"
+    }
+  },
+  "search-result-layout.customQuery#collection": {
+    "blocks": ["search-result-layout.desktop#collection"],
+    "props": {
+      "querySchema": {
+        "orderByField": "OrderByScoreDESC",
+        "hideUnavailableItems": true,
+        "maxItemsPerPage": 12,
+        "queryField": "138",
+        "mapField": "productClusterIds"
+      }
+    },
+    "title": "Coleção"
+  },
+
+  "search-result-layout.desktop#collection": {
+    "children": ["flex-layout.row#result-collection"],
+    "props": {
+      "pagination": "show-more",
+      "mobileLayout": {
+        "mode1": "small",
+        "mode2": "normal"
+      }
+    },
+    "title": "Search Result Desktop"
+  },
+
+  "flex-layout.row#result-collection": {
+    "children": ["flex-layout.col#content-collection"],
+    "props": {
+      "preventHorizontalStretch": true,
+      "fullWidth": false
+    }
+  },
+
+  "flex-layout.col#content-collection": {
+    "children": ["flex-layout.row#products-collection"],
+    "props": {
+      "width": "grow"
+    }
+  },
+
+  "flex-layout.row#products-collection": {
+    "children": ["search-content#collection"],
+    "props": {
+      "blockClass": "collection-content"
+    }
+  },
+  "search-content#collection": {
+    "blocks": ["gallery#collection", "not-found"]
+  },
+  "gallery#collection": {
+    "blocks": ["product-summary.shelf"],
+    "props": {
+      "maxItemsPerRow": {
+        "desktop": 4,
+        "tablet": 2,
+        "phone": 2
+      }
+    }
+  },
+  // premios ---------------------------------------------
+  "flex-layout.row#designer-premios": {
+    "title": "institucional | coleção designer",
+    "children": ["rich-text#title-premios", "rich-text#content-premios"],
+    "props": {
+      "blockClass": ["premios"]
+    }
+  },
+  "rich-text#title-premios": {
+    "title": "institucional | título",
+    "props": {
+      "blockClass": "institucional-title--designer",
+      "text": "prêmios"
+    }
+  },
+  "rich-text#content-premios": {
+    "title": "institucional | conteúdo",
+    "props": {
+      "blockClass": "institucional-content",
+      "text": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy."
+    }
+  },
+
+  // imagens -----------------------------
+  "list-context.image-list#premios": {
+    "title": "MZ | Banner Home",
+    "children": ["slider-layout#premios"],
+    "props": {
+      "images": [
+        {
+          "image": "assets/img/institucional/premio1.png",
+          "mobileImage": "assets/img/institucional/premio1.png"
+        },
+        {
+          "image": "assets/img/institucional/premio2.png",
+          "mobileImage": "assets/img/institucional/premio2.png"
+        },
+        {
+          "image": "assets/img/institucional/premio1.png",
+          "mobileImage": "assets/img/institucional/premio1.png"
+        },
+        {
+          "image": "assets/img/institucional/premio2.png",
+          "mobileImage": "assets/img/institucional/premio2.png"
+        },
+        {
+          "image": "assets/img/institucional/premio3.png",
+          "mobileImage": "assets/img/institucional/premio3.png"
+        },
+        {
+          "image": "assets/img/institucional/premio1.png",
+          "mobileImage": "assets/img/institucional/premio1.png"
+        },
+        {
+          "image": "assets/img/institucional/premio2.png",
+          "mobileImage": "assets/img/institucional/premio2.png"
+        },
+        {
+          "image": "assets/img/institucional/premio3.png",
+          "mobileImage": "assets/img/institucional/premio3.png"
+        },
+        {
+          "image": "assets/img/institucional/premio1.png",
+          "mobileImage": "assets/img/institucional/premio1.png"
+        },
+        {
+          "image": "assets/img/institucional/premio2.png",
+          "mobileImage": "assets/img/institucional/premio2.png"
+        },
+        {
+          "image": "assets/img/institucional/premio3.png",
+          "mobileImage": "assets/img/institucional/premio3.png"
+        }
+      ]
+    }
+  },
+  "slider-layout#premios": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 8,
+        "tablet": 6,
+        "phone": 3
+      },
+      "infinite": true,
+      "fullWidth": true,
+      "autoPlay": true,
+      "blockClass": "premios",
+      "showPaginationDots": "never",
+      "showNavigationArrows": "never",
+      "navigationStep": 1,
+      "centerMode": {
+        "mobile": "center",
+        "desktop": "center"
+      }
+    }
+  },
+  // galeria ------------------------------------
+  "flex-layout.row#designer-galeria-fotos": {
+    "title": "institucional | coleção designer",
+    "children": [
+      "rich-text#title-galeria-fotos",
+      "list-context.image-list#galeria-designer"
+    ],
+    "props": {
+      "blockClass": ["galeria-de-fotos"]
+    }
+  },
+  "rich-text#title-galeria-fotos": {
+    "title": "institucional | título galeria",
+    "props": {
+      "blockClass": "institucional-title--galeria",
+      "text": "galeria de fotos"
+    }
+  },
+
+  "list-context.image-list#galeria-designer": {
+    "title": "institucional | galeria de imagens",
+    "children": ["slider-layout#slider-galeria-designer"],
+    "props": {
+      "blockClass": "galeria-designer",
+      "images": [
+        {
+          "image": "assets/img/institucional/galeria1.png",
+          "mobileImage": "assets/img/institucional/galeria1.png"
+        },
+        {
+          "image": "assets/img/institucional/galeria2.png",
+          "mobileImage": "assets/img/institucional/galeria2.png"
+        },
+        {
+          "image": "assets/img/institucional/galeria1.png",
+          "mobileImage": "assets/img/institucional/galeria1.png"
+        },
+        {
+          "image": "assets/img/institucional/galeria3.png",
+          "mobileImage": "assets/img/institucional/galeria3.png"
+        },
+        {
+          "image": "assets/img/institucional/galeria2.png",
+          "mobileImage": "assets/img/institucional/galeria2.png"
+        },
+        {
+          "image": "assets/img/institucional/galeria3.png",
+          "mobileImage": "assets/img/institucional/galeria3.png"
+        },
+        {
+          "image": "assets/img/institucional/galeria3.png",
+          "mobileImage": "assets/img/institucional/galeria3.png"
+        },
+        {
+          "image": "assets/img/institucional/galeria2.png",
+          "mobileImage": "assets/img/institucional/galeria2.png"
+        },
+        {
+          "image": "assets/img/institucional/galeria2.png",
+          "mobileImage": "assets/img/institucional/galeria2.png"
+        },
+        {
+          "image": "assets/img/institucional/galeria3.png",
+          "mobileImage": "assets/img/institucional/galeria3.png"
+        },
+        {
+          "image": "assets/img/institucional/galeria2.png",
+          "mobileImage": "assets/img/institucional/galeria2.png"
+        },
+        {
+          "image": "assets/img/institucional/galeria1.png",
+          "mobileImage": "assets/img/institucional/galeria1.png"
+        },
+        {
+          "image": "assets/img/institucional/galeria3.png",
+          "mobileImage": "assets/img/institucional/galeria3.png"
+        },
+        {
+          "image": "assets/img/institucional/galeria2.png",
+          "mobileImage": "assets/img/institucional/galeria2.png"
+        },
+        {
+          "image": "assets/img/institucional/galeria3.png",
+          "mobileImage": "assets/img/institucional/galeria3.png"
+        },
+        {
+          "image": "assets/img/institucional/galeria2.png",
+          "mobileImage": "assets/img/institucional/galeria2.png"
+        },
+        {
+          "image": "assets/img/institucional/galeria3.png",
+          "mobileImage": ""
+        },
+        {
+          "image": "assets/img/institucional/galeria2.png",
+          "mobileImage": ""
+        }
+      ]
+    }
+  },
+  "slider-layout#slider-galeria-designer": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 50,
+        "tablet": 50,
+        "phone": 50
+      },
+      "infinite": false,
+      "showNavigationArrows": "never",
+      "blockClass": "galeria-designer",
+      "centerMode": {
+        "mobile": "center",
+        "desktop": "center"
+      }
+    }
+  }
+}

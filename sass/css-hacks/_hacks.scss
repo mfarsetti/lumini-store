@@ -1,0 +1,37 @@
+span {
+  mobiliar-viewer-ar {
+    background: #FFFFFF !important;
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 450px;
+    justify-content: space-between;
+    border: solid 1px #969799;
+    height: 45px;
+    padding: 0 15px;
+    width: calc(58% - 59px);
+
+    @media (max-width: 640px) {
+      width: 90%;
+      gap: 12px;
+      padding-right: 0;
+    }
+
+    &::before {
+      content: '';
+      width: 30px;
+      height: 34px;
+      background: url(https://tezexb.vteximg.com.br/arquivos/icon-realidade-aumentada.jpg);
+
+      @media (max-width: 640px) {
+        width: 34px;
+      }
+    }
+
+    &::after {
+      content: 'veja em sua casa através da realidade aumentada';
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

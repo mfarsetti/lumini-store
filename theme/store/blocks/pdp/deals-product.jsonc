@@ -1,0 +1,24 @@
+{
+  "flex-layout.row#image-detail": {
+    "title": "PDP | Imagens adicionais",
+    "children": ["image#pdp-image-1","image#pdp-image-2"],
+    "props": {
+      "blockClass": "home__image-detail"
+    }
+  },
+
+  "image#pdp-image-1": {
+    "props": {
+      "blockClass": "pdp__image-detail",
+      "maxHeight": 960,
+      "src": ""
+    }
+  },
+  "image#pdp-image-2": {
+    "props": {
+      "blockClass": "pdp__image-detail",
+      "maxHeight": 960,
+      "src": ""
+    }
+  }
+}

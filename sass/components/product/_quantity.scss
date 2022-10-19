@@ -1,0 +1,47 @@
+@import 'mixins/text';
+
+.quantity {
+  &Selector {
+    &Container {
+      margin: 0;
+
+      :global(.vtex-numeric-stepper__input) {
+        border-top: 1px solid $text-color-1-500;
+        border-bottom: 1px solid $text-color-1-500;
+        border-right: none;
+        border-left: none;
+        height: 3rem;
+        @include text($font-size-lg, $text-color-1-500, $bold);
+
+        @media (max-width: $m) {
+          width: 20%;
+        }
+      }
+
+      :global(.vtex-numeric-stepper__plus-button) {
+        background: $white;
+        border: 1px solid $text-color-1-500;
+        border-left: none;
+        border-radius: 0;
+        height: 3rem;
+      }
+
+      :global(.vtex-numeric-stepper__minus-button) {
+        background: $white;
+        border: 1px solid $text-color-1-500;
+        border-right: none;
+        border-radius: 0;
+        height: 3rem;
+      }
+
+      :global(.vtex-numeric-stepper__minus-button__text),
+      :global(.vtex-numeric-stepper__plus-button__text) {
+        @include text($font-24, $text-color-1-500, $lighter);
+      }
+    }
+
+    &Title {
+      display: none;
+    }
+  }
+}

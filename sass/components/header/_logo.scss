@@ -1,0 +1,14 @@
+.logo {
+  &Container {
+    &--header__logo {
+      padding: 0;
+      display: flex;
+      max-width: inherit;
+      justify-content: center;
+
+      @media (min-width: $l) {
+        justify-content: flex-start !important;
+      }
+    }
+  }
+}

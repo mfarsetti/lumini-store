@@ -1,0 +1,9 @@
+query ($specificationFilters: [String]){
+  products(specificationFilters: $specificationFilters from: 0 to: 99) @context(provider: "vtex.search-graphql") {
+    productName
+    properties {
+      name
+      values
+    }
+  }
+}

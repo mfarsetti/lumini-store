@@ -1,0 +1,132 @@
+.flex {
+  &Row {
+    &--mz-orderplaced {
+      &__confirmation {
+        border: 1px solid $color-border;
+        border-radius: 0;
+        background: $white;
+        padding: 30px 20px;
+        width: 100%;
+
+        @media (max-width: $m) {
+          padding: 20px 12px;
+        }
+      }
+
+      &__summary {
+        @media (max-width: $m) {
+          :global(.vtex-store-components-3-x-container) {
+            padding: 0;
+          }
+        }
+      }
+
+      &__products {
+        :global(.vtex-flex-layout-0-x-stretchChildrenWidth) {
+          width: 100% !important;
+
+          :global(.vtex-order-placed-2-x-package) {
+            flex-direction: column;
+          }
+        }
+      }
+
+      &__buttons {
+        margin: 40px 0;
+
+        @media (max-width: $m) {
+          :global(.vtex-store-components-3-x-container) {
+            padding: 0;
+          }
+        }
+      }
+    }
+
+    &Content {
+      &--mz-orderplaced {
+        &__confirmation {
+          flex-direction: column;
+
+          :global(.vtex-flex-layout-0-x-stretchChildrenWidth) {
+            width: 100% !important;
+          }
+        }
+
+        &__orderid {
+          flex-direction: column;
+        }
+
+        &__summary {
+          margin: 35px 0;
+          justify-content: space-between;
+
+          @media (max-width: $m) {
+            margin: 24px 0;
+          }
+        }
+
+        &__products {
+          flex-direction: column;
+
+          :global(.vtex-order-placed-2-x-packageAddressWrapper) {
+            display: none;
+          }
+        }
+
+        &__buttons {
+          justify-content: flex-end;
+
+          @media (max-width: $m) {
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 15px;
+          }
+
+          :global(.vtex-flex-layout-0-x-stretchChildrenWidth) {
+            width: auto !important;
+          }
+        }
+      }
+    }
+  }
+
+  &Col {
+    &--mz-orderplaced {
+      &__confirmation {
+        height: auto !important;
+      }
+
+      &__summary {
+        &--box {
+          border: 1px solid $color-border;
+          border-radius: 0;
+          background: $color-c-4;
+          padding: 23px 16px;
+
+          @media (max-width: $m) {
+            margin-bottom: 21px;
+          }
+        }
+      }
+    }
+
+    &Child {
+      &--mz-orderplaced {
+        &__confirmation {
+          height: auto !important;
+        }
+
+        &__summary {
+          &--box {
+            height: auto !important;
+
+            :global(.vtex-order-placed-2-x-packageHeader),
+            :global(.vtex-order-placed-2-x-productList) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

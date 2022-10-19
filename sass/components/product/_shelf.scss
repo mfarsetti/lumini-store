@@ -1,0 +1,28 @@
+@import 'extends/titles';
+@import 'mixins/text';
+@import 'extends/container';
+
+.related {
+  &Products {
+    padding: 0 0 40px;
+
+    .title {
+      @extend %container;
+      @include text($font-size-xlg, $text-color-1-500, $regular);
+      text-align: left;
+      justify-content: flex-start;
+      text-transform: lowercase;
+      margin-top: 0;
+      padding-left: 15px;
+
+      @media (min-width: $l) {
+        font-size: $font-size-h2;
+        padding-left: 0;
+      }
+    }
+
+    .slide {
+      padding: 0 0 20px;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+.wrapper {
+  &--mz-not-found-page {
+    &__title {
+      .paragraph {
+        @include text($font-size-h3, $color-1, $regular);
+        text-transform: lowercase;
+        margin: 0 0 40px;
+
+        @media (max-width: $m) {
+          max-width: 300px;
+          margin-bottom: 23px;
+        }
+      }
+    }
+
+    &__subtitle {
+      .paragraph {
+        @include text($font-size-lg, $color-2, $regular);
+        margin: 0 0 52px;
+
+        @media (max-width: $m) {
+          max-width: 300px;
+          margin-bottom: 24px;
+          font-size: $font-size-md;
+        }
+      }
+    }
+
+    &__text {
+      .paragraph {
+        @include text($font-size-md, $text-color-1-500, $regular);
+        margin: 0;
+
+        @media (min-width: $l) {
+          font-size: $font-size-lg;
+          width: 540px;
+        }
+      }
+    }
+
+    &__button {
+      .link {
+        @extend %primary-button;
+        font-size: $font-size-sm;
+        padding: 9px 20px;
+        margin-top: 56px;
+
+        @media (max-width: $m) {
+          margin-top: 42px;
+          font-size: $font-size-xs;
+          padding: 9px 20px;
+        }
+      }
+    }
+  }
+}
